@@ -1,0 +1,84 @@
+{
+  "chainId": 4663,
+  "name": "Robinhood Chain",
+  "rpcUrl": "https://rpc.mainnet.chain.robinhood.com",
+  "explorer": "https://robinhoodchain.blockscout.com",
+  "owner": "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A",
+  "epochDuration": 3600,
+  "epochReward": "1000",
+  "rewardEpochs": 8760,
+  "tasks": [
+    [
+      "逻辑反相",
+      1,
+      255,
+      8,
+      [
+        0,
+        1
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    [
+      "双输入与门",
+      2,
+      255,
+      12,
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        false,
+        false,
+        false,
+        true
+      ]
+    ],
+    [
+      "双输入异或",
+      2,
+      255,
+      16,
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        false,
+        true,
+        true,
+        false
+      ]
+    ],
+    [
+      "使能锁存器",
+      2,
+      255,
+      12,
+      [
+        0,
+        3,
+        0,
+        2,
+        1
+      ],
+      [
+        false,
+        true,
+        true,
+        false,
+        false
+      ]
+    ]
+  ],
+  "deploymentBlocked": true,
+  "blockReason": "发布已暂停：核对发现组合逻辑任务可被状态电路绕过验证，且当前实现与 Fab X 的持续挖矿、双池、最优原创机制不等价。修复并重新验收后再开放主网部署。"
+}
