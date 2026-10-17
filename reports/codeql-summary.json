@@ -3,10 +3,10 @@
   "tool": "GitHub CodeQL",
   "status": "completed",
   "conclusion": "success",
-  "generatedAt": "2026-10-17T08:08:06.745Z",
-  "runId": 39016103666,
-  "runUrl": "https://github.com/LIFNF/rotap/actions/runs/39016103666",
-  "sourceCommit": "b236429c4a9da03c6ba6d52f844016edc90952d2",
+  "generatedAt": "2026-10-17T08:13:32.876Z",
+  "runId": 39016457782,
+  "runUrl": "https://github.com/LIFNF/rotap/actions/runs/39016457782",
+  "sourceCommit": "786123d0fc918443c3257d99b2992b13ae524c33",
   "sourceFileSHA256": {
     "scripts/build.mjs": "36d77d72d13f114fc9e442d553d2fea5342879d4d8b1c9dc02fc95422c969539",
     "scripts/check-independent-review.mjs": "ed97c2421b82b238f75701440f83660332610b1b247e1c3e41fbe4782d2d2ebc",
@@ -17,7 +17,7 @@
     "scripts/deploy-protocol-library.mjs": "5ff619619d2cfcf67d13f6f0805ddbd956d976936e08e54373cafb258eab652b",
     "scripts/estimate-full-deployment.mjs": "6f36fd31984f2bbd2ae6899ea3c081aaa9e2b1f8ac7e7276a8569d6939f1b4d9",
     "scripts/extract-reference-abi.mjs": "a33d5852a7b950593e9d229f4b9b438cd36569392532ae95d519a96c62b226b2",
-    "scripts/github-security-results.mjs": "8fc4d4c4685d97ec89fe0edc701acdf25220000728207669ed9bce70723dba95",
+    "scripts/github-security-results.mjs": "bab3c2c596245b51ff1d0d2e50c7da73e071f8f83438695662c8181e1c079ae4",
     "scripts/infer-reference-sampling-extended.mjs": "b1f1fb5b6be62d68a886ccb8133fa6008f165166586766afa6ee913b0202bf83",
     "scripts/infer-reference-sampling.mjs": "6d8489a4dd25c5c87ad55d5db8bb4c2798cbba0a65a01c7bdeb9c730e1e86561",
     "scripts/mainnet-provider.mjs": "30e8a57c0b187af9e36d067c42c9dfea3529d4d286ca07a5db06af354c315b92",
@@ -44,7 +44,7 @@
     "scripts/read-mainnet.mjs": "8bbead3ccb13b4b11acdac9608a48664a1b185d527d8ebb4fb08b7c13298bea7",
     "scripts/read-original-rpc.mjs": "d48b6b42d64163b83fc0cf44825f8b1e7c8fed2444d777b88f18889e271308f9",
     "scripts/recover-reference-vectors.mjs": "1d2b04afe03ff628e092b9be45a3a430450d856d2072d13da4bc0011614ccb3d",
-    "scripts/reference-fork-provider.mjs": "80423e45f5e20ddf5f2ea675e4d962f6c4654f55839a36440663c4f22b1f01f0",
+    "scripts/reference-fork-provider.mjs": "bc0e111702364a15380d0091bf3b202e83fecd7b43e59218407a016dfa08cafc",
     "scripts/release-server.mjs": "871bebaddf9e1da6d35950c0bb47fedec7385b2f1f1409ed36fdfca7b7ba76d2",
     "scripts/remove-legacy-assets.mjs": "11816a2d004af8acd6cdd38ecdb6df195083cac0e5d7bc072b8f57dff53e71b9",
     "scripts/serve.mjs": "68d4e5d11d88c6dcc14e90c6e55923a7218496d88d01612d6ed9cd1505736723",
@@ -57,7 +57,7 @@
     "scripts/test-fixed-release-security.mjs": "5ffa3024fedf64b7ca67f858f19c5edb46c9c3b5414ff2d6f805bcc95e739019",
     "scripts/test-full-protocol-browser.mjs": "996e84399a0766d1ee93878fa84fe7e1030672e3268f6a3eaa5b54904059cdcc",
     "scripts/test-full-protocol-deployment.mjs": "931b13d800cbcf2a0d5e1382c26658464adec03a3ef151aebefddc0b2a10f171",
-    "scripts/test-github-pages.mjs": "5f985bf7110f201061fd03e8de139d6cf7ee9f9dbaf7b88898b3784af9d1dd0a",
+    "scripts/test-github-pages.mjs": "76cb28f138fd3889145fbf17095d7818756f247f220aee6ede82c7388d453573",
     "scripts/test-markets.mjs": "75c59530572fe981d2d4e905ba267aa6f999d2f4127e109733fce2f77d385d41",
     "scripts/test-mining-inventory.mjs": "2bd34ad0c25f60dcaa172ee6faf35043dbb73acc2c98fac50e71705b4135092c",
     "scripts/test-mining-lifecycle.mjs": "d5e6380146355bf90dab5f8ab85d83610f2657b673a81bc0a486beb5d82bd481",
@@ -117,12 +117,12 @@
   ],
   "solidityAnalyzed": false,
   "independentHumanReview": false,
-  "findingCount": 3,
+  "findingCount": 0,
   "reports": [
     {
       "path": "reports/codeql.sarif",
-      "sha256": "cd4cbdab0703178f338618f7c97f7d007db8d789235c0df1736627d322c23575",
-      "findingCount": 3
+      "sha256": "d7d2ad802e77e414172c8ff7d37648a99694de44d6164b04f9403bf30e6dd53a",
+      "findingCount": 0
     }
   ],
   "limitations": [
