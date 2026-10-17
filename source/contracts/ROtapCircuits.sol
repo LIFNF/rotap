@@ -69,10 +69,17 @@ contract ROtapCircuits {
     }
     function eval(uint256 id,bytes calldata inputs) external view returns(bytes memory outputs){
         ownerOf(id);Circuit storage c=data[id];require(c.states==0,'SEQUENTIAL');
-        if(c.references)(,outputs)=ROtapReferenceRuntime.run(c.program,c.nIn,c.nOut,'',inputs,factory);else (,outputs)=ROtapRuntime.run(c.program,c.nIn,c.nOut,'',inputs);
+        if(c.references)(,outputs)=ROtapReferenceRuntime.run(c.program,c.nIn,c.nOut,'',inputs,factory);else (,outputs)=ROtapRuntime.runValidated(c.program,c.nIn,c.nOut,'',inputs,c.metrics.nand,c.metrics.latch);
     }
     function step(uint256 id,bytes calldata state,bytes calldata inputs) external view returns(bytes memory newState,bytes memory outputs){
-        ownerOf(id);Circuit storage c=data[id];if(c.references)return ROtapReferenceRuntime.run(c.program,c.nIn,c.nOut,state,inputs,factory);return ROtapRuntime.run(c.program,c.nIn,c.nOut,state,inputs);
+        ownerOf(id);Circuit storage c=data[id];if(c.references)return ROtapReferenceRuntime.run(c.program,c.nIn,c.nOut,state,inputs,factory);return ROtapRuntime.runValidated(c.program,c.nIn,c.nOut,state,inputs,c.metrics.nand,c.metrics.latch);
+    }
+    /// Execute immutable task programs using counts validated at tapeout, loading program storage only once.
+    function runTask(uint256 id,uint32 cycles,bytes calldata input) external view returns(bytes memory result){
+        ownerOf(id);Circuit storage c=data[id];require(!c.references&&cycles>0&&cycles<=256&&(c.states>0||cycles==1),'CYCLES');
+        uint256 inputSize=(uint256(c.nIn)+7)/8;uint256 outputSize=(uint256(c.nOut)+7)/8;require(input.length==inputSize*cycles,'INPUT_LENGTH');
+        bytes memory program=c.program;uint32 nIn=c.nIn;uint32 nOut=c.nOut;uint32 nand=c.metrics.nand;uint32 latch=c.metrics.latch;bytes memory state;result=new bytes(outputSize*cycles);
+        for(uint256 cycle;cycle<cycles;cycle++){bytes memory vector=new bytes(inputSize);for(uint256 j;j<inputSize;j++)vector[j]=input[cycle*inputSize+j];bytes memory out;(state,out)=ROtapRuntime.runValidated(program,nIn,nOut,state,vector,nand,latch);for(uint256 j;j<outputSize;j++)result[cycle*outputSize+j]=out[j];}
     }
     function approve(address operator,uint256 id) external {address account=ownerOf(id);require(msg.sender==account||isApprovedForAll[account][msg.sender],'AUTH');require(operator!=account,'SELF');getApproved[id]=operator;emit Approval(account,operator,id);}
     function setApprovalForAll(address operator,bool approved) external {require(operator!=msg.sender,'SELF');isApprovedForAll[msg.sender][operator]=approved;emit ApprovalForAll(msg.sender,operator,approved);}

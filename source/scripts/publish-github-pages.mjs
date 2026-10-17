@@ -35,6 +35,6 @@ try{
  git(['-c','credential.helper=','-c','http.extraHeader=','-c','http.proxy=http://127.0.0.1:7890','-c','http.sslVersion=tlsv1.2','--config-env=http.'+remote+'.extraHeader=GITHUB_PAGES_AUTH','push',remote,'HEAD:refs/heads/main']);
  let pages;try{pages=api(route+'/pages');if(pages.build_type!=='legacy'||pages.source?.branch!=='main'||pages.source?.path!=='/')throw Error('Existing Pages configuration differs; refusing to overwrite');}
  catch(e){if(!e.message.includes('404'))throw e;pages=api(route+'/pages',{method:'POST',body:{build_type:'legacy',source:{branch:'main',path:'/'}}});}
- const receipt={repository:repository.html_url,siteUrl:pages.html_url,sourceCommit:git(['rev-parse','HEAD']).trim(),pagesStatus:pages.status,sourceCommit,sourceTreeHash:provenance.sourceTreeHash,mainnetContractsDeployed:false,mintPaymentsEnabled:false};
+ const receipt={repository:repository.html_url,siteUrl:pages.html_url,siteCommit:git(['rev-parse','HEAD']).trim(),pagesStatus:pages.status,sourceCommit,sourceTreeHash:provenance.sourceTreeHash,mainnetContractsDeployed:false,mintPaymentsEnabled:false};
  fs.writeFileSync('audit/github-pages-deployment.json',JSON.stringify(receipt,null,2));console.log(JSON.stringify(receipt,null,2));
 }catch(error){console.error(error.message.split(token).join('[redacted]'));process.exitCode=1;}

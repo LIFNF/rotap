@@ -50,19 +50,22 @@ library ROtapRuntime {
         }
     }
     function run(bytes memory data,uint32 nIn,uint32 nOut,bytes memory state,bytes memory inputs) internal pure returns(bytes memory newState,bytes memory outputs){
-        Metrics memory m=inspect(data,nIn,nOut);
+        Metrics memory m=inspect(data,nIn,nOut);return runValidated(data,nIn,nOut,state,inputs,m.nand,m.latch);
+    }
+    /// Only immutable programs already validated by tapeout may enter this execution path.
+    function runValidated(bytes memory data,uint32 nIn,uint32 nOut,bytes memory state,bytes memory inputs,uint32 nand,uint32 latch) internal pure returns(bytes memory newState,bytes memory outputs){
         require(inputs.length==(uint256(nIn)+7)/8,"INPUT_LENGTH");
-        require(state.length==0||state.length==(uint256(m.latch)+7)/8,"STATE_LENGTH");
-        bool[] memory wires=new bool[](2+uint256(nIn)+m.nand+m.latch);wires[1]=true;
+        require(state.length==0||state.length==(uint256(latch)+7)/8,"STATE_LENGTH");
+        bool[] memory wires=new bool[](2+uint256(nIn)+nand+latch);wires[1]=true;
         for(uint256 i;i<nIn;i++)wires[2+i]=bit(inputs,i);
-        uint256[] memory updateFrom=new uint256[](m.latch);
+        uint256[] memory updateFrom=new uint256[](latch);
         uint256 pos;uint256 at=2+uint256(nIn);uint256 stateId;
         while(pos<data.length){uint8 op=uint8(data[pos++]);uint256 a=u24(data,pos);
             if(op==0){wires[at]=!(wires[a]&&wires[u24(data,pos+3)]);pos+=6;}
             else {updateFrom[stateId]=a;wires[at]=bit(state,stateId++);pos+=3;}at++;
         }
-        newState=new bytes((uint256(m.latch)+7)/8);outputs=new bytes((uint256(nOut)+7)/8);
-        for(uint256 i;i<m.latch;i++)if(wires[updateFrom[i]])setBit(newState,i);
+        newState=new bytes((uint256(latch)+7)/8);outputs=new bytes((uint256(nOut)+7)/8);
+        for(uint256 i;i<latch;i++)if(wires[updateFrom[i]])setBit(newState,i);
         for(uint256 i;i<nOut;i++)if(wires[wires.length-nOut+i])setBit(outputs,i);
     }
 }

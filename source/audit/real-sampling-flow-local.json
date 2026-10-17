@@ -7,7 +7,7 @@
   "referenceNandCount": 3,
   "verifiedHashrate": "78",
   "ledgerWeight": "7800",
-  "claimedSmallestUnits": "824999966",
+  "claimedSmallestUnits": "824999999",
   "checks": [
     "paid mint",
     "exact burn",

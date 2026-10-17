@@ -9,7 +9,7 @@
     "beneficiary transfer settlement",
     "duplicate claim",
     "8 decimals",
-    "21M cap constant"
+    "20M fixed escrow supply"
   ],
   "referenceChainRoundingVerified": false,
   "miningEligibilityIntegrated": false

@@ -6,92 +6,97 @@
     {
       "test": "test-transistor-sale",
       "passed": true,
-      "milliseconds": 3384
+      "milliseconds": 2929
     },
     {
       "test": "test-fixed-release-security",
       "passed": true,
-      "milliseconds": 8842
+      "milliseconds": 8128
     },
     {
       "test": "test-runtime",
       "passed": true,
-      "milliseconds": 7566
+      "milliseconds": 7359
     },
     {
       "test": "test-persistent-circuits",
       "passed": true,
-      "milliseconds": 18063
+      "milliseconds": 18585
     },
     {
       "test": "test-continuous-ledger",
       "passed": true,
-      "milliseconds": 6418
+      "milliseconds": 5826
+    },
+    {
+      "test": "test-mining-inventory",
+      "passed": true,
+      "milliseconds": 19205
     },
     {
       "test": "test-stake-boost",
       "passed": true,
-      "milliseconds": 2929
+      "milliseconds": 3096
     },
     {
       "test": "test-reward-stake",
       "passed": true,
-      "milliseconds": 5904
+      "milliseconds": 4908
     },
     {
       "test": "test-task-registry",
       "passed": true,
-      "milliseconds": 22691
+      "milliseconds": 16953
     },
     {
       "test": "test-mining-lifecycle",
       "passed": true,
-      "milliseconds": 39623
+      "milliseconds": 27994
     },
     {
       "test": "test-markets",
       "passed": true,
-      "milliseconds": 13312
+      "milliseconds": 10457
     },
     {
       "test": "test-accounts-sites",
       "passed": true,
-      "milliseconds": 9314
+      "milliseconds": 8076
     },
     {
       "test": "test-reference-circuits",
       "passed": true,
-      "milliseconds": 24134
+      "milliseconds": 17826
     },
     {
       "test": "test-burn-boost",
       "passed": true,
-      "milliseconds": 16486
+      "milliseconds": 12893
     },
     {
       "test": "test-account-pure-reference",
       "passed": true,
-      "milliseconds": 6758
+      "milliseconds": 5934
     },
     {
       "test": "test-processor-factory",
       "passed": true,
-      "milliseconds": 17546
+      "milliseconds": 13125
     },
     {
       "test": "test-real-sampling-flow",
       "passed": true,
-      "milliseconds": 53727
+      "milliseconds": 36262
     },
     {
       "test": "test-mining-reference-governance",
       "passed": true,
-      "milliseconds": 33709
+      "milliseconds": 26346
     },
     {
       "test": "test-browser-ref-runtime",
       "passed": true,
-      "milliseconds": 314
+      "milliseconds": 278
     }
   ]
 }

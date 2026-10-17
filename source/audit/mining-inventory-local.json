@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "initialSupply": "20000000",
+  "initialEscrow": "20000000",
+  "initialWalletAllocation": "0",
+  "initialDailyRelease": "7200",
+  "verifiedDailyPool": "7128",
+  "unverifiedDailyPool": "72",
+  "halvingSeconds": 126000000,
+  "checkpointFrequencyIndependent": true,
+  "noMintFunction": true,
+  "noAdminInventoryWithdrawal": true,
+  "totalDistributionCapped": true,
+  "checks": [
+    "all genesis tokens enter ledger, no deployer allocation",
+    "only accounting-backed mining transfers release inventory",
+    "single daily and 100 checkpoint daily releases equal",
+    "duplicate claims do not release more",
+    "daily release halves to 3600 at first boundary",
+    "stock cannot be stolen through allowance",
+    "full schedule stops at 20 million"
+  ]
+}

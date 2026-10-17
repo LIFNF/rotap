@@ -1,0 +1,37 @@
+name: Public code audit
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  security-events: write
+jobs:
+  javascript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v4
+        with:
+          languages: javascript-typescript
+          build-mode: none
+          queries: security-extended
+          config: |
+            paths:
+              - source/src
+              - source/scripts
+            paths-ignore:
+              - source/reference-v2
+              - source/candidate-v2
+      - name: Analyze JavaScript
+        uses: github/codeql-action/analyze@v4
+        with:
+          category: /language:javascript-typescript
+          output: codeql-results
+      - name: Save full SARIF report
+        uses: actions/upload-artifact@v4
+        with:
+          name: rotap-codeql-sarif
+          path: codeql-results/*.sarif
+          retention-days: 30

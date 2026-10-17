@@ -67,7 +67,7 @@ contract ROtapMining is OwnableUpgradeable,PausableUpgradeable,UUPSUpgradeable {
     function startTime() external view returns(uint256){return ledger.startTime();}
     function currentRate() external view returns(uint256){return ledger.currentRate();}
     function token() external view returns(address){return address(ledger.token());}
-    function totalMined() external view returns(uint256){return ledger.token().totalSupply();}
+    function totalMined() external view returns(uint256){return ledger.totalClaimed();}
     function totalForgone() external view returns(uint256){return ledger.totalForgone();}
     function totalVerifWeight() external view returns(uint256){return ledger.totalVerifWeight();}
     function totalUnverWeight() external view returns(uint256){return ledger.totalUnverWeight();}
@@ -149,7 +149,7 @@ contract ROtapMining is OwnableUpgradeable,PausableUpgradeable,UUPSUpgradeable {
     function kick(uint32 taskId,address circuits) external whenNotPaused {bytes32 key=bestSlot[taskId][circuits];require(key!=bytes32(0),'SLOT');Miner storage m=miners[key];require(!passesCounterexamples(taskId,circuits,m.circuitId),'PASSES');releaseOriginal(key);sync(key,m.holder);emit Demoted(key,'');}
     function claim(bytes32 key) external whenNotPaused returns(uint256){bytes32[] memory keys=new bytes32[](1);keys[0]=key;return claimKeys(keys);}
     function claimMany(bytes32[] calldata keys) external whenNotPaused returns(uint256){return claimKeys(keys);}
-    function claimKeys(bytes32[] memory keys) private returns(uint256 amount){uint256 beforeSupply=ledger.token().totalSupply();for(uint256 i;i<keys.length;i++){Miner storage m=miners[keys[i]];require(m.circuits!=address(0),'MINER');sync(keys[i],m.holder);}return ledger.token().totalSupply()-beforeSupply;}
+    function claimKeys(bytes32[] memory keys) private returns(uint256 amount){uint256 beforeSupply=ledger.totalClaimed();for(uint256 i;i<keys.length;i++){Miner storage m=miners[keys[i]];require(m.circuits!=address(0),'MINER');sync(keys[i],m.holder);}return ledger.totalClaimed()-beforeSupply;}
     function beforeCircuitTransfer(uint256 id,address from,address to) external {
         require(processorMultiplier[msg.sender]>0,'PROCESSOR');bytes32 key=minerKey(msg.sender,id);Miner storage m=miners[key];if(!m.active)return;require(m.holder==from,'HOLDER');
         detach(key);m.holder=to;attach(key,to);ledger.reassign(key,to);

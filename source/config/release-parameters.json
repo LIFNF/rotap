@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "chainId": 4663,
   "owner": "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A",
   "nativeCurrency": "ETH",
@@ -17,7 +17,8 @@
     "protocolFeeWei": "322700000000000",
     "supplyCap": "1000000",
     "recipient": "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A",
-    "status": "configured-awaiting-contract-deployment"
+    "status": "configured-awaiting-contract-deployment",
+    "paymentFlow": "automatic-deployer-forward"
   },
   "genesis": {
     "name": "ROtap Genesis",
@@ -32,9 +33,11 @@
     "defaultTapeoutFeeWei": "63570000000000"
   },
   "mining": {
-    "initialRate": "8333333",
     "halvingPeriod": 126000000,
-    "ownerHeadStartSeconds": 1800
+    "ownerHeadStartSeconds": 1800,
+    "initialDailyEmission": "720000000000",
+    "totalSupply": "2000000000000000",
+    "distribution": "fixed-supply-mining-escrow"
   },
   "boost": {
     "nativeStakeTiersWei": [

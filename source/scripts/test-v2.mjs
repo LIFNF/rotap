@@ -1,6 +1,6 @@
 import {spawn} from 'node:child_process';
 import fs from 'node:fs';
-const tests=['test-transistor-sale','test-fixed-release-security','test-runtime','test-persistent-circuits','test-continuous-ledger','test-stake-boost','test-reward-stake','test-task-registry','test-mining-lifecycle','test-markets','test-accounts-sites','test-reference-circuits','test-burn-boost','test-account-pure-reference','test-processor-factory','test-real-sampling-flow','test-mining-reference-governance','test-browser-ref-runtime'];
+const tests=['test-transistor-sale','test-fixed-release-security','test-runtime','test-persistent-circuits','test-continuous-ledger','test-mining-inventory','test-stake-boost','test-reward-stake','test-task-registry','test-mining-lifecycle','test-markets','test-accounts-sites','test-reference-circuits','test-burn-boost','test-account-pure-reference','test-processor-factory','test-real-sampling-flow','test-mining-reference-governance','test-browser-ref-runtime'];
 const report=[];
 for(const name of tests){
  const start=Date.now();

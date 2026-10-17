@@ -20,16 +20,13 @@ contract ROtapTransistors {
     uint256 public minted;
     mapping(uint256=>uint256) public mintedOf;
     mapping(address=>uint256) public mintedBy;
-    mapping(address=>uint256) public owed;
     mapping(uint256=>mapping(address=>uint256)) private balances;
     mapping(address=>mapping(address=>bool)) public isApprovedForAll;
     uint256 private entered;
     event TransferSingle(address indexed operator,address indexed from,address indexed to,uint256 id,uint256 value);
     event TransferBatch(address indexed operator,address indexed from,address indexed to,uint256[] ids,uint256[] values);
     event ApprovalForAll(address indexed account,address indexed operator,bool approved);
-    event PricingSet(uint256 price,uint256 fee,uint256 cap);
-    event TypeCapsSet(uint256 nandCap,uint256 latchCap);
-    event WalletCapSet(uint256 cap);
+    event MintPaymentForwarded(address indexed creator,address indexed protocolWallet,uint256 price,uint256 fee);
     modifier nonReentrant(){require(entered==0,"REENTRANCY");entered=1;_;entered=0;}
     constructor(address creator_,address protocolWallet_,address circuits_,uint256 price_,uint256 fee_){
         initialized=true;
@@ -55,13 +52,11 @@ contract ROtapTransistors {
         uint256 price=mintPrice*amount;uint256 fee=protocolFee;
         require(msg.value==price+fee,"PAYMENT");
         minted+=amount;mintedOf[id]+=amount;mintedBy[msg.sender]+=amount;
-        balances[id][msg.sender]+=amount;owed[creator]+=price;owed[protocolWallet]+=fee;
+        balances[id][msg.sender]+=amount;
         emit TransferSingle(msg.sender,address(0),msg.sender,id,amount);
         accept(msg.sender,address(0),msg.sender,id,amount,"");
-    }
-    function withdraw() external nonReentrant {
-        uint256 amount=owed[msg.sender];require(amount>0,"NOTHING");owed[msg.sender]=0;
-        (bool ok,)=payable(msg.sender).call{value:amount}("");require(ok,"TRANSFER");
+        if(creator==protocolWallet){if(msg.value>0){(bool ok,)=payable(creator).call{value:msg.value}("");require(ok,"PAYMENT_FORWARD");}}else{if(price>0){(bool ok,)=payable(creator).call{value:price}("");require(ok,"PRICE_FORWARD");}if(fee>0){(bool ok,)=payable(protocolWallet).call{value:fee}("");require(ok,"FEE_FORWARD");}}
+        emit MintPaymentForwarded(creator,protocolWallet,price,fee);
     }
     function setApprovalForAll(address operator,bool approved) external {
         require(operator!=msg.sender,"SELF");isApprovedForAll[msg.sender][operator]=approved;

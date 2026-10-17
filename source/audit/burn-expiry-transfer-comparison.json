@@ -3,7 +3,7 @@
   "originalBlock": 73397243,
   "burnWeightIncreaseMatchesOriginal": true,
   "expirySettlesOldStoredWeight": true,
-  "expiryClaimSmallestUnits": "4989608050416",
+  "expiryClaimSmallestUnits": "4989608250000",
   "transferDoesNotCheckpointAccumulators": true,
   "transferPreservesUnclaimedDebt": true,
   "unclaimedRewardFollowsNFT": true,

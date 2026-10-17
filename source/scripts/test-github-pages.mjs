@@ -11,7 +11,7 @@ const base='http://127.0.0.1:'+server.address().port+'/rotap/';await page.goto(b
 await page.waitForURL(base+'tasks');
 await page.getByRole('link',{name:'Mint 元件',exact:true}).click();await page.waitForURL(base+'mint');
 await page.goBack();await page.waitForURL(base+'tasks');await page.goForward();await page.waitForURL(base+'mint');
-for(const route of ['home','tasks','mint','studio','materials','miners','boost','market','accounts','processors','governance','status','docs','docs/rewards']){const response=await page.goto(base+route);assert.equal(response.status(),200);await page.locator('#main').waitFor();await page.waitForURL(base+route);await page.reload();await page.locator('#main').waitFor();assert.equal(new URL(page.url()).hash,'');}
+for(const route of ['home','tasks','mint','studio','materials','miners','boost','market','accounts','processors','governance','status','audit','docs','docs/rewards']){const response=await page.goto(base+route);assert.equal(response.status(),200);await page.locator('#main').waitFor();await page.waitForURL(base+route);await page.reload();await page.locator('#main').waitFor();assert.equal(new URL(page.url()).hash,'');}
 await page.goto(base+'tasks');await page.locator('#v2-task-search').fill('反相');await page.locator('#v2-task-list a').first().click();await page.waitForURL(/\/workbench\?task=\d+$/);
 await page.goto(base+'#workbench?task=1');await page.locator('#v2-official').click();await page.waitForFunction(()=>document.querySelector('#v2-metrics').textContent.includes('官方向量验证通过：256 / 256'));
 await page.goto(base+'#mint');assert.equal(await page.locator('#mint-submit').isDisabled(),true);assert.match(await page.locator('#mint-status').textContent(),/不接受付款/);
@@ -20,6 +20,9 @@ await page.locator('#mint-quantity').fill('100');assert.equal(await page.locator
 assert.ok((await page.locator('body').innerText()).includes('0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A'));
 for(const route of ['home','docs','materials','miners']){await page.goto(base+'#'+route);await page.locator('#main').waitFor();assert.doesNotMatch(await page.locator('body').innerText(),/登记下一周期|固定周期奖池|32 NAND|领取初始元件|四项任务|EPOCH BASED/);}
 await page.goto(base+'#docs');assert.match(await page.locator('body').innerText(),/99%/);assert.match(await page.locator('body').innerText(),/8 位小数/);
+assert.match(await page.locator('body').innerText(),/20,000,000/);assert.match(await page.locator('body').innerText(),/7,200/);assert.match(await page.locator('body').innerText(),/自动转入部署者钱包/);
+assert.deepEqual(await page.locator('#primary-navigation a').allTextContents().then(items=>items.slice(-3)),['协议文档','审计报告','GitHub ↗']);
+await page.goto(base+'audit');await page.locator('[data-audit-body]').filter({hasText:'Slither'}).waitFor();assert.match(await page.locator('[data-audit-body]').innerText(),/独立人工审查/);assert.equal((await page.request.get(base+'reports/slither.json')).status(),200);
 await page.goto(base+'launch.html');await page.locator('#status').filter({hasText:'尚未完成部署'}).waitFor();assert.equal(await page.locator('button,input[type="checkbox"]').count(),0);
 for(const retired of ['deployment-artifact.json','protocol-abi.json','materials-abi.json','reward-abi.json'])assert.equal(fs.existsSync(path.join(root,retired)),false);
 await page.goto(base+'?demo=1#tasks');assert.equal(await page.locator('#v2-task-list .task-card').count(),100);

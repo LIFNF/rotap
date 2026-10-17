@@ -1,0 +1,32 @@
+{
+  "environment": "local-complete-deployment",
+  "mainnetDeployed": false,
+  "releaseId": "0xb14559509b853ea1159f3d823c2f5c2e811954c2123634572e2e7c07eec68fda",
+  "sourceHashes": {
+    "ROtapRuntime.sol": "0xab661fce6aa7d77d7358a9ae1d1e0bc743fed4154897a03e0c2c1bb9dab974cc",
+    "ROtapTransistors.sol": "0x35781194816b12474626d89eacf7c32df5ea567f6845f3417bb589f46b047b82",
+    "ROtapCircuits.sol": "0xda9401231c3e02c718ed60e424b90a4804babe845f10f38172cc24257cba603f",
+    "ROtapReferenceRuntime.sol": "0xfa0ad6b026c86a2ccd387ff4e560e0cfe31d43795e4f1abc7000749972dd701e",
+    "ROtapContinuousLedger.sol": "0xdafc1aeddb426492f96acc09b57dc6cc40b690d2313e0c53471e9fcf3124d34f",
+    "ROtapStakeBoost.sol": "0x4af38aa3c1761fb4986c231377990a404c53497ea284e93eb64f315973989f52",
+    "ROtapRewardStakeBoost.sol": "0x5604967a5fe4efe9edfcfe38d220601899a79dd368aacf960989ed6c5ac23dcf",
+    "ROtapBoost.sol": "0xbd8ea00471cd94c662455618d1b10954b8d6bc7a4f6eb80b2280dc49565ab92c",
+    "ROtapSamplingPolicy.sol": "0x494e9307690eb9e78325f4bd2b9f1fd3bf26495d246d0d1e921cf403ab0e6129",
+    "ROtapTaskRegistry.sol": "0xae1f3b80b4cda27dd94dbbfb68ed9c78f161f3900d6935551b4b45baf302a372",
+    "ROtapMining.sol": "0xac1eea7891e88f204e9105d18d41434a5debd767505374e659551a9b72497e02",
+    "ROtapMarkets.sol": "0x4057e92b7501f4420ecc38395fb5e069bded10fbec39b9d23e547c26f22770ac",
+    "ROtapAccounts.sol": "0xeb645ced5cb2acff84dbac10137d1cca63c156e667b4f8b6ec52152d52616f40",
+    "ROtapProcessorFactory.sol": "0x4b9afb04796f3ffeab3e88652890e0904dba96d6a5744cc9c4f636c06ad40bca"
+  },
+  "transactionCount": 239,
+  "previousExecutionGas": "919266764",
+  "currentExecutionGas": "485102873",
+  "reductionPercent": 47.229368884264375,
+  "scope": "100 reference circuits, 100 task roots, all protocol modules and finalization",
+  "changes": [
+    "Cache immutable circuit validation and geometry",
+    "Execute reference task cycles in one call",
+    "Preserve task roots, vectors and sampling counts"
+  ],
+  "realMainnetFees": "audit/full-deployment-budget.json"
+}

@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-17T07:57:53.216Z",
+  "status": "completed",
+  "kind": "automated",
+  "independentReview": false,
+  "scope": [
+    "14 份自有 Solidity 源文件与导入依赖；编译器 0.8.30+commit.73712a01.Emscripten.clang。",
+    "Slither 全部 102 个检测器；完整原始输出，不排除或压低严重性。",
+    "项目人工上下文仅覆盖 13 条 High 告警及资金/库存规则；其余 214 条原始告警仍待独立逐项确认。"
+  ],
+  "tools": [
+    {
+      "name": "Slither",
+      "version": "0.11.6",
+      "status": "completed",
+      "report": "reports/slither.json",
+      "officialUrl": "https://github.com/crytic/slither",
+      "summary": "执行 102 个检测器，产生 227 条原始告警：High 13、Medium 51、Low 71、Informational 90、Optimization 2。",
+      "readableReport": "reports/slither-report.md",
+      "triageReport": "reports/slither-review.json"
+    }
+  ],
+  "sourceHashes": {
+    "ROtapRuntime.sol": "0xab661fce6aa7d77d7358a9ae1d1e0bc743fed4154897a03e0c2c1bb9dab974cc",
+    "ROtapTransistors.sol": "0x35781194816b12474626d89eacf7c32df5ea567f6845f3417bb589f46b047b82",
+    "ROtapCircuits.sol": "0xda9401231c3e02c718ed60e424b90a4804babe845f10f38172cc24257cba603f",
+    "ROtapReferenceRuntime.sol": "0xfa0ad6b026c86a2ccd387ff4e560e0cfe31d43795e4f1abc7000749972dd701e",
+    "ROtapContinuousLedger.sol": "0xdafc1aeddb426492f96acc09b57dc6cc40b690d2313e0c53471e9fcf3124d34f",
+    "ROtapStakeBoost.sol": "0x4af38aa3c1761fb4986c231377990a404c53497ea284e93eb64f315973989f52",
+    "ROtapRewardStakeBoost.sol": "0x5604967a5fe4efe9edfcfe38d220601899a79dd368aacf960989ed6c5ac23dcf",
+    "ROtapBoost.sol": "0xbd8ea00471cd94c662455618d1b10954b8d6bc7a4f6eb80b2280dc49565ab92c",
+    "ROtapSamplingPolicy.sol": "0x494e9307690eb9e78325f4bd2b9f1fd3bf26495d246d0d1e921cf403ab0e6129",
+    "ROtapTaskRegistry.sol": "0xae1f3b80b4cda27dd94dbbfb68ed9c78f161f3900d6935551b4b45baf302a372",
+    "ROtapMining.sol": "0xac1eea7891e88f204e9105d18d41434a5debd767505374e659551a9b72497e02",
+    "ROtapMarkets.sol": "0x4057e92b7501f4420ecc38395fb5e069bded10fbec39b9d23e547c26f22770ac",
+    "ROtapAccounts.sol": "0xeb645ced5cb2acff84dbac10137d1cca63c156e667b4f8b6ec52152d52616f40",
+    "ROtapProcessorFactory.sol": "0x4b9afb04796f3ffeab3e88652890e0904dba96d6a5744cc9c4f636c06ad40bca"
+  },
+  "rawFindingCount": 227,
+  "severityCounts": {
+    "High": 13,
+    "Medium": 51,
+    "Low": 71,
+    "Informational": 90,
+    "Optimization": 2
+  },
+  "limitations": [
+    "扫描完成不代表安全审计通过；尚未完成独立人工合约与经济机制审查。",
+    "区块哈希抽样存在重新尝试、样本重复及区块生产者影响风险，尚未消除。",
+    "214 条非 High 原始告警尚未逐项独立确认或排除。",
+    "报告仅对应列出的源码校验值，不自动覆盖其他版本或主网部署。",
+    "尚未建立 ROTAP/ETH 池；未来手动添加流动性不受 Mint 合约强制执行，市场退出依赖实际流动性。"
+  ],
+  "findings": [
+    {
+      "id": "8820989a75fdc768d014dca05a928b24af97a5ac282d231c9cfb01613c6446bd",
+      "title": "NFT 市场 transferFrom 参数",
+      "severity": "High",
+      "detector": "arbitrary-send-erc20",
+      "status": "项目已提供上下文，待独立复核",
+      "description": "Slither 将 NFT 市场的 ERC-721 transferFrom 识别为 arbitrary-send-erc20。交易使用存储中的挂牌卖家和代币编号。",
+      "resolution": "ROtapCircuitMarket.buy 检查挂牌有效、预期价格、精确付款和当前 NFT 所有权；挂牌先验证卖方身份及授权，成交前取消挂牌状态。此处是 ERC-721 转移，未据此认定为可任意转走 ERC-20。仍需独立审查交易与回调组合。",
+      "evidence": [
+        "contracts/ROtapMarkets.sol:62",
+        "contracts/ROtapMarkets.sol:65",
+        "scripts/test-markets.mjs",
+        "audit/markets-local.json"
+      ]
+    },
+    {
+      "id": "74dd11c4bc731ab28d3c36e16790946932e17a18e495481d228efc9705974b30",
+      "title": "质押退出的收款人",
+      "severity": "High",
+      "detector": "arbitrary-send-eth",
+      "status": "项目已提供上下文，待独立复核",
+      "description": "withdraw(address) 允许第三方触发已到期的退出，因此参数是外部提供的地址。",
+      "resolution": "金额只取自 unstaking[account]，支付给同一个 account；退出记录先删除，函数使用 nonReentrant。触发者不能把其他账户的本金改付给自己。七天队列、重复退出重置和本金守恒已有项目测试，尚未由独立审计方复核。",
+      "evidence": [
+        "contracts/ROtapStakeBoost.sol:44",
+        "scripts/test-stake-boost.mjs",
+        "scripts/test-fixed-release-security.mjs",
+        "audit/fixed-release-security-local.json"
+      ]
+    },
+    {
+      "id": "8bee25fac96b7e437fb035960e20081776758fe10ec3e349a39f45fc4df9f6da",
+      "title": "账户执行费用转款",
+      "severity": "High",
+      "detector": "arbitrary-send-eth",
+      "status": "项目已提供上下文，待独立复核",
+      "description": "电路账户向 treasury 支付执行费用，被检测为任意 ETH 发送。",
+      "resolution": "treasury、EXEC_FEE、BATCH_FEE 均为构造时固定值。execute / executeBatch 先确认当前 NFT 持有人、付费开通状态及未挂牌状态，并使用 nonReentrant；多付部分仅退回调用者。费用收款权限公开记录，不属于被隐藏的提款权限。",
+      "evidence": [
+        "contracts/ROtapAccounts.sol:39",
+        "contracts/ROtapAccounts.sol:47",
+        "contracts/ROtapAccounts.sol:50",
+        "audit/accounts-sites-local.json"
+      ]
+    },
+    {
+      "id": "a3d3b6412cc5e0b8c53d3fd82116bd278c4bac12ac97bb7689948b142ac33a16",
+      "title": "开通账户费用转款",
+      "severity": "High",
+      "detector": "arbitrary-send-eth",
+      "status": "项目已提供上下文，待独立复核",
+      "description": "账户开通合约向 treasury 转账，被检测为任意 ETH 发送。",
+      "resolution": "收款 treasury 与 FEE 为不可变值；只处理已注册处理器，按开通账户记录防止重复收费，多付部分退回调用者。open 在外部调用前设置 entered=1，并在结束时复位；失败整体回滚。仍需独立复核外部调用和锁的覆盖范围。",
+      "evidence": [
+        "contracts/ROtapAccounts.sol:60",
+        "contracts/ROtapAccounts.sol:68",
+        "audit/accounts-sites-local.json"
+      ]
+    },
+    {
+      "id": "c91f21186414dcf91c10571b4e2e940c4f83e57fe00e2c9f8188ce175926c165",
+      "title": "NFT 账户自主执行",
+      "severity": "High",
+      "detector": "arbitrary-send-eth",
+      "status": "项目已提供上下文，待独立复核",
+      "description": "callTarget 可向调用者指定目标发送账户资产，这是 NFT 账户的执行功能。",
+      "resolution": "callTarget 为 private，只由经 authorize 检查并受 nonReentrant 保护的 execute / executeBatch 调用；当前 NFT 持有人可以执行，旧持有人及挂牌中的账户不能执行。用户自行调用恶意目标的风险仍由账户执行行为承担。",
+      "evidence": [
+        "contracts/ROtapAccounts.sol:47",
+        "contracts/ROtapAccounts.sol:51",
+        "audit/accounts-sites-local.json"
+      ]
+    },
+    {
+      "id": "d2547f35cc1d179d8e12b1226da7cdde51ecfcb0a6d9ea93558b80b7959d6644",
+      "title": "OpenZeppelin 非 payable 检查",
+      "severity": "High",
+      "detector": "msg-value-in-nonpayable",
+      "status": "上游依赖告警，待独立复核",
+      "description": "检测器指出依赖 ERC1967Utils._checkNonPayable 读取 msg.value 的可达路径问题。",
+      "resolution": "该项属于 OpenZeppelin 5.4.0 的代理实现依赖。未修改依赖代码，也未屏蔽告警；代理初始化、升级和最终封存路径需要与编译后的实际可达路径一起由独立审查方核对。",
+      "evidence": [
+        "package-lock.json",
+        "scripts/test-fixed-release-security.mjs",
+        "scripts/test-processor-factory.mjs"
+      ]
+    },
+    {
+      "id": "41c607c27972f86ec153b43f41955aac9ddc94d6bf7137e1b90ef5ab7160296b",
+      "title": "ROTAP 质押的余额前后检查",
+      "severity": "High",
+      "detector": "reentrancy-balance",
+      "status": "项目已提供上下文，待独立复核",
+      "description": "stakeRewardInternal 在 transferFrom 前记录余额，之后用余额差确认收到精确数量，检测器提示回调可能使前值失效。",
+      "resolution": "两个外部入口 stakeReward / stakeRewardWithKeys 均使用继承的 nonReentrant；生产 rewardToken 指向固定的 ROtapContinuousReward，该代币没有转账回调或手续费。精确余额差主动拒绝非标准到账数量。该判断依赖正确的生产部署绑定，不能推广到任意 ERC-20。",
+      "evidence": [
+        "contracts/ROtapRewardStakeBoost.sol:26",
+        "contracts/ROtapRewardStakeBoost.sol:36",
+        "contracts/ROtapRewardStakeBoost.sol:38",
+        "contracts/ROtapContinuousLedger.sol:16",
+        "scripts/test-reward-stake.mjs"
+      ]
+    },
+    {
+      "id": "94b585786cd6effbd554a873b3f60289d7174fe994f0926102d27bbf6053617b",
+      "title": "账户开通的重入告警",
+      "severity": "High",
+      "detector": "reentrancy-eth",
+      "status": "项目已提供上下文，待独立复核",
+      "description": "检测器指出 open 外部调用之后仍写入 entered，给出 reentrancy-eth 告警。",
+      "resolution": "当前实现使用显式 entered 锁：外部调用前要求 entered==0 并设为 1，结束时改回 0。重入 open 会在首个检查失败；支付记录在 ETH 转款前设置，异常回滚。该项未被删除或标为独立审计通过，仍需复核所有交互路径。",
+      "evidence": [
+        "contracts/ROtapAccounts.sol:68",
+        "scripts/test-accounts-sites.mjs",
+        "audit/accounts-sites-local.json"
+      ]
+    },
+    {
+      "id": "3e1331cd78d364d3391b4703516c50a4cb515c8c19f1534b49ba3a1f8e839c75",
+      "title": "默认单钱包 Mint 上限",
+      "severity": "High",
+      "detector": "uninitialized-state",
+      "status": "项目已提供上下文，待独立复核",
+      "description": "walletCap 采用 Solidity 默认零值，未显式赋值。",
+      "resolution": "零值表示不设置额外的单钱包限额；所有钱包仍受共享的一百万个生命周期发行上限和精确付费检查约束。生产发行路径没有免费 Mint 白名单及改价、扩容入口；销毁不会减少 minted。保留本条原始告警供独立复核。",
+      "evidence": [
+        "contracts/ROtapTransistors.sol:17",
+        "contracts/ROtapTransistors.sol:49",
+        "scripts/test-transistor-sale.mjs",
+        "audit/fixed-release-security-local.json"
+      ]
+    },
+    {
+      "id": "933e7b055033dcba8fb0286a86bb424570a4d3751d9f2a52ad392adaf1c4bc86",
+      "title": "默认元件分类型上限",
+      "severity": "High",
+      "detector": "uninitialized-state",
+      "status": "项目已提供上下文，待独立复核",
+      "description": "typeCap 映射采用默认零值，未为 NAND / LATCH 分别赋值。",
+      "resolution": "零值表示无额外的分类型配额；NAND 和 LATCH 共用同一个 supplyCap，累计 minted 不因销毁而下降。默认值并非免费额度。生产参数与来源会在部署核验中再次检查。",
+      "evidence": [
+        "contracts/ROtapTransistors.sol:18",
+        "contracts/ROtapTransistors.sol:49",
+        "scripts/test-transistor-sale.mjs"
+      ]
+    },
+    {
+      "id": "c054e8af557a5ca7e0b58a28e5c3998375d4d2b24a80d4aa5fb1567ed622dff1",
+      "title": "反例集合的默认空值",
+      "severity": "High",
+      "detector": "uninitialized-state",
+      "status": "项目已提供上下文，待独立复核",
+      "description": "counterexamples 是按任务与处理器分组的动态集合，检测器提示未初始化。",
+      "resolution": "初始空数组是预期状态；registerCounterexample 校验后向对应数组加入反例，计数和检查函数读取该集合。此说明仅解释默认存储语义，反例覆盖充分性仍需独立审查。",
+      "evidence": [
+        "contracts/ROtapMining.sol:41",
+        "contracts/ROtapMining.sol:93",
+        "contracts/ROtapMining.sol:144",
+        "scripts/test-mining-reference-governance.mjs"
+      ]
+    },
+    {
+      "id": "0c2187792c648a5af02613cb8270f9c10328016b4749c24acb5c9f2ceb1c2ec8",
+      "title": "区块哈希抽样的残余风险",
+      "severity": "High",
+      "detector": "weak-prng",
+      "status": "未解决的机制风险，待独立复核",
+      "description": "样本索引由 anchorBlock 的 blockhash、处理器地址、NFT 编号和样本序号计算。区块哈希不是不可操纵的随机信标。矿工可选择是否使用一次抽样并重新 arm，区块生产者也可能影响锚点；重复索引会减少有效样本数。有限抽样可能漏掉错误电路。",
+      "resolution": "尚未消除，必须独立复核和评估经济攻击成本、重复尝试及抽样参数。当前另有任务 Merkle 证明、已登记反例检查和反例挑战/踢出流程；这些约束不能证明抽样无法被博弈，也不构成全向量正确性证明。",
+      "evidence": [
+        "contracts/ROtapSamplingPolicy.sol:25",
+        "contracts/ROtapSamplingPolicy.sol:29",
+        "contracts/ROtapMining.sol:98",
+        "contracts/ROtapMining.sol:106",
+        "contracts/ROtapMining.sol:145"
+      ]
+    },
+    {
+      "id": "b889218fa6aa59724970aa96558835506e1a383e0d61410bece868b9a793a2ef",
+      "title": "加成周期取余的随机数告警",
+      "severity": "High",
+      "detector": "weak-prng",
+      "status": "项目上下文：周期计算，待独立复核",
+      "description": "Slither 将 burnBpsNow 中 elapsed % period 标为 weak-prng。",
+      "resolution": "此表达式只计算当前周期内经过的时间，以判断销毁加成窗口；没有将结果用作抽样、抽奖或随机数。本条与区块哈希抽样告警分别记录，不能据此消除后者的实际风险。",
+      "evidence": [
+        "contracts/ROtapBoost.sol:25",
+        "scripts/test-burn-boost.mjs"
+      ]
+    },
+    {
+      "id": "fixed-mining-inventory",
+      "title": "两千万枚固定库存及挖矿释放",
+      "severity": "项目核对事项",
+      "status": "本地专项测试已完成，待独立复核",
+      "description": "代币构造时一次发行 20,000,000 ROTAP，八位小数，全部记入挖矿账本地址；部署者和普通钱包初始分配均为零。总发行量与已领取挖矿量必须分别展示。",
+      "resolution": "代币无后续 mint 函数；账本没有库存提款、approve 或管理员清扫入口，只有已记账的挖矿权益可通过 claim 转出。生产 controller 必须绑定最终封存的挖矿合约；本地 EOA 控制器测试仅是会计夹具。",
+      "evidence": [
+        "contracts/ROtapContinuousLedger.sol:16",
+        "scripts/test-mining-inventory.mjs",
+        "audit/mining-inventory-local.json"
+      ]
+    },
+    {
+      "id": "daily-release-schedule",
+      "title": "每日 7,200 枚是初始排放预算",
+      "severity": "项目核对事项",
+      "status": "本地专项测试已完成，待独立复核",
+      "description": "初始每日排放预算为 7,200 ROTAP，99% 分配至验证池、1% 分配至未验证池，并按有效权重分配；每 126,000,000 秒减半。它不是每个矿工的产量，也不是收益保证。",
+      "resolution": "采用累计向下取整之差，避免检查点频率改变总排放；空池预算被放弃，不返还未来预算。被放弃份额和舍入余量可能永久留在账本内；累计排放预算封顶两千万枚，实际领取量可能低于总库存。",
+      "evidence": [
+        "contracts/ROtapContinuousLedger.sol:5",
+        "contracts/ROtapContinuousLedger.sol:49",
+        "scripts/test-mining-inventory.mjs"
+      ]
+    },
+    {
+      "id": "automatic-mint-payment",
+      "title": "Mint ETH 自动进入部署者钱包",
+      "severity": "资金流说明",
+      "status": "本地资金流测试已完成，待独立复核",
+      "description": "Mint 成功交易中，ETH 由元件合约即时转给固定 creator / protocolWallet。生产参数将两者设为公开部署者地址 0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A。此项没有另设 Mint 收入提款函数。",
+      "resolution": "收款失败会使整笔 Mint 回滚，防重入锁覆盖铸造、接收回调和转款。部署者获得 ETH 后的用途不受合约约束；未来手动添加流动性是运营计划，不能表述为已经建池或由合约强制执行。市场费用结算和用户质押退出仍是各自独立的资金流。",
+      "evidence": [
+        "contracts/ROtapTransistors.sol:49",
+        "scripts/test-transistor-sale.mjs",
+        "scripts/test-full-protocol-deployment.mjs"
+      ]
+    },
+    {
+      "id": "no-live-pool",
+      "title": "流动性与退出条件",
+      "severity": "经济机制说明",
+      "status": "尚未建立交易池",
+      "description": "本版本不创建 ROTAP/ETH 池，也不提供协议赎回、保本或按固定价格兑换。质押退出只返还用户已经拥有并存入的相应资产。",
+      "resolution": "未来建池所需 ROTAP 必须先由正常挖矿释放后取得，不能提取账本中的未挖库存。市场交易退出依赖届时实际存在的池子、深度和交易对手；代币数量增长不代表投资回报。",
+      "evidence": [
+        "contracts/ROtapContinuousLedger.sol",
+        "contracts/ROtapRewardStakeBoost.sol"
+      ]
+    }
+  ]
+}

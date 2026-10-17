@@ -17,6 +17,7 @@ fs.mkdirSync('dist/abi',{recursive:true});for(const file of fs.readdirSync('dist
 const candidateManifest=JSON.parse(fs.readFileSync('candidate-v2/manifest.json','utf8'));
 for(const name of Object.keys(candidateManifest.contracts)){const artifact=JSON.parse(fs.readFileSync('candidate-v2/'+name+'.json','utf8'));fs.writeFileSync('dist/abi/'+name+'.json',JSON.stringify(artifact.abi));}
 fs.copyFileSync('src/protocol.css','dist/protocol.css');
+fs.mkdirSync('dist/reports',{recursive:true});if(fs.existsSync('audit/public'))fs.cpSync('audit/public','dist/reports',{recursive:true});fs.writeFileSync('dist/audit-summary.json',fs.existsSync('audit/audit-summary.json')?fs.readFileSync('audit/audit-summary.json') : JSON.stringify({status:'pending',kind:'automated',tools:[],limitations:['自动化扫描尚未完成。','独立人工审查尚未完成。']}));
 const index=fs.readFileSync('dist/index.html','utf8');if(!index.includes('/protocol.css'))fs.writeFileSync('dist/index.html',index.replace('</head>','<link rel="stylesheet" href="/protocol.css"></head>'));
 const vectorBank=JSON.parse(fs.readFileSync('config/task-bank.json','utf8'));
 fs.mkdirSync('dist/vectors',{recursive:true});

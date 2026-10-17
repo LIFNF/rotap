@@ -14,7 +14,7 @@ try{
  const registry=await deploy('ROtapTaskRegistry.sol','ROtapTaskRegistry');const initial=vectors.slice(0,3);
  await(await registry.publish(task.name,await reference.getAddress(),1,1,256,task.vectorsRoot,initial.map(v=>v.index),initial.map(v=>v.input),initial.map(v=>v.expectedOut),initial.map(v=>v.proof))).wait();
  const policy=await deploy('ROtapSamplingPolicy.sol','ROtapSamplingPolicy',[await registry.getAddress()]);
- const ledgerFactory=await deploy('ROtapContinuousLedger.sol','ROtapLedgerFactory');const mining=await deploy('ROtapMining.sol','ROtapMining',[await registry.getAddress(),await policy.getAddress(),(await provider.getBlock('latest')).timestamp-1800,126000000,8333333,await ledgerFactory.getAddress()]);
+ const ledgerFactory=await deploy('ROtapContinuousLedger.sol','ROtapLedgerFactory');const mining=await deploy('ROtapMining.sol','ROtapMining',[await registry.getAddress(),await policy.getAddress(),(await provider.getBlock('latest')).timestamp-1800,126000000,720000000000,await ledgerFactory.getAddress()]);
  const address=await genesis.getAddress();await(await mining.setProcessor(address,6)).wait();await(await genesis.configureMining(await mining.getAddress())).wait();
  const program='0x00000002000002',salt=id('real-policy');const commitment=await mining.designCommitment(ua,address,keccak256(program),salt);await(await mining.connect(user).commitDesign(address,commitment)).wait();
  await(await materials.mint(0,1,{value:17})).wait();await(await genesis.connect(user).tapeout(program,1,1,{value:3})).wait();
@@ -24,9 +24,11 @@ try{
  assert.equal(await mining.bestSlot(1,address),key);
  const ledger=new Contract(await mining.ledger(),output.contracts['ROtapContinuousLedger.sol'].ROtapContinuousLedger.abi,owner),token=new Contract(await ledger.token(),output.contracts['ROtapContinuousLedger.sol'].ROtapContinuousReward.abi,provider);
  assert.equal((await ledger.positions(key)).verified,7800n);
+ const emissionFrom=await ledger.lastUpdate(),emissionGenesis=await ledger.startTime();
  await rpc.request({method:'evm_increaseTime',params:[100]});await rpc.request({method:'evm_mine',params:[]});await(await mining.connect(user).claimMany([key])).wait();
- const expectedReward=(8333333n*100n*99n/100n)*(10n**27n)/7800n*7800n/(10n**27n);
- assert.equal(await token.balanceOf(ua),expectedReward);assert.equal(await materials.owed(oa),17n);assert.equal(await genesis.owedFees(),3n);
+ const elapsedEmission=(await ledger.lastUpdate()-emissionGenesis)*720000000000n/86400n-(emissionFrom-emissionGenesis)*720000000000n/86400n;
+ const expectedReward=(elapsedEmission-elapsedEmission/100n)*(10n**27n)/7800n*7800n/(10n**27n);
+ assert.equal(await token.balanceOf(ua),expectedReward);assert.equal(await provider.getBalance(materials.target),0n);assert.equal(await genesis.owedFees(),3n);
  const boost=await deploy('ROtapBoost.sol','ROtapBoost',[await mining.getAddress(),[50,150,250,400,500],await token.getAddress(),oa,['2.5','5','15','25','50'].map(parseEther)]);await(await mining.setBoost(await boost.getAddress())).wait();
  await rpc.request({method:'evm_increaseTime',params:[3000]});await rpc.request({method:'evm_mine',params:[]});await(await mining.connect(user).claimMany([key])).wait();
  const stakedAmount=200n*100000000n;assert.ok(await token.balanceOf(ua)>=stakedAmount);

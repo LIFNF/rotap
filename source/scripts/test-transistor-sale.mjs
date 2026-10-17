@@ -20,11 +20,11 @@ try{
  await reject(()=>sale.connect(buyer).mint(0,0,{value:7}));
  await(await sale.connect(buyer).mint(0,2,{value:27})).wait();
  await(await sale.connect(buyer).mint(1,3,{value:37})).wait();
- assert.equal(await sale.minted(),5n);assert.equal(await sale.balanceOf(buyerAddress,0),2n);assert.equal(await sale.owed(address),64n);
+ assert.equal(await sale.minted(),5n);assert.equal(await sale.balanceOf(buyerAddress,0),2n);assert.equal(await provider.getBalance(sale.target),0n);
  await reject(()=>sale.connect(other).burnFrom(buyerAddress,0,1));
  await(await sale.connect(circuit).burnFrom(buyerAddress,0,1)).wait();
  assert.equal(await sale.minted(),5n);assert.equal(await sale.balanceOf(buyerAddress,0),1n);
- await(await sale.withdraw()).wait();assert.equal(await sale.owed(address),0n);assert.equal(await provider.getBalance(await sale.getAddress()),0n);
+ assert.equal(sale.interface.fragments.some(x=>x.name==='withdraw'),false);assert.equal(await provider.getBalance(await sale.getAddress()),0n);
  const otherAddress=await other.getAddress();
  await reject(()=>sale.connect(other).safeTransferFrom(buyerAddress,otherAddress,0,1,'0x'));
  await(await sale.connect(buyer).mint(1,999995,{value:9999957})).wait();

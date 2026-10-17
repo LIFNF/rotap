@@ -2,7 +2,7 @@
   "environment": "local-qa",
   "chainId": 4663,
   "owner": "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A",
-  "releaseId": "0x486663fa041f2ddf5e688dcc1f50c96dbe76204e409e68a9436aa0587d50ab57",
+  "releaseId": "0xb14559509b853ea1159f3d823c2f5c2e811954c2123634572e2e7c07eec68fda",
   "addresses": {
     "factoryAddress": "0xaECF32e57d249ADD5941bEDb7231E786be8E3c4e",
     "transistorsAddress": "0x5ADdFc3C30C2BB19790eC6a1c3D24365E38FAf68",
@@ -26,17 +26,17 @@
     "siteRegistryAddress": "0x5b19f82E2363a8B9A9058556d2Ac739927c15029"
   },
   "sourceHashes": {
-    "ROtapRuntime.sol": "0xd37f109bbd29c3a6dfd02c8387f561a3af20181724394b817687f6f69f7c4a60",
-    "ROtapTransistors.sol": "0x382d6de8e65ea3c33cadbdf3447081d68f8f5216f18f7eba4a43be9ab90282d8",
-    "ROtapCircuits.sol": "0xdbbf87212692f9e56154df1fece29a5e97f15df66d75ec8f06b6f7a4e1008e0e",
+    "ROtapRuntime.sol": "0xab661fce6aa7d77d7358a9ae1d1e0bc743fed4154897a03e0c2c1bb9dab974cc",
+    "ROtapTransistors.sol": "0x35781194816b12474626d89eacf7c32df5ea567f6845f3417bb589f46b047b82",
+    "ROtapCircuits.sol": "0xda9401231c3e02c718ed60e424b90a4804babe845f10f38172cc24257cba603f",
     "ROtapReferenceRuntime.sol": "0xfa0ad6b026c86a2ccd387ff4e560e0cfe31d43795e4f1abc7000749972dd701e",
-    "ROtapContinuousLedger.sol": "0x0b86bea92984a22419af877f4b4454131cf4ec3862514cdbafe7e81a4d59d235",
+    "ROtapContinuousLedger.sol": "0xdafc1aeddb426492f96acc09b57dc6cc40b690d2313e0c53471e9fcf3124d34f",
     "ROtapStakeBoost.sol": "0x4af38aa3c1761fb4986c231377990a404c53497ea284e93eb64f315973989f52",
     "ROtapRewardStakeBoost.sol": "0x5604967a5fe4efe9edfcfe38d220601899a79dd368aacf960989ed6c5ac23dcf",
     "ROtapBoost.sol": "0xbd8ea00471cd94c662455618d1b10954b8d6bc7a4f6eb80b2280dc49565ab92c",
     "ROtapSamplingPolicy.sol": "0x494e9307690eb9e78325f4bd2b9f1fd3bf26495d246d0d1e921cf403ab0e6129",
-    "ROtapTaskRegistry.sol": "0x05f51a96778939b17f3efa6a8175a86db820cf1af3b1ff83968b03450bfa72b5",
-    "ROtapMining.sol": "0xbce698f102873f469708da5b3b0d3cd705ab6ebd8a0115bba35d2d6cdbbd446c",
+    "ROtapTaskRegistry.sol": "0xae1f3b80b4cda27dd94dbbfb68ed9c78f161f3900d6935551b4b45baf302a372",
+    "ROtapMining.sol": "0xac1eea7891e88f204e9105d18d41434a5debd767505374e659551a9b72497e02",
     "ROtapMarkets.sol": "0x4057e92b7501f4420ecc38395fb5e069bded10fbec39b9d23e547c26f22770ac",
     "ROtapAccounts.sol": "0xeb645ced5cb2acff84dbac10137d1cca63c156e667b4f8b6ec52152d52616f40",
     "ROtapProcessorFactory.sol": "0x4b9afb04796f3ffeab3e88652890e0904dba96d6a5744cc9c4f636c06ad40bca"
@@ -143,27 +143,27 @@
     "99": "99",
     "100": "100"
   },
-  "startTime": 1792220629,
+  "startTime": 1792223099,
   "deploymentBlock": 3,
   "transactionCount": 239,
-  "totalGasUsed": "919266764",
-  "totalExecutionFeesWei": "11074621853612469",
-  "journalPath": "C:\\Users\\田\\.codex\\.chatgpt-projects\\g-p-6ad200d54f208191b652d5332861cd05\\rotap\\.test-chain\\full-protocol-1792220628900\\deployment-journal.json",
+  "totalGasUsed": "485102873",
+  "totalExecutionFeesWei": "10933393298660376",
+  "journalPath": "C:\\Users\\田\\.codex\\.chatgpt-projects\\g-p-6ad200d54f208191b652d5332861cd05\\rotap\\.test-chain\\full-protocol-1792223099014\\deployment-journal.json",
   "verification": {
     "codeHashes": {
-      "0xaECF32e57d249ADD5941bEDb7231E786be8E3c4e": "0xfeef4ba1565dd804bd8ac10d5804ae92a570353b6ae7ca61500f839ef7a75466",
+      "0xaECF32e57d249ADD5941bEDb7231E786be8E3c4e": "0x034e7a5eb60fb554be3a567a4fca3a823a5c98bbbeaf8b4ee9cd01553ca9da3a",
       "0x5ADdFc3C30C2BB19790eC6a1c3D24365E38FAf68": "0x9145215046d038399d08099de0d338af1d3a2dd9c11c1dd36e0c98809c872b11",
       "0xa822ebBA7b0375b98FdceD775a461AC9EB31521C": "0xbd4e1bc9d9b0f5e4c12c0fe26eb8af327fcf7f89f81b73b5d2b0aa97fe71452c",
-      "0x8530c2718Bb7736ec2057276bA4A0B1c17435eE9": "0x82bf4affd67e3c29080ab2dfa69382bc5492d32aafe691dadc0f643f079284ad",
-      "0xca0FfeD25b99D97E2c3f3585582575309728dA63": "0x2ae1099e1031c5b295d9768023c9628721160b50862e7a90a61574776baad140",
-      "0x9f049733811908D05e129f5F6f6486f9e9756C62": "0x2060bc884457771fdbe05ac5bb5210389741750d62a5edcda774c7dc09bfe435",
-      "0xB10d3FB345749E290C7E2E80234e5dbE102a5642": "0x6d39bc06ade481a391866da216751e4b92240a3473340f2b7f68a64233af7c1b",
-      "0x69CBd55a2BE111d496EBEb80deEeeCf529D5dcF4": "0xfeef4ba1565dd804bd8ac10d5804ae92a570353b6ae7ca61500f839ef7a75466",
-      "0x2eE0456436C324500D42F9FF2385a821bc56B081": "0xdb8af25d4a6aedcbdca4e3f5fa1579bb5081acbc9fade4a524fd15bb31f3ad6c",
-      "0x271DA6b92C78640F29594Ebfed99C9f7c1AD0Ec2": "0x93912340aaa53f51f3833edace5e100fa3bae2a36ee7bf78c355d493eced0e29",
+      "0x8530c2718Bb7736ec2057276bA4A0B1c17435eE9": "0x60b0d8bd1ad50ed8acac048599cb7709468ec7d53015acf757a981b4c364a2fc",
+      "0xca0FfeD25b99D97E2c3f3585582575309728dA63": "0xcae3883a9d7f7184e1d4599aaabb0e3f9d2bc493eb6aef997af37f14355c4c43",
+      "0x9f049733811908D05e129f5F6f6486f9e9756C62": "0xfd30fb92c11010579d00c983937124f434203eac43cce694a26461614156d73a",
+      "0xB10d3FB345749E290C7E2E80234e5dbE102a5642": "0x3d853f2fcb5afc080a0b87fa2ef94cf57d8838db725e9c1d60716235f34c4528",
+      "0x69CBd55a2BE111d496EBEb80deEeeCf529D5dcF4": "0x034e7a5eb60fb554be3a567a4fca3a823a5c98bbbeaf8b4ee9cd01553ca9da3a",
+      "0x2eE0456436C324500D42F9FF2385a821bc56B081": "0xe5df3d3b6f9a6e254bea37fd4632651297f01fca991753546df31e59b21a1065",
+      "0x271DA6b92C78640F29594Ebfed99C9f7c1AD0Ec2": "0xc338f65e192e4162b8cac26a66f1028c2bb40bab8e68b69036ec8157aa254920",
       "0xE8aeB5AC19A187038a46671f467C295AB6d0653B": "0x5f3f76b4cfd8250b87819766dbdae98834c85aed33d2a1aab7daaea5b1c073d2",
-      "0xd074eb7A98b4a8B4754fFDDD6E1eF81BC0004275": "0xfeef4ba1565dd804bd8ac10d5804ae92a570353b6ae7ca61500f839ef7a75466",
-      "0x6cf90504601B085B59E37fF1c14313C7474A5b35": "0xfeef4ba1565dd804bd8ac10d5804ae92a570353b6ae7ca61500f839ef7a75466",
+      "0xd074eb7A98b4a8B4754fFDDD6E1eF81BC0004275": "0x034e7a5eb60fb554be3a567a4fca3a823a5c98bbbeaf8b4ee9cd01553ca9da3a",
+      "0x6cf90504601B085B59E37fF1c14313C7474A5b35": "0x034e7a5eb60fb554be3a567a4fca3a823a5c98bbbeaf8b4ee9cd01553ca9da3a",
       "0x000000006551c19487814612e58fe06813775758": "0xda1d5b06e579f9e42e59b00fbc22939896ecb38dc8830d40de0a2508fecd6735",
       "0xd622B39b85A6061BE3d8c224e27d6E8330073A27": "0x34d059e52caa39f32831f4b14ce0bba3f5ddb7e288d63a873759d97cd9b7d7ce",
       "0x71454c822eFe087765397cEd1677588F65D0f452": "0xb96bcf24ec02c88ccd2c782a1c73001515bbbe638b8d66a5d50ea88d13c67045",
@@ -171,10 +171,10 @@
       "0x8D4742D4CF4d618E82D044bdD73787Ad5CFF161f": "0xbc232c4609e67492a9aea3733b6defd0c303620a398cfe84395b08113d062a92",
       "0x9370F9b1a0B27020a99f74aA81c6a0654d896507": "0x71ccc3fbeae571e40807ccfe2e491b9333061d984667c15d4cc4f35a15f8b4a5",
       "0x5b19f82E2363a8B9A9058556d2Ac739927c15029": "0x5e07232a83e6d13b53b21ef1de8f2b7f1dfc3bf31f0d28c4420c350b65d3eac0",
-      "0xB2D36C141515f87912DfDFeC5feC889EA6d63253": "0x5fd2dd588d9a28bcbb7205180945a09aacd1764d9ab8c3725359f3b437af4124",
-      "0x3276005878e1012e83ff1d87697b8656EBFaa1EF": "0x82bf4affd67e3c29080ab2dfa69382bc5492d32aafe691dadc0f643f079284ad",
-      "0xA0EEB23BF1d99c2E1507Cdb785Ee8f571F548bD6": "0xfc3b688afb55514696e5ec6d6f3141fe90dbdab45681ca1f38c6b8448552d67a",
-      "0xeE928D1ea83Fa66f4B5F042F88398A39FB6f115F": "0x39351d3c178ca0b1c1c0128aad3273a445c28bc50c800ea16e7a399fc0a71cde",
+      "0xB2D36C141515f87912DfDFeC5feC889EA6d63253": "0xa22d95d0dab9caf0df3b9695acade950e4202e8bc2a9c4b3d44680709bd98c04",
+      "0x3276005878e1012e83ff1d87697b8656EBFaa1EF": "0x60b0d8bd1ad50ed8acac048599cb7709468ec7d53015acf757a981b4c364a2fc",
+      "0xA0EEB23BF1d99c2E1507Cdb785Ee8f571F548bD6": "0x9f8612c416bc85009d4adb1a86af3ff63a153ecd68ee55407457e404fe2726c6",
+      "0xeE928D1ea83Fa66f4B5F042F88398A39FB6f115F": "0x81ab8ddce59efc95a7731d9cafe55d6638a49c3ea1ac50a5b69405a3b036d27f",
       "0x2fb3E43fBe02c97F0907bB66b6ba75A4f73D1631": "0x6022951107cc0b3b91279b15289f3a766ca1d42cae39020604b4ae2f94cf7604",
       "0x48bF3E67BCE119A391a014e56816B40f87277360": "0xa4cb42c9bfe7b62d59f409deeca5867963d74bff8de33879bee3d30def56ff56",
       "0x640CB8EB163e80124D3c4548369303189AA9Ba85": "0x15e10d4d6f51db96f67240d0eb1c8def42881916e0716f00af24d252b6e312a8",
@@ -182,7 +182,7 @@
     },
     "verified": true,
     "environment": "local-qa",
-    "releaseId": "0x486663fa041f2ddf5e688dcc1f50c96dbe76204e409e68a9436aa0587d50ab57",
+    "releaseId": "0xb14559509b853ea1159f3d823c2f5c2e811954c2123634572e2e7c07eec68fda",
     "contractRuntimesMatched": 23,
     "referenceTasksMatched": 100,
     "recipient": "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A",
@@ -190,21 +190,21 @@
     "allRecipientsAndAssetMappingsVerified": true,
     "mainnet": false
   },
-  "dbPath": ".test-chain/full-protocol-1792220628900",
+  "dbPath": ".test-chain/full-protocol-1792223099014",
   "canonicalRegistryInstalledOnlyInLocalFixture": true,
   "all100TasksPublishedAndVerified": true,
-  "paid100MintAndTreasuryWithdrawalVerified": true,
+  "paid100MintAndAutomaticForwardVerified": true,
   "uniformMintPricingVerified": true,
   "mainnetDeployed": false,
-  "maxTransactionGas": 13230916,
+  "maxTransactionGas": 6468829,
   "transactions": [
     {
       "label": "transistor-implementation",
-      "gasUsed": "1990986"
+      "gasUsed": "2002560"
     },
     {
       "label": "circuit-implementation",
-      "gasUsed": "4234831"
+      "gasUsed": "4394261"
     },
     {
       "label": "factory-implementation",
@@ -220,7 +220,7 @@
     },
     {
       "label": "genesis-created",
-      "gasUsed": "825483"
+      "gasUsed": "825497"
     },
     {
       "label": "factory-final-create-fee",
@@ -232,7 +232,7 @@
     },
     {
       "label": "task-registry",
-      "gasUsed": "2184202"
+      "gasUsed": "2216588"
     },
     {
       "label": "sampling-policy",
@@ -240,827 +240,827 @@
     },
     {
       "label": "reference-benchmark",
-      "gasUsed": "6298775"
+      "gasUsed": "6468829"
     },
     {
       "label": "reference-materials-nand",
-      "gasUsed": "133497"
+      "gasUsed": "133158"
     },
     {
       "label": "reference-materials-latch",
-      "gasUsed": "99309"
+      "gasUsed": "98970"
     },
     {
       "label": "reference-circuit-1",
-      "gasUsed": "339023"
+      "gasUsed": "339190"
     },
     {
       "label": "task-published-1",
-      "gasUsed": "1429454"
+      "gasUsed": "1161216"
     },
     {
       "label": "reference-circuit-2",
-      "gasUsed": "307629"
+      "gasUsed": "307796"
     },
     {
       "label": "task-published-2",
-      "gasUsed": "1427781"
+      "gasUsed": "1159341"
     },
     {
       "label": "reference-circuit-3",
-      "gasUsed": "311673"
+      "gasUsed": "311855"
     },
     {
       "label": "task-published-3",
-      "gasUsed": "1536137"
+      "gasUsed": "1200419"
     },
     {
       "label": "reference-circuit-4",
-      "gasUsed": "360351"
+      "gasUsed": "360556"
     },
     {
       "label": "task-published-4",
-      "gasUsed": "1657840"
+      "gasUsed": "1253205"
     },
     {
       "label": "reference-circuit-5",
-      "gasUsed": "364395"
+      "gasUsed": "364614"
     },
     {
       "label": "task-published-5",
-      "gasUsed": "1769624"
+      "gasUsed": "1296064"
     },
     {
       "label": "reference-circuit-6",
-      "gasUsed": "364395"
+      "gasUsed": "364614"
     },
     {
       "label": "task-published-6",
-      "gasUsed": "1771870"
+      "gasUsed": "1302784"
     },
     {
       "label": "reference-circuit-7",
-      "gasUsed": "368440"
+      "gasUsed": "368672"
     },
     {
       "label": "task-published-7",
-      "gasUsed": "1875067"
+      "gasUsed": "1340891"
     },
     {
       "label": "reference-circuit-8",
-      "gasUsed": "372478"
+      "gasUsed": "372725"
     },
     {
       "label": "task-published-8",
-      "gasUsed": "1999709"
+      "gasUsed": "1392660"
     },
     {
       "label": "reference-circuit-9",
-      "gasUsed": "364390"
+      "gasUsed": "364608"
     },
     {
       "label": "task-published-9",
-      "gasUsed": "1830392"
+      "gasUsed": "1356034"
     },
     {
       "label": "reference-circuit-10",
-      "gasUsed": "376671"
+      "gasUsed": "376932"
     },
     {
       "label": "task-published-10",
-      "gasUsed": "2162605"
+      "gasUsed": "1479851"
     },
     {
       "label": "reference-circuit-11",
-      "gasUsed": "535405"
+      "gasUsed": "535904"
     },
     {
       "label": "task-published-11",
-      "gasUsed": "4101144"
+      "gasUsed": "2246927"
     },
     {
       "label": "reference-circuit-12",
-      "gasUsed": "860370"
+      "gasUsed": "861373"
     },
     {
       "label": "task-published-12",
-      "gasUsed": "8087163"
+      "gasUsed": "3779476"
     },
     {
       "label": "reference-circuit-13",
-      "gasUsed": "565510"
+      "gasUsed": "566037"
     },
     {
       "label": "task-published-13",
-      "gasUsed": "4277812"
+      "gasUsed": "2309796"
     },
     {
       "label": "reference-circuit-14",
-      "gasUsed": "411074"
+      "gasUsed": "411377"
     },
     {
       "label": "task-published-14",
-      "gasUsed": "2453459"
+      "gasUsed": "1570652"
     },
     {
       "label": "reference-circuit-15",
-      "gasUsed": "441612"
+      "gasUsed": "441943"
     },
     {
       "label": "task-published-15",
-      "gasUsed": "2747318"
+      "gasUsed": "1716754"
     },
     {
       "label": "reference-circuit-16",
-      "gasUsed": "484253"
+      "gasUsed": "484654"
     },
     {
       "label": "task-published-16",
-      "gasUsed": "3290968"
+      "gasUsed": "1933758"
     },
     {
       "label": "reference-circuit-17",
-      "gasUsed": "376671"
+      "gasUsed": "376932"
     },
     {
       "label": "task-published-17",
-      "gasUsed": "2118410"
+      "gasUsed": "1432652"
     },
     {
       "label": "reference-circuit-18",
-      "gasUsed": "415267"
+      "gasUsed": "415584"
     },
     {
       "label": "task-published-18",
-      "gasUsed": "2575972"
+      "gasUsed": "1617901"
     },
     {
       "label": "reference-circuit-19",
-      "gasUsed": "407172"
+      "gasUsed": "407461"
     },
     {
       "label": "task-published-19",
-      "gasUsed": "2338873"
+      "gasUsed": "1516823"
     },
     {
       "label": "reference-circuit-20",
-      "gasUsed": "453846"
+      "gasUsed": "454218"
     },
     {
       "label": "task-published-20",
-      "gasUsed": "3014938"
+      "gasUsed": "1798475"
     },
     {
       "label": "reference-circuit-21",
-      "gasUsed": "582019"
+      "gasUsed": "582602"
     },
     {
       "label": "task-published-21",
-      "gasUsed": "4747081"
+      "gasUsed": "2493816"
     },
     {
       "label": "reference-circuit-22",
-      "gasUsed": "523620"
+      "gasUsed": "524077"
     },
     {
       "label": "task-published-22",
-      "gasUsed": "3732826"
+      "gasUsed": "2091925"
     },
     {
       "label": "reference-circuit-23",
-      "gasUsed": "527653"
+      "gasUsed": "528123"
     },
     {
       "label": "task-published-23",
-      "gasUsed": "3864970"
+      "gasUsed": "2138947"
     },
     {
       "label": "reference-circuit-24",
-      "gasUsed": "450531"
+      "gasUsed": "450889"
     },
     {
       "label": "task-published-24",
-      "gasUsed": "3044895"
+      "gasUsed": "1859452"
     },
     {
       "label": "reference-circuit-25",
-      "gasUsed": "372802"
+      "gasUsed": "373049"
     },
     {
       "label": "task-published-25",
-      "gasUsed": "2059342"
+      "gasUsed": "1438570"
     },
     {
       "label": "reference-circuit-26",
-      "gasUsed": "527338"
+      "gasUsed": "527809"
     },
     {
       "label": "task-published-26",
-      "gasUsed": "4010892"
+      "gasUsed": "2292812"
     },
     {
       "label": "reference-circuit-27",
-      "gasUsed": "315706"
+      "gasUsed": "315863"
     },
     {
       "label": "task-published-27",
-      "gasUsed": "3181568"
+      "gasUsed": "1387470"
     },
     {
       "label": "reference-circuit-28",
-      "gasUsed": "411387"
+      "gasUsed": "411651"
     },
     {
       "label": "task-published-28",
-      "gasUsed": "4954118"
+      "gasUsed": "2090154"
     },
     {
       "label": "reference-circuit-29",
-      "gasUsed": "419475"
+      "gasUsed": "419768"
     },
     {
       "label": "task-published-29",
-      "gasUsed": "5584906"
+      "gasUsed": "2315902"
     },
     {
       "label": "reference-circuit-30",
-      "gasUsed": "319732"
+      "gasUsed": "319903"
     },
     {
       "label": "task-published-30",
-      "gasUsed": "3543729"
+      "gasUsed": "1493973"
     },
     {
       "label": "reference-circuit-31",
-      "gasUsed": "899627"
+      "gasUsed": "900686"
     },
     {
       "label": "task-published-31",
-      "gasUsed": "8640953"
+      "gasUsed": "4039193"
     },
     {
       "label": "reference-circuit-32",
-      "gasUsed": "1383025"
+      "gasUsed": "1384827"
     },
     {
       "label": "task-published-32",
-      "gasUsed": "8812643"
+      "gasUsed": "3909592"
     },
     {
       "label": "reference-circuit-33",
-      "gasUsed": "2010611"
+      "gasUsed": "2013422"
     },
     {
       "label": "task-published-33",
-      "gasUsed": "8721043"
+      "gasUsed": "3778506"
     },
     {
       "label": "reference-circuit-34",
-      "gasUsed": "771355"
+      "gasUsed": "772204"
     },
     {
       "label": "task-published-34",
-      "gasUsed": "6954314"
+      "gasUsed": "3382989"
     },
     {
       "label": "reference-circuit-35",
-      "gasUsed": "1065797"
+      "gasUsed": "1067123"
     },
     {
       "label": "task-published-35",
-      "gasUsed": "8733186"
+      "gasUsed": "4003214"
     },
     {
       "label": "reference-circuit-36",
-      "gasUsed": "902855"
+      "gasUsed": "903928"
     },
     {
       "label": "task-published-36",
-      "gasUsed": "8439819"
+      "gasUsed": "3930867"
     },
     {
       "label": "reference-circuit-37",
-      "gasUsed": "647470"
+      "gasUsed": "648123"
     },
     {
       "label": "task-published-37",
-      "gasUsed": "5337434"
+      "gasUsed": "2732588"
     },
     {
       "label": "reference-circuit-38",
-      "gasUsed": "825920"
+      "gasUsed": "826881"
     },
     {
       "label": "task-published-38",
-      "gasUsed": "7860330"
+      "gasUsed": "3758984"
     },
     {
       "label": "reference-circuit-39",
-      "gasUsed": "946420"
+      "gasUsed": "947563"
     },
     {
       "label": "task-published-39",
-      "gasUsed": "8613167"
+      "gasUsed": "3914442"
     },
     {
       "label": "reference-circuit-40",
-      "gasUsed": "942043"
+      "gasUsed": "943172"
     },
     {
       "label": "task-published-40",
-      "gasUsed": "8676028"
+      "gasUsed": "4027644"
     },
     {
       "label": "reference-circuit-41",
-      "gasUsed": "1270237"
+      "gasUsed": "1271885"
     },
     {
       "label": "task-published-41",
-      "gasUsed": "8853207"
+      "gasUsed": "3941408"
     },
     {
       "label": "reference-circuit-42",
-      "gasUsed": "1715900"
+      "gasUsed": "1718234"
     },
     {
       "label": "task-published-42",
-      "gasUsed": "9027935"
+      "gasUsed": "3961180"
     },
     {
       "label": "reference-circuit-43",
-      "gasUsed": "1317748"
+      "gasUsed": "1319480"
     },
     {
       "label": "task-published-43",
-      "gasUsed": "8721411"
+      "gasUsed": "3788277"
     },
     {
       "label": "reference-circuit-44",
-      "gasUsed": "907151"
+      "gasUsed": "908238"
     },
     {
       "label": "task-published-44",
-      "gasUsed": "8566751"
+      "gasUsed": "4012722"
     },
     {
       "label": "reference-circuit-45",
-      "gasUsed": "907151"
+      "gasUsed": "908238"
     },
     {
       "label": "task-published-45",
-      "gasUsed": "8585743"
+      "gasUsed": "4001295"
     },
     {
       "label": "reference-circuit-46",
-      "gasUsed": "864381"
+      "gasUsed": "865399"
     },
     {
       "label": "task-published-46",
-      "gasUsed": "8294053"
+      "gasUsed": "3917864"
     },
     {
       "label": "reference-circuit-47",
-      "gasUsed": "826346"
+      "gasUsed": "827308"
     },
     {
       "label": "task-published-47",
-      "gasUsed": "7842910"
+      "gasUsed": "3743836"
     },
     {
       "label": "reference-circuit-48",
-      "gasUsed": "488732"
+      "gasUsed": "489147"
     },
     {
       "label": "task-published-48",
-      "gasUsed": "3439332"
+      "gasUsed": "2008868"
     },
     {
       "label": "reference-circuit-49",
-      "gasUsed": "565925"
+      "gasUsed": "566452"
     },
     {
       "label": "task-published-49",
-      "gasUsed": "4338273"
+      "gasUsed": "2364750"
     },
     {
       "label": "reference-circuit-50",
-      "gasUsed": "694359"
+      "gasUsed": "695096"
     },
     {
       "label": "task-published-50",
-      "gasUsed": "6070885"
+      "gasUsed": "3033862"
     },
     {
       "label": "reference-circuit-51",
-      "gasUsed": "1233114"
+      "gasUsed": "1234706"
     },
     {
       "label": "task-published-51",
-      "gasUsed": "8928706"
+      "gasUsed": "3987315"
     },
     {
       "label": "reference-circuit-52",
-      "gasUsed": "774985"
+      "gasUsed": "775848"
     },
     {
       "label": "task-published-52",
-      "gasUsed": "7257974"
+      "gasUsed": "3628086"
     },
     {
       "label": "reference-circuit-53",
-      "gasUsed": "1032573"
+      "gasUsed": "1033856"
     },
     {
       "label": "task-published-53",
-      "gasUsed": "8906160"
+      "gasUsed": "4065917"
     },
     {
       "label": "reference-circuit-54",
-      "gasUsed": "941488"
+      "gasUsed": "942617"
     },
     {
       "label": "task-published-54",
-      "gasUsed": "8658082"
+      "gasUsed": "4064316"
     },
     {
       "label": "reference-circuit-55",
-      "gasUsed": "1065321"
+      "gasUsed": "1066647"
     },
     {
       "label": "task-published-55",
-      "gasUsed": "8878106"
+      "gasUsed": "4126682"
     },
     {
       "label": "reference-circuit-56",
-      "gasUsed": "618348"
+      "gasUsed": "618970"
     },
     {
       "label": "task-published-56",
-      "gasUsed": "10719462"
+      "gasUsed": "4422843"
     },
     {
       "label": "reference-circuit-57",
-      "gasUsed": "618329"
+      "gasUsed": "618951"
     },
     {
       "label": "task-published-57",
-      "gasUsed": "10639796"
+      "gasUsed": "4367573"
     },
     {
       "label": "reference-circuit-58",
-      "gasUsed": "1084995"
+      "gasUsed": "1086409"
     },
     {
       "label": "task-published-58",
-      "gasUsed": "12034965"
+      "gasUsed": "4928868"
     },
     {
       "label": "reference-circuit-59",
-      "gasUsed": "715687"
+      "gasUsed": "716491"
     },
     {
       "label": "task-published-59",
-      "gasUsed": "11035972"
+      "gasUsed": "4527117"
     },
     {
       "label": "reference-circuit-60",
-      "gasUsed": "415236"
+      "gasUsed": "415514"
     },
     {
       "label": "task-published-60",
-      "gasUsed": "5200881"
+      "gasUsed": "2169711"
     },
     {
       "label": "reference-circuit-61",
-      "gasUsed": "415224"
+      "gasUsed": "415502"
     },
     {
       "label": "task-published-61",
-      "gasUsed": "5238746"
+      "gasUsed": "2198234"
     },
     {
       "label": "reference-circuit-62",
-      "gasUsed": "419280"
+      "gasUsed": "419573"
     },
     {
       "label": "task-published-62",
-      "gasUsed": "5533620"
+      "gasUsed": "2298855"
     },
     {
       "label": "reference-circuit-63",
-      "gasUsed": "626561"
+      "gasUsed": "627211"
     },
     {
       "label": "task-published-63",
-      "gasUsed": "10788823"
+      "gasUsed": "4404612"
     },
     {
       "label": "reference-circuit-64",
-      "gasUsed": "622818"
+      "gasUsed": "623447"
     },
     {
       "label": "task-published-64",
-      "gasUsed": "10335585"
+      "gasUsed": "4105380"
     },
     {
       "label": "reference-circuit-65",
-      "gasUsed": "589603"
+      "gasUsed": "590183"
     },
     {
       "label": "task-published-65",
-      "gasUsed": "10346814"
+      "gasUsed": "4102472"
     },
     {
       "label": "reference-circuit-66",
-      "gasUsed": "1117099"
+      "gasUsed": "1118527"
     },
     {
       "label": "task-published-66",
-      "gasUsed": "12148702"
+      "gasUsed": "4818065"
     },
     {
       "label": "reference-circuit-67",
-      "gasUsed": "994217"
+      "gasUsed": "995441"
     },
     {
       "label": "task-published-67",
-      "gasUsed": "12051442"
+      "gasUsed": "4766361"
     },
     {
       "label": "reference-circuit-68",
-      "gasUsed": "828090"
+      "gasUsed": "829048"
     },
     {
       "label": "task-published-68",
-      "gasUsed": "11226901"
+      "gasUsed": "4457244"
     },
     {
       "label": "reference-circuit-69",
-      "gasUsed": "1033215"
+      "gasUsed": "1034495"
     },
     {
       "label": "task-published-69",
-      "gasUsed": "11778498"
+      "gasUsed": "4655636"
     },
     {
       "label": "reference-circuit-70",
-      "gasUsed": "1039919"
+      "gasUsed": "1041235"
     },
     {
       "label": "task-published-70",
-      "gasUsed": "12160314"
+      "gasUsed": "4906608"
     },
     {
       "label": "reference-circuit-71",
-      "gasUsed": "1036619"
+      "gasUsed": "1037913"
     },
     {
       "label": "task-published-71",
-      "gasUsed": "11915706"
+      "gasUsed": "4731984"
     },
     {
       "label": "reference-circuit-72",
-      "gasUsed": "754235"
+      "gasUsed": "755096"
     },
     {
       "label": "task-published-72",
-      "gasUsed": "11120845"
+      "gasUsed": "4432719"
     },
     {
       "label": "reference-circuit-73",
-      "gasUsed": "622367"
+      "gasUsed": "623003"
     },
     {
       "label": "task-published-73",
-      "gasUsed": "10387220"
+      "gasUsed": "4182933"
     },
     {
       "label": "reference-circuit-74",
-      "gasUsed": "592097"
+      "gasUsed": "592698"
     },
     {
       "label": "task-published-74",
-      "gasUsed": "10249598"
+      "gasUsed": "4134043"
     },
     {
       "label": "reference-circuit-75",
-      "gasUsed": "708929"
+      "gasUsed": "709691"
     },
     {
       "label": "task-published-75",
-      "gasUsed": "10993891"
+      "gasUsed": "4387178"
     },
     {
       "label": "reference-circuit-76",
-      "gasUsed": "462116"
+      "gasUsed": "462479"
     },
     {
       "label": "task-published-76",
-      "gasUsed": "7258190"
+      "gasUsed": "2950723"
     },
     {
       "label": "reference-circuit-77",
-      "gasUsed": "658354"
+      "gasUsed": "659018"
     },
     {
       "label": "task-published-77",
-      "gasUsed": "10821129"
+      "gasUsed": "4342252"
     },
     {
       "label": "reference-circuit-78",
-      "gasUsed": "753863"
+      "gasUsed": "754730"
     },
     {
       "label": "task-published-78",
-      "gasUsed": "11368421"
+      "gasUsed": "4698590"
     },
     {
       "label": "reference-circuit-79",
-      "gasUsed": "2020555"
+      "gasUsed": "2023517"
     },
     {
       "label": "task-published-79",
-      "gasUsed": "12930545"
+      "gasUsed": "5371399"
     },
     {
       "label": "reference-circuit-80",
-      "gasUsed": "961049"
+      "gasUsed": "962224"
     },
     {
       "label": "task-published-80",
-      "gasUsed": "11777152"
+      "gasUsed": "4704252"
     },
     {
       "label": "reference-circuit-81",
-      "gasUsed": "2532624"
+      "gasUsed": "2536234"
     },
     {
       "label": "task-published-81",
-      "gasUsed": "9334048"
+      "gasUsed": "4017389"
     },
     {
       "label": "reference-circuit-82",
-      "gasUsed": "3110468"
+      "gasUsed": "3115252"
     },
     {
       "label": "task-published-82",
-      "gasUsed": "10608097"
+      "gasUsed": "4456389"
     },
     {
       "label": "reference-circuit-83",
-      "gasUsed": "2940296"
+      "gasUsed": "2944743"
     },
     {
       "label": "task-published-83",
-      "gasUsed": "13230916"
+      "gasUsed": "5445677"
     },
     {
       "label": "reference-circuit-84",
-      "gasUsed": "3215125"
+      "gasUsed": "3220021"
     },
     {
       "label": "task-published-84",
-      "gasUsed": "10946567"
+      "gasUsed": "4596608"
     },
     {
       "label": "reference-circuit-85",
-      "gasUsed": "2677706"
+      "gasUsed": "2681677"
     },
     {
       "label": "task-published-85",
-      "gasUsed": "11847360"
+      "gasUsed": "4878064"
     },
     {
       "label": "reference-circuit-86",
-      "gasUsed": "1738668"
+      "gasUsed": "1741111"
     },
     {
       "label": "task-published-86",
-      "gasUsed": "12496730"
+      "gasUsed": "5019878"
     },
     {
       "label": "reference-circuit-87",
-      "gasUsed": "1388110"
+      "gasUsed": "1389926"
     },
     {
       "label": "task-published-87",
-      "gasUsed": "8828385"
+      "gasUsed": "3910341"
     },
     {
       "label": "reference-circuit-88",
-      "gasUsed": "1883775"
+      "gasUsed": "1886376"
     },
     {
       "label": "task-published-88",
-      "gasUsed": "8748422"
+      "gasUsed": "3807252"
     },
     {
       "label": "reference-circuit-89",
-      "gasUsed": "2650930"
+      "gasUsed": "2654936"
     },
     {
       "label": "task-published-89",
-      "gasUsed": "11808319"
+      "gasUsed": "4847120"
     },
     {
       "label": "reference-circuit-90",
-      "gasUsed": "1043272"
+      "gasUsed": "1044608"
     },
     {
       "label": "task-published-90",
-      "gasUsed": "12427211"
+      "gasUsed": "5100136"
     },
     {
       "label": "reference-circuit-91",
-      "gasUsed": "1643760"
+      "gasUsed": "1646000"
     },
     {
       "label": "task-published-91",
-      "gasUsed": "13200975"
+      "gasUsed": "5272437"
     },
     {
       "label": "reference-circuit-92",
-      "gasUsed": "835493"
+      "gasUsed": "836479"
     },
     {
       "label": "task-published-92",
-      "gasUsed": "11632666"
+      "gasUsed": "4647035"
     },
     {
       "label": "reference-circuit-93",
-      "gasUsed": "1908356"
+      "gasUsed": "1911171"
     },
     {
       "label": "task-published-93",
-      "gasUsed": "12205705"
+      "gasUsed": "5043600"
     },
     {
       "label": "reference-circuit-94",
-      "gasUsed": "2406731"
+      "gasUsed": "2410408"
     },
     {
       "label": "task-published-94",
-      "gasUsed": "13212127"
+      "gasUsed": "5467186"
     },
     {
       "label": "reference-circuit-95",
-      "gasUsed": "1622397"
+      "gasUsed": "1624721"
     },
     {
       "label": "task-published-95",
-      "gasUsed": "11798683"
+      "gasUsed": "4854835"
     },
     {
       "label": "reference-circuit-96",
-      "gasUsed": "1575075"
+      "gasUsed": "1577273"
     },
     {
       "label": "task-published-96",
-      "gasUsed": "12759552"
+      "gasUsed": "5135269"
     },
     {
       "label": "reference-circuit-97",
-      "gasUsed": "1818544"
+      "gasUsed": "1821177"
     },
     {
       "label": "task-published-97",
-      "gasUsed": "13151025"
+      "gasUsed": "5276336"
     },
     {
       "label": "reference-circuit-98",
-      "gasUsed": "4313306"
+      "gasUsed": "4320269"
     },
     {
       "label": "task-published-98",
-      "gasUsed": "10179180"
+      "gasUsed": "4303861"
     },
     {
       "label": "reference-circuit-99",
-      "gasUsed": "3212221"
+      "gasUsed": "3217089"
     },
     {
       "label": "task-published-99",
-      "gasUsed": "10856588"
+      "gasUsed": "4470110"
     },
     {
       "label": "reference-circuit-100",
-      "gasUsed": "1030151"
+      "gasUsed": "1031516"
     },
     {
       "label": "task-published-100",
-      "gasUsed": "12333692"
+      "gasUsed": "5096551"
     },
     {
       "label": "ledger-factory",
-      "gasUsed": "1559835"
+      "gasUsed": "1605142"
     },
     {
       "label": "mining-implementation",
-      "gasUsed": "5123350"
+      "gasUsed": "5069191"
     },
     {
       "label": "mining-proxy",
-      "gasUsed": "1536337"
+      "gasUsed": "1595421"
     },
     {
       "label": "registry-controller",
@@ -1072,7 +1072,7 @@
     },
     {
       "label": "boost",
-      "gasUsed": "2289399"
+      "gasUsed": "2289435"
     },
     {
       "label": "mining-boost",
@@ -1124,7 +1124,7 @@
     },
     {
       "label": "genesis-hooks",
-      "gasUsed": "99923"
+      "gasUsed": "99958"
     },
     {
       "label": "genesis-mining-processor",
@@ -1157,8 +1157,8 @@
   ],
   "mainnetFeeEstimate": {
     "gasPriceWei": "20000000",
-    "executionFeeWei": "18385335280000000",
-    "with25PercentGasMarginWei": "22981669100000000",
+    "executionFeeWei": "9702057460000000",
+    "with25PercentGasMarginWei": "12127571825000000",
     "walletBalanceWei": "1135797940946051",
     "includesArbitrumDataFees": false
   }

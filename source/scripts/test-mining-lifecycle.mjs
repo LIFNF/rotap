@@ -14,7 +14,7 @@ try{
  const materials=new Contract(await circuits.transistors(),output.contracts['ROtapTransistors.sol'].ROtapTransistors.abi,a);await(await materials.mint(0,20)).wait();
  const registry=await deploy('ROtapTaskRegistry.sol','ROtapTaskRegistry'),sampling=await deploy('TestSampling.sol','TestSampling');
  const genesis=(await provider.getBlock('latest')).timestamp-1800;
- const ledgerFactory=await deploy('ROtapContinuousLedger.sol','ROtapLedgerFactory');const mining=await deploy('ROtapMining.sol','ROtapMining',[await registry.getAddress(),await sampling.getAddress(),genesis,100000,10000,await ledgerFactory.getAddress()]);
+ const ledgerFactory=await deploy('ROtapContinuousLedger.sol','ROtapLedgerFactory');const mining=await deploy('ROtapMining.sol','ROtapMining',[await registry.getAddress(),await sampling.getAddress(),genesis,100000,864000000,await ledgerFactory.getAddress()]);
  await(await mining.setProcessor(caddr,6)).wait();await(await circuits.configureMining(await mining.getAddress())).wait();
  const not='0x00000002000002',constantZero='0x00000001000001';
  const salt=id('test-salt');const commit=await mining.designCommitment(aa,caddr,keccak256(not),salt);await(await mining.connect(a).commitDesign(caddr,commit)).wait();

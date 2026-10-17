@@ -19,7 +19,7 @@ for(let i=0;i<referenceLabels.length;i++)if(referenceLabels[i][0]==='bemStakeBps
  assert.equal(await boost.rewardStakeBpsOf(amount),BigInt(response.result));
 }
 for(let i=0;i<5;i++){assert.equal(await boost.rewardStakeBpsOf(thresholds[i]*unit),bonuses[i]);assert.equal(await boost.rewardStakeBpsOf(thresholds[i]*unit-1n),i?bonuses[i-1]:0n);}
-await(await token.mint(account,2500n*unit)).wait();await assert.rejects(()=>boost.stakeReward(600n*unit));await(await token.approve(await boost.getAddress(),2500n*unit)).wait();
+assert.equal(await token.totalSupply(),20000000n*unit);await assert.rejects(()=>boost.stakeReward(600n*unit));await(await token.approve(await boost.getAddress(),2500n*unit)).wait();
 await(await boost.stakeReward(600n*unit)).wait();assert.equal(await sync.beforeFactor(),10000n);assert.equal(await sync.afterFactor(),10700n);
 await(await boost.stake({value:500})).wait();assert.equal(await boost.factorBps(account),12200n);
 await(await boost.unstakeReward(401n*unit)).wait();assert.equal(await sync.beforeFactor(),12200n);assert.equal(await sync.afterFactor(),11500n);

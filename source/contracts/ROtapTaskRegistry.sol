@@ -9,6 +9,8 @@ interface IROtapExecutable {
     function step(uint256 id,bytes calldata state,bytes calldata inputs) external view returns(bytes memory,bytes memory);
 }
 
+interface IROtapBatchExecutable {function runTask(uint256,uint32,bytes calldata) external view returns(bytes memory);}
+
 /// Reference-verified task and Merkle proof candidate. Sampling integration is separate.
 contract ROtapTaskRegistry {
     address public immutable owner;address public controller;bool public tasksFrozen;uint32 public taskCount;
@@ -54,7 +56,7 @@ contract ROtapTaskRegistry {
         (uint32 nIn,uint32 nOut,uint32 states,)=IROtapExecutable(circuits).circuitInfo(circuitId);
         require(nIn==task.nIn&&nOut==task.nOut&&(states>0)==(task.states>0),'SHAPE');
         uint256 inputSize=(uint256(nIn)+7)/8;uint256 outputSize=(uint256(nOut)+7)/8;
-        require(input.length==inputSize*task.cycles,'INPUT_LENGTH');result=new bytes(outputSize*task.cycles);bytes memory state;
+        require(input.length==inputSize*task.cycles,'INPUT_LENGTH');try IROtapBatchExecutable(circuits).runTask(circuitId,task.cycles,input) returns(bytes memory batched){require(batched.length==outputSize*task.cycles,'OUTPUT_LENGTH');return batched;}catch{}result=new bytes(outputSize*task.cycles);bytes memory state;
         for(uint256 cycle;cycle<task.cycles;cycle++){
             bytes memory vector=new bytes(inputSize);for(uint256 j;j<inputSize;j++)vector[j]=input[cycle*inputSize+j];
             bytes memory outputs;
