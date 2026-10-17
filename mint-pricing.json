@@ -7,7 +7,5 @@
   "protocolFeeWei": "322700000000000",
   "supplyCap": "1000000",
   "recipient": "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A",
-  "freeMintAddresses": ["0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A"],
-  "freeMintProtocolFeeWei": "0",
   "status": "configured-awaiting-contract-deployment"
 }

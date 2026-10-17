@@ -3,7 +3,7 @@
   "chainId": 4663,
   "owner": "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A",
   "deploymentBlocked": true,
-  "blockReason": "主网合约尚未完成部署与完整验收，Mint、流片、挖矿及质押交易尚未开放。",
+  "blockReason": "主网合约尚未完成部署与完整验收，当前不接受链上付款。",
   "taskCount": 100,
   "mintPricing": {
     "chainId": 4663,
@@ -14,10 +14,7 @@
     "protocolFeeWei": "322700000000000",
     "supplyCap": "1000000",
     "recipient": "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A",
-    "freeMintAddresses": [
-      "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A"
-    ],
-    "freeMintProtocolFeeWei": "0",
     "status": "configured-awaiting-contract-deployment"
-  }
+  },
+  "releaseId": null
 }

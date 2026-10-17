@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"beacon_","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"stateMutability":"payable","type":"fallback"},{"inputs":[],"name":"beacon","outputs":[{"internalType":"contract IBeacon","name":"","type":"address"}],"stateMutability":"view","type":"function"}]
