@@ -32,7 +32,8 @@ try{
  if(difference.status===1)git(['-c','user.name='+owner,'-c','user.email='+user.id+'+'+owner+'@users.noreply.github.com','commit','-m','Publish ROtap website']);else if(difference.status!==0)throw Error('Unable to inspect deployment changes');
  const remote='https://github.com/'+owner+'/'+repo+'.git';
  env.GITHUB_PAGES_AUTH='Authorization: Basic '+Buffer.from('x-access-token:'+token).toString('base64');
- git(['-c','credential.helper=','-c','http.extraHeader=','-c','http.proxy=http://127.0.0.1:7890','-c','http.sslVersion=tlsv1.2','--config-env=http.'+remote+'.extraHeader=GITHUB_PAGES_AUTH','push',remote,'HEAD:refs/heads/main']);
+ const pushArgs=['-c','credential.helper=','-c','http.extraHeader=','-c','http.proxy=http://127.0.0.1:7890','-c','http.sslVersion=tlsv1.2','-c','http.version=HTTP/1.1','-c','http.postBuffer=10485760','--config-env=http.'+remote+'.extraHeader=GITHUB_PAGES_AUTH','push',remote,'HEAD:refs/heads/main'];
+ for(let attempt=1;attempt<=3;attempt++){try{git(pushArgs);break;}catch(error){if(attempt===3||!/HTTP (?:408|429|5\d\d)|disconnect|connection|timed out|remote end hung up/i.test(error.message))throw error;console.log('Retrying interrupted GitHub upload ('+attempt+'/3).');}}
  let pages;try{pages=api(route+'/pages');if(pages.build_type!=='legacy'||pages.source?.branch!=='main'||pages.source?.path!=='/')throw Error('Existing Pages configuration differs; refusing to overwrite');}
  catch(e){if(!e.message.includes('404'))throw e;pages=api(route+'/pages',{method:'POST',body:{build_type:'legacy',source:{branch:'main',path:'/'}}});}
  const receipt={repository:repository.html_url,siteUrl:pages.html_url,siteCommit:git(['rev-parse','HEAD']).trim(),pagesStatus:pages.status,sourceCommit,sourceTreeHash:provenance.sourceTreeHash,mainnetContractsDeployed:false,mintPaymentsEnabled:false};

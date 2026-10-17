@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "sourceTreeHash": "94ab8de86866592a0b125fdb01c6772d7f5a045e7f370efa18f359eda3119c61",
+  "sourceTreeHash": "12e897ab203e6be0319eef839bb2e1508a77e69358beba7669f8be826c319ffe",
   "files": [
     {
       "path": ".github/workflows/security.yml",
@@ -24,7 +24,7 @@
     },
     {
       "path": "audit/browser-full-protocol.json",
-      "sha256": "124664bd1d80441fdfac1c7eaea227bcd53006d08975fd872f8a4e284aaaef99"
+      "sha256": "f32aa951dbd8287244c2ffab1869665feb07fca6fa63580bbde0119e4e6f9d3f"
     },
     {
       "path": "audit/browser-ref-runtime-comparison.json",
@@ -204,7 +204,7 @@
     },
     {
       "path": "audit/reproducible-build-local.json",
-      "sha256": "a4410b5e892b823e7f12e6ec41bc684949c7c9426f1edadefc071a989e8cac1c"
+      "sha256": "4387ce37c78968778fd338eae15abbc1c1211c98601606fed53e51c22bd5c80f"
     },
     {
       "path": "audit/reward-stake-local.json",
@@ -1828,7 +1828,7 @@
     },
     {
       "path": "scripts/publish-github-pages.mjs",
-      "sha256": "a0e40ae89eda51c8cb8af190ae41c038b82848ff9d31a1e050718c5b4c33ab8c"
+      "sha256": "b7918d486eca1f0f46532469febeafdb984911a9f079cf70b6c20ea56ec57645"
     },
     {
       "path": "scripts/read-mainnet.mjs",
@@ -2028,7 +2028,7 @@
     },
     {
       "path": "src/app.js",
-      "sha256": "c503a799c91797f6f8494673111bbf66ca409a9577c7f40e72b2d8e00a6fa5ed"
+      "sha256": "bbdafcb62ca2d9e3031d08962a9b1ae757df30e4d8544d4700078791f5cad6b1"
     },
     {
       "path": "src/audit-ui.js",

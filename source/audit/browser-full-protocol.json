@@ -19,7 +19,7 @@
     "ROtapAccounts.sol": "0xeb645ced5cb2acff84dbac10137d1cca63c156e667b4f8b6ec52152d52616f40",
     "ROtapProcessorFactory.sol": "0x4b9afb04796f3ffeab3e88652890e0904dba96d6a5744cc9c4f636c06ad40bca"
   },
-  "appAssetHash": "f519de65a8030d9af7037976789514e0955cdec40faf26128ac8f3af68fbd8ff",
+  "appAssetHash": "bec53c624a5daa7facc6964615e9f28e09af61239db9dd3c346170a07e5ee990",
   "checks": [
     "connect EIP-6963 wallet and uniform owner Mint",
     "ordinary paid 100 Mint and treasury income",
