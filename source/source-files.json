@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "sourceTreeHash": "f743a7e36a3e8cc89d12c268f3b1475435c6e282f832dc8dbeac2eb788f16bee",
+  "sourceTreeHash": "e678726e68de316a7cec76f08a625837e1987cbb1f04ca98a0d73efd02fcdeb0",
   "files": [
     {
       "path": ".github/workflows/security.yml",
@@ -20,7 +20,7 @@
     },
     {
       "path": "audit/audit-summary.json",
-      "sha256": "42b4dd230c2247fc3351852c2aa25f3383c7e4f05b1c1be662873ade0ede9e16"
+      "sha256": "7d330ff916031efaf6254458d430a4503519cdf70ef962fb88ffc255cd7f01fe"
     },
     {
       "path": "audit/browser-full-protocol.json",
@@ -149,6 +149,26 @@
     {
       "path": "audit/processor-factory-reference-comparison.json",
       "sha256": "cdb230be3d7a0999fd4cabf4dbf4aa6068fe070dbe7cc4d5ba1f4bd664933d1a"
+    },
+    {
+      "path": "audit/public/codeql-before-fixes-summary.json",
+      "sha256": "df3c2457481bb98ef229a04b723faa4e89574a1da5d75ef3faa4d47ae990344c"
+    },
+    {
+      "path": "audit/public/codeql-before-fixes.sarif",
+      "sha256": "cd4cbdab0703178f338618f7c97f7d007db8d789235c0df1736627d322c23575"
+    },
+    {
+      "path": "audit/public/codeql-fixes.json",
+      "sha256": "9a08ba55a047c9d79496c8caaf90e0ec92a5012eb45bd6f0cfc5789f9dc000ee"
+    },
+    {
+      "path": "audit/public/codeql-summary.json",
+      "sha256": "df3c2457481bb98ef229a04b723faa4e89574a1da5d75ef3faa4d47ae990344c"
+    },
+    {
+      "path": "audit/public/codeql.sarif",
+      "sha256": "cd4cbdab0703178f338618f7c97f7d007db8d789235c0df1736627d322c23575"
     },
     {
       "path": "audit/public/slither-environment.json",
@@ -1740,7 +1760,7 @@
     },
     {
       "path": "scripts/github-security-results.mjs",
-      "sha256": "8fc4d4c4685d97ec89fe0edc701acdf25220000728207669ed9bce70723dba95"
+      "sha256": "bab3c2c596245b51ff1d0d2e50c7da73e071f8f83438695662c8181e1c079ae4"
     },
     {
       "path": "scripts/infer-reference-sampling-extended.mjs",
@@ -1848,7 +1868,7 @@
     },
     {
       "path": "scripts/reference-fork-provider.mjs",
-      "sha256": "80423e45f5e20ddf5f2ea675e4d962f6c4654f55839a36440663c4f22b1f01f0"
+      "sha256": "bc0e111702364a15380d0091bf3b202e83fecd7b43e59218407a016dfa08cafc"
     },
     {
       "path": "scripts/release-server.mjs",
@@ -1904,7 +1924,7 @@
     },
     {
       "path": "scripts/test-github-pages.mjs",
-      "sha256": "5f985bf7110f201061fd03e8de139d6cf7ee9f9dbaf7b88898b3784af9d1dd0a"
+      "sha256": "76cb28f138fd3889145fbf17095d7818756f247f220aee6ede82c7388d453573"
     },
     {
       "path": "scripts/test-markets.mjs",
@@ -2028,7 +2048,7 @@
     },
     {
       "path": "SECURITY.md",
-      "sha256": "8d9601c4504e5c356f5eaff6c1af0ea5535e9798af3ea9c8dfa8ee6a934648e0"
+      "sha256": "368bc0a600b8cca9d1eff96f6e4db6a8752e88ad9b775e10fa8397b68bc2f25f"
     },
     {
       "path": "src/accounts-ui.js",

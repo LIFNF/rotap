@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-17T07:57:53.216Z",
+  "generatedAt": "2026-10-17T08:08:06.747Z",
   "status": "completed",
   "kind": "automated",
   "independentReview": false,
@@ -19,6 +19,15 @@
       "summary": "执行 102 个检测器，产生 227 条原始告警：High 13、Medium 51、Low 71、Informational 90、Optimization 2。",
       "readableReport": "reports/slither-report.md",
       "triageReport": "reports/slither-review.json"
+    },
+    {
+      "name": "GitHub CodeQL",
+      "version": "GitHub Actions / security-extended",
+      "status": "pending",
+      "report": "reports/codeql-summary.json",
+      "officialUrl": "https://docs.github.com/en/code-security/concepts/code-scanning/codeql/codeql-code-scanning",
+      "summary": "首次扫描发现3处本地工具脚本文件读取时序问题，修复已提交，正在复扫。",
+      "triageReport": "reports/codeql-fixes.json"
     }
   ],
   "sourceHashes": {
@@ -294,5 +303,6 @@
         "contracts/ROtapRewardStakeBoost.sol"
       ]
     }
-  ]
+  ],
+  "codeqlSourceCommit": "b236429c4a9da03c6ba6d52f844016edc90952d2"
 }

@@ -1,9 +1,11 @@
 import fs from 'node:fs';import path from 'node:path';import http from 'node:http';import assert from 'node:assert/strict';import {chromium} from '@playwright/test';
 const root=path.resolve('.github-pages'),types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.woff2':'font/woff2'};
 const server=http.createServer((req,res)=>{const pathname=decodeURIComponent(new URL(req.url,'http://local').pathname);if(!pathname.startsWith('/rotap/')){res.writeHead(404);res.end();return;}
- let filename=path.resolve(root,pathname.slice(7)||'index.html');if(!filename.startsWith(root+path.sep)||!fs.existsSync(filename)){res.writeHead(404);res.end();return;}
- if(fs.statSync(filename).isDirectory()){if(!pathname.endsWith('/')){res.writeHead(301,{Location:pathname+'/'+new URL(req.url,'http://local').search});res.end();return;}filename=path.join(filename,'index.html');}
- res.writeHead(200,{'Content-Type':types[path.extname(filename)]||'application/octet-stream'});res.end(fs.readFileSync(filename));});
+ let filename=path.resolve(root,pathname.slice(7)||'index.html');if(!filename.startsWith(root+path.sep)){res.writeHead(404);res.end();return;}
+ let descriptor;
+ try{descriptor=fs.openSync(filename,'r');if(fs.fstatSync(descriptor).isDirectory()){fs.closeSync(descriptor);descriptor=undefined;if(!pathname.endsWith('/')){res.writeHead(301,{Location:pathname+'/'+new URL(req.url,'http://local').search});res.end();return;}filename=path.join(filename,'index.html');descriptor=fs.openSync(filename,'r');}
+ const body=fs.readFileSync(descriptor);res.writeHead(200,{'Content-Type':types[path.extname(filename)]||'application/octet-stream'});res.end(body);
+ }catch(error){res.writeHead(['ENOENT','ENOTDIR','EACCES'].includes(error.code)?404:500);res.end();}finally{if(descriptor!==undefined)fs.closeSync(descriptor);}});
 await new Promise(r=>server.listen(0,'127.0.0.1',r));let browser;
 try{browser=await chromium.launch({executablePath:process.env.ROTAP_BROWSER_EXECUTABLE||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true,args:['--no-proxy-server']});
 const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[],failed=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)failed.push(r.url());});
