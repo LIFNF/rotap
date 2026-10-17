@@ -1,11 +1,14 @@
 {
-  "releaseId": "0x486663fa041f2ddf5e688dcc1f50c96dbe76204e409e68a9436aa0587d50ab57",
+  "checkedAt": "2026-10-17T08:03:38.424Z",
+  "releaseId": "0xb14559509b853ea1159f3d823c2f5c2e811954c2123634572e2e7c07eec68fda",
   "chainId": 4663,
   "sourceIntegrityMatches": true,
   "testsPassed": true,
   "completeLocalDeploymentVerified": true,
   "all100TasksVerified": true,
   "uniformPaidMintVerified": true,
+  "automaticMintForwardVerified": true,
+  "fixedSupplyMiningInventoryVerified": true,
   "permissionsPermanentlyRenouncedInLocalDeployment": true,
   "fullBrowserFlowVerified": true,
   "mainnetDeployed": false,
@@ -19,15 +22,16 @@
     "reason": "No actual mainnet deployment"
   },
   "budget": {
-    "budgetWei": "23041804599107500",
+    "budgetWei": "12189950007895000",
     "balanceWei": "1135797940946051",
-    "shortfallWei": "21906006658161449",
-    "funded": false
+    "shortfallWei": "11054152066948949",
+    "funded": false,
+    "includesArbitrumDataFees": true,
+    "checkedAt": "2026-10-17T07:53:28.876Z"
   },
   "remaining": [
-    "Actual independent third-party review, matching source commit and issues",
+    "Actual independent third-party review matching the source release and findings",
     "Mainnet deployment funding",
     "Mainnet transactions and explorer source verification"
-  ],
-  "scopeConfirmed": true
+  ]
 }

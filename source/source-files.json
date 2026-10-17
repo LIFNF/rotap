@@ -1,10 +1,10 @@
 {
   "format": 1,
-  "sourceTreeHash": "12e897ab203e6be0319eef839bb2e1508a77e69358beba7669f8be826c319ffe",
+  "sourceTreeHash": "f743a7e36a3e8cc89d12c268f3b1475435c6e282f832dc8dbeac2eb788f16bee",
   "files": [
     {
       "path": ".github/workflows/security.yml",
-      "sha256": "7858ff230eec3f71ed676f983f73f2098e9f420db140892922128bc7ea395cf2"
+      "sha256": "48858b581e7af2bfdf7800bde56dac0bb994b4d8cdf712b2d0d21d2ebc193742"
     },
     {
       "path": ".gitignore",
@@ -88,7 +88,7 @@
     },
     {
       "path": "audit/mainnet-deployment-readiness.json",
-      "sha256": "204f614d865aa2ac7250e8aa8b80cb2720ad3990fcc98f991edd93e0f8c7880d"
+      "sha256": "f7466d2e45c66d17227866e1793b643b89a652aa7a4320d55090edcf6b8f5ac2"
     },
     {
       "path": "audit/mainnet-gas-price.json",
@@ -1740,7 +1740,7 @@
     },
     {
       "path": "scripts/github-security-results.mjs",
-      "sha256": "2293cc290381eee16e3a049dff63efa50ac9655f1f3ae270e9f59a6338481554"
+      "sha256": "8fc4d4c4685d97ec89fe0edc701acdf25220000728207669ed9bce70723dba95"
     },
     {
       "path": "scripts/infer-reference-sampling-extended.mjs",
@@ -1805,6 +1805,10 @@
     {
       "path": "scripts/prepare-ref-probe.mjs",
       "sha256": "120055c293a3facb8e9e64db8674fc927b6707f9d5b8ac7ee117597a9c2436d1"
+    },
+    {
+      "path": "scripts/prepare-release-readiness.mjs",
+      "sha256": "53df3a6e1d88db871dfaf0a9f76a42b2bf35075d3a0837fde5285fb1e9c5c6cd"
     },
     {
       "path": "scripts/prepare-runtime-reference-cases.mjs",
@@ -1993,6 +1997,10 @@
     {
       "path": "scripts/verify-current-release.mjs",
       "sha256": "20727605cadc1123841ab26b443596b358f4a7f4a11ead25c99514d42d605183"
+    },
+    {
+      "path": "scripts/verify-live-github.mjs",
+      "sha256": "8c1c48ea5cd21cff60081e37cba11ddca07bf0f7206613b9eb83ce619a09c5f8"
     },
     {
       "path": "scripts/verify-local-release.mjs",

@@ -2,6 +2,10 @@ name: Public code audit
 on:
   push:
     branches: [main]
+    paths:
+      - source/src/**
+      - source/scripts/**
+      - .github/workflows/security.yml
   workflow_dispatch:
 permissions:
   contents: read
