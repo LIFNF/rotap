@@ -1,0 +1,41 @@
+import {compileSolidity} from './solidity-compiler.mjs';
+import fs from 'node:fs';import assert from 'node:assert/strict';import solc from 'solc';import ganache from 'ganache';import {BrowserProvider,ContractFactory,Contract,AbiCoder,keccak256,concat,id} from 'ethers';
+const names=['ROtapRuntime.sol','ROtapTransistors.sol','ROtapCircuits.sol','ROtapReferenceRuntime.sol','ROtapTaskRegistry.sol','ROtapContinuousLedger.sol','ROtapMining.sol'];
+const mock=`pragma solidity ^0.8.24; contract TestSampling {bool public repeated;function setRepeated(bool value) external {repeated=value;}function sampleIndexes(address,uint256,uint32,uint256) external view returns(uint32[] memory indexes){indexes=new uint32[](3);indexes[0]=0;indexes[1]=1;indexes[2]=repeated?1:2;}function checkBudget(uint32,uint32,uint256) external pure returns(bool){return true;}}`;
+const sources=Object.fromEntries(names.map(name=>[name,{content:fs.readFileSync('contracts/'+name,'utf8')}]));sources['TestSampling.sol']={content:mock};
+const output=JSON.parse(compileSolidity(JSON.stringify({language:'Solidity',sources,settings:{optimizer:{enabled:true,runs:200},viaIR:true,evmVersion:'shanghai',outputSelection:{'*':{'*':['abi','evm.bytecode.object']}}}})));
+assert.equal((output.errors||[]).filter(e=>e.severity==='error').length,0,JSON.stringify(output.errors));
+const dbPath='.test-chain/mining-'+Date.now();fs.mkdirSync(dbPath,{recursive:true});const rpc=ganache.provider({database:{dbPath},logging:{quiet:true},miner:{timestampIncrement:0}});
+try{
+ const provider=new BrowserProvider(rpc,undefined,{cacheTimeout:-1}),owner=await provider.getSigner(0),a=await provider.getSigner(1),b=await provider.getSigner(2);
+ const oa=await owner.getAddress(),aa=await a.getAddress(),ba=await b.getAddress();
+ const deploy=async(file,name,args=[])=>{const artifact=output.contracts[file][name];const c=await new ContractFactory(artifact.abi,artifact.evm.bytecode.object,owner).deploy(...args);await c.waitForDeployment();return c;};
+ const circuits=await deploy('ROtapCircuits.sol','ROtapCircuits',[oa,0,0,0]);const caddr=await circuits.getAddress();
+ const materials=new Contract(await circuits.transistors(),output.contracts['ROtapTransistors.sol'].ROtapTransistors.abi,a);await(await materials.mint(0,20)).wait();
+ const registry=await deploy('ROtapTaskRegistry.sol','ROtapTaskRegistry'),sampling=await deploy('TestSampling.sol','TestSampling');
+ const genesis=(await provider.getBlock('latest')).timestamp-1800;
+ const ledgerFactory=await deploy('ROtapContinuousLedger.sol','ROtapLedgerFactory');const mining=await deploy('ROtapMining.sol','ROtapMining',[await registry.getAddress(),await sampling.getAddress(),genesis,100000,10000,await ledgerFactory.getAddress()]);
+ await(await mining.setProcessor(caddr,6)).wait();await(await circuits.configureMining(await mining.getAddress())).wait();
+ const not='0x00000002000002',constantZero='0x00000001000001';
+ const salt=id('test-salt');const commit=await mining.designCommitment(aa,caddr,keccak256(not),salt);await(await mining.connect(a).commitDesign(caddr,commit)).wait();
+ await(await circuits.connect(a).tapeout(not,1,1)).wait();await(await circuits.connect(a).tapeout(constantZero,1,1)).wait();
+ // Three sampled vectors happen to be input=1; index 3 exposes the false constant circuit.
+ const inputs=['0x01','0x01','0x01','0x00'],expected=['0x00','0x00','0x00','0x01'];
+ const leaf=(i,x,y)=>keccak256(keccak256(AbiCoder.defaultAbiCoder().encode(['uint256','bytes','bytes'],[i,x,y]))),pair=(x,y)=>keccak256(concat(BigInt(x)<BigInt(y)?[x,y]:[y,x]));
+ const leaves=inputs.map((x,i)=>leaf(i,x,expected[i])),left=pair(leaves[0],leaves[1]),right=pair(leaves[2],leaves[3]),root=pair(left,right),proofs=leaves.map((x,i)=>[leaves[i^1],i<2?right:left]);
+ await(await registry.publish('NOT',caddr,1,1,4,root,[0,1,2,3],inputs,expected,proofs)).wait();
+ const start=async tokenId=>{await(await mining.connect(a).arm(caddr,tokenId)).wait();const key=await mining.minerKey(caddr,tokenId),anchor=await mining.armedAt(key);await rpc.request({method:'evm_mine',params:[]});const indexes=Array.from(await sampling.sampleIndexes(caddr,tokenId,1,anchor)).map(Number);await(await mining.connect(a).start(caddr,tokenId,1,anchor,indexes.map(i=>inputs[i]),indexes.map(i=>expected[i]),indexes.map(i=>proofs[i]),salt)).wait();return key;};
+ const goodKey=await start(1);assert.equal(await mining.bestSlot(1,caddr),goodKey);
+ await(await sampling.setRepeated(true)).wait();const badKey=await start(2);assert.equal((await mining.miners(badKey)).active,true);
+ const ledger=new Contract(await mining.ledger(),output.contracts['ROtapContinuousLedger.sol'].ROtapContinuousLedger.abi,owner);
+ const token=new Contract(await ledger.token(),output.contracts['ROtapContinuousLedger.sol'].ROtapContinuousReward.abi,provider);
+ await rpc.request({method:'evm_increaseTime',params:[100]});await rpc.request({method:'evm_mine',params:[]});
+ await(await mining.connect(a).claimMany([goodKey,badKey])).wait();assert.ok(await token.balanceOf(aa)>0n);
+ await(await mining.connect(b).challenge(badKey,3,inputs[3],expected[3],proofs[3])).wait();assert.equal((await mining.miners(badKey)).revoked,true);assert.equal((await ledger.positions(badKey)).verified,0n);
+ await(await circuits.connect(a).transferFrom(aa,ba,1)).wait();assert.equal((await ledger.positions(goodKey)).beneficiary,ba);
+ await rpc.request({method:'evm_increaseTime',params:[100]});await rpc.request({method:'evm_mine',params:[]});await(await mining.connect(b).claimMany([goodKey])).wait();assert.ok(await token.balanceOf(ba)>0n);
+ await(await mining.connect(b).stop(goodKey)).wait();assert.equal((await ledger.positions(goodKey)).verified,0n);
+ await assert.rejects(()=>mining.connect(b).start(caddr,1,0,0,[],[],[],salt));
+ fs.writeFileSync('audit/mining-lifecycle-local.json',JSON.stringify({environment:'local',checks:['sample proof verification','pre-design commitment','best original slot','continuous claim','permissionless official-vector revocation','zero reward weight after revocation','holder transfer settles rewards','stop and cooldown'],samplingPolicy:'TEST MOCK ONLY - NOT DEPLOYABLE',referenceTaskBankImported:false,referenceSamplingParityVerified:false},null,2));
+ console.log('PASS: mining candidate integration, proof validation, original slot, continuous reward, challenge revocation, transfer settlement and cooldown. Sampling is a test mock, not production.');
+}finally{await rpc.disconnect();}

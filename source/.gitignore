@@ -1,0 +1,11 @@
+node_modules/
+.npm-cache/
+.env
+.env.*
+!.env.example
+artifacts/
+test-results/
+playwright-report/
+.test-chain/
+.openai/local/
+.github-pages/

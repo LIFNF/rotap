@@ -1,0 +1,110 @@
+[
+  {
+    "name": "version-1-codec-0",
+    "cid": "baeabeiaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6d4"
+  },
+  {
+    "name": "version-2-codec-0",
+    "cid": "baiabeiaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6d4"
+  },
+  {
+    "name": "version-1-codec-85",
+    "cid": "bafkreiaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6d4"
+  },
+  {
+    "name": "version-2-codec-85",
+    "cid": "bajkreiaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6d4"
+  },
+  {
+    "name": "version-1-codec-112",
+    "cid": "bafybeiaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6d4"
+  },
+  {
+    "name": "version-2-codec-112",
+    "cid": "bajybeiaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6d4"
+  },
+  {
+    "name": "version-1-codec-113",
+    "cid": "bafyreiaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6d4"
+  },
+  {
+    "name": "version-2-codec-113",
+    "cid": "bajyreiaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6d4"
+  },
+  {
+    "name": "sha256-size-0",
+    "cid": "bafybeaa"
+  },
+  {
+    "name": "sha256-size-1",
+    "cid": "bafybeaia"
+  },
+  {
+    "name": "sha256-size-16",
+    "cid": "bafybeeaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "name": "sha256-size-31",
+    "cid": "bafybehyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "name": "sha256-size-32",
+    "cid": "bafybeiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "name": "sha256-size-33",
+    "cid": "bafybeiiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "name": "sha256-size-64",
+    "cid": "bafybeqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "name": "multihash-0",
+    "cid": "bafyaaiaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6d4"
+  },
+  {
+    "name": "multihash-17",
+    "cid": "bafybciaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6d4"
+  },
+  {
+    "name": "multihash-18",
+    "cid": "bafybeiaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6d4"
+  },
+  {
+    "name": "multihash-19",
+    "cid": "bafybgiaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6d4"
+  },
+  {
+    "name": "valid-v0",
+    "cid": "QmNLfbof5rLekrACjeuLk9JmGZD2HDBHCU4z16iYKmx5SE"
+  },
+  {
+    "name": "v0-zero-digest",
+    "cid": "QmNLei78zWmzUdbeRB3CiUfAizWUrbeeZh5K1rhAQKCh51"
+  },
+  {
+    "name": "padding-nonzero",
+    "cid": "bafybeiaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6d7"
+  },
+  {
+    "name": "extra-digit",
+    "cid": "bafybeiaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6d4a"
+  },
+  {
+    "name": "missing-digit",
+    "cid": "bafybeiaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6d"
+  },
+  {
+    "name": "upper-multibase",
+    "cid": "BAFYBEIAAAEBAGBAFAYDQQCIKBMGA2DQPCAIREEYUCULBOGAZDINRYHI6D4"
+  },
+  {
+    "name": "v1-base58",
+    "cid": "zdj7WVRuyEiwKpFdZU8UPrxcX9KtmQTzkbR4nUWfu7D9DWycA"
+  },
+  {
+    "name": "truncated-digest",
+    "cid": "bafybeiaaaebagbafaydqqcikbmga2dqpcaireeyuculbogazdinryhi6"
+  }
+]

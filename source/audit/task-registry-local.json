@@ -1,0 +1,14 @@
+{
+  "environment": "local",
+  "checks": [
+    "reference execution before task publication",
+    "indexed double-hash Merkle vectors",
+    "invalid proof rejection",
+    "official failed vector",
+    "counterexample against reference",
+    "frozen existing references with append-only task publication"
+  ],
+  "originalTaskBankImported": false,
+  "originalBonusFormulaConfirmed": false,
+  "anchorSamplingIntegrated": false
+}

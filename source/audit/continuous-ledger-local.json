@@ -1,0 +1,16 @@
+{
+  "environment": "local",
+  "checks": [
+    "continuous per-second rewards",
+    "halving boundaries",
+    "99/1 allocation",
+    "empty-pool forfeiture",
+    "stop and restart",
+    "beneficiary transfer settlement",
+    "duplicate claim",
+    "8 decimals",
+    "21M cap constant"
+  ],
+  "referenceChainRoundingVerified": false,
+  "miningEligibilityIntegrated": false
+}

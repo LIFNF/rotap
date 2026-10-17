@@ -1,0 +1,77 @@
+{
+  "environment": "local fork of original contracts",
+  "referenceBlock": 73397243,
+  "remoteReadOnly": true,
+  "mainnetTransactionsSent": 0,
+  "overpaymentRejected": true,
+  "testFixtureChanges": {
+    "reason": "Original genesis sold out; provision materials only in local storage",
+    "NANDGiven": 20,
+    "originalMintNotTestedHere": true
+  },
+  "ask": {
+    "initialNext": "737",
+    "id": "738",
+    "storedFeeBps": "100",
+    "initialFeeBps": "100",
+    "escrowAtLeastFive": true,
+    "fill": {
+      "sellerNativeReceived": "19800",
+      "treasuryNativeReceived": "0",
+      "sellerCredit": "0",
+      "treasuryCredit": "200",
+      "overpayCredit": "0",
+      "remaining": "3"
+    },
+    "sellerBalanceAfterCancel": "18"
+  },
+  "bid": {
+    "id": "6464",
+    "storedFeeBps": "200",
+    "cancelImmediateRefund": "30000",
+    "cancelOwedCredit": "0"
+  },
+  "nft": {
+    "id": "1143",
+    "initialFeeBps": "100",
+    "listing": [
+      "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+      "0x87BFCa3494Aa228fF589ab9B642143A5e8c8F9a6",
+      "4934",
+      "100000",
+      "100",
+      true
+    ],
+    "sellerOwnsUntilFill": true,
+    "duplicateRelistResult": "1144",
+    "duplicateRelistAllowed": true,
+    "delistWithoutApprovalAllowed": true,
+    "listWithoutApprovalAllowed": false,
+    "fill": {
+      "sellerNativeReceived": "99000",
+      "treasuryNativeReceived": "0",
+      "sellerCredit": "0",
+      "treasuryCredit": "1000",
+      "overpayCredit": "0",
+      "buyerOwnsNFT": true
+    }
+  },
+  "rpc": {
+    "publicRpcReads": 0,
+    "cacheHits": 114,
+    "broadcasts": 0
+  },
+  "newProcessorMint": {
+    "paid": "650000000000200",
+    "nativeReceived": "0",
+    "owedCredit": "650000000000200"
+  },
+  "rejectingSeller": {
+    "fillSucceeded": false,
+    "owed": "0"
+  },
+  "seal": {
+    "owner": "0x0000000000000000000000000000000000000000",
+    "sealed": true
+  }
+}

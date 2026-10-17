@@ -1,0 +1,11 @@
+{
+  "endpoint": "https://xlayerrpc.okx.com",
+  "readOnly": true,
+  "responses": [
+    {
+      "jsonrpc": "2.0",
+      "result": "0x00000000000000000000000000000000000000000000000000049e57d6354000",
+      "id": 1
+    }
+  ]
+}

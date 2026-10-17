@@ -1,0 +1,318 @@
+[
+  {
+    "type": "constructor",
+    "inputs": [
+      {
+        "name": "mining_",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "currentEra",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "dailyEmission",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "mining",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract PodMining"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "pendingLive",
+    "inputs": [
+      {
+        "name": "key",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "poolInfo",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "verifWeight",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "unverWeight",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "verifMiners",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "miners_",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "unverBps",
+        "type": "uint16",
+        "internalType": "uint16"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "previewBurn",
+    "inputs": [
+      {
+        "name": "nl",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "nandBurn",
+        "type": "uint32",
+        "internalType": "uint32"
+      },
+      {
+        "name": "latchBurn",
+        "type": "uint32",
+        "internalType": "uint32"
+      }
+    ],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "function",
+    "name": "previewDepth",
+    "inputs": [
+      {
+        "name": "circuits",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "nl",
+        "type": "bytes",
+        "internalType": "bytes"
+      },
+      {
+        "name": "nIn",
+        "type": "uint32",
+        "internalType": "uint32"
+      },
+      {
+        "name": "nOut",
+        "type": "uint32",
+        "internalType": "uint32"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint32",
+        "internalType": "uint32"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "previewScore",
+    "inputs": [
+      {
+        "name": "circuits",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "circuitId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "taskId",
+        "type": "uint32",
+        "internalType": "uint32"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "verifWeight",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "unverWeight",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "h",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "bstar",
+        "type": "uint64",
+        "internalType": "uint64"
+      },
+      {
+        "name": "bonus",
+        "type": "uint64",
+        "internalType": "uint64"
+      },
+      {
+        "name": "optimal",
+        "type": "bool",
+        "internalType": "bool"
+      },
+      {
+        "name": "samples",
+        "type": "uint32",
+        "internalType": "uint32"
+      },
+      {
+        "name": "reason",
+        "type": "string",
+        "internalType": "string"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "refsEligible",
+    "inputs": [
+      {
+        "name": "circuits",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "circuitId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "sampleIndexes",
+    "inputs": [
+      {
+        "name": "circuits",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "circuitId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "taskId",
+        "type": "uint32",
+        "internalType": "uint32"
+      },
+      {
+        "name": "anchorBlock",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "idx",
+        "type": "uint32[]",
+        "internalType": "uint32[]"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "taskReference",
+    "inputs": [
+      {
+        "name": "taskId",
+        "type": "uint32",
+        "internalType": "uint32"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "refCircuits",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "refCircuitId",
+        "type": "uint64",
+        "internalType": "uint64"
+      },
+      {
+        "name": "refArea",
+        "type": "uint64",
+        "internalType": "uint64"
+      },
+      {
+        "name": "refCost",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  }
+]

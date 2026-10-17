@@ -1,0 +1,1929 @@
+{
+  "environment": "mainnet-read-only-estimate",
+  "checkedAt": "2026-10-17T07:16:20.006Z",
+  "releaseId": "0x486663fa041f2ddf5e688dcc1f50c96dbe76204e409e68a9436aa0587d50ab57",
+  "owner": "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A",
+  "chainId": 4663,
+  "nonce": 1,
+  "transactionCount": 239,
+  "includesArbitrumDataFees": true,
+  "estimatedFeeWei": "18433443679286000",
+  "budgetWith25PercentMarginWei": "23041804599107500",
+  "balanceWei": "1135797940946051",
+  "shortfallWei": "21906006658161449",
+  "funded": false,
+  "transactions": [
+    {
+      "label": "transistor-implementation",
+      "executionGas": "1990986",
+      "l1Gas": "2609",
+      "baseFee": "20024000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "39919746280000"
+    },
+    {
+      "label": "circuit-implementation",
+      "executionGas": "4234831",
+      "l1Gas": "7347",
+      "baseFee": "20024000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "84945372272000"
+    },
+    {
+      "label": "factory-implementation",
+      "executionGas": "2102200",
+      "l1Gas": "2550",
+      "baseFee": "20024000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "42145514000000"
+    },
+    {
+      "label": "factory-proxy",
+      "executionGas": "697773",
+      "l1Gas": "410",
+      "baseFee": "20024000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "13980416392000"
+    },
+    {
+      "label": "factory-tapeout-default",
+      "executionGas": "32162",
+      "l1Gas": "81",
+      "baseFee": "20024000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "645633832000"
+    },
+    {
+      "label": "genesis-created",
+      "executionGas": "825483",
+      "l1Gas": "181",
+      "baseFee": "20070000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "16571076480000"
+    },
+    {
+      "label": "factory-final-create-fee",
+      "executionGas": "51942",
+      "l1Gas": "81",
+      "baseFee": "20070000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "1044101610000"
+    },
+    {
+      "label": "factory-final-protocol-fee",
+      "executionGas": "34732",
+      "l1Gas": "81",
+      "baseFee": "20070000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "698696910000"
+    },
+    {
+      "label": "task-registry",
+      "executionGas": "2184202",
+      "l1Gas": "2731",
+      "baseFee": "20070000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "43891745310000"
+    },
+    {
+      "label": "sampling-policy",
+      "executionGas": "1300424",
+      "l1Gas": "1693",
+      "baseFee": "20070000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "26133488190000"
+    },
+    {
+      "label": "reference-benchmark",
+      "executionGas": "6298775",
+      "l1Gas": "7350",
+      "baseFee": "20048000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "126425194000000"
+    },
+    {
+      "label": "reference-materials-nand",
+      "executionGas": "133497",
+      "l1Gas": "96",
+      "baseFee": "20048000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "2678272464000"
+    },
+    {
+      "label": "reference-materials-latch",
+      "executionGas": "99309",
+      "l1Gas": "96",
+      "baseFee": "20048000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "1992871440000"
+    },
+    {
+      "label": "reference-circuit-1",
+      "executionGas": "339023",
+      "l1Gas": "121",
+      "baseFee": "20048000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "6799158912000"
+    },
+    {
+      "label": "task-published-1",
+      "executionGas": "1429454",
+      "l1Gas": "2588",
+      "baseFee": "20048000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "28709578016000"
+    },
+    {
+      "label": "reference-circuit-2",
+      "executionGas": "307629",
+      "l1Gas": "122",
+      "baseFee": "20076000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "6178409076000"
+    },
+    {
+      "label": "task-published-2",
+      "executionGas": "1427781",
+      "l1Gas": "2632",
+      "baseFee": "20076000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "28716971388000"
+    },
+    {
+      "label": "reference-circuit-3",
+      "executionGas": "311673",
+      "l1Gas": "123",
+      "baseFee": "20076000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "6259616496000"
+    },
+    {
+      "label": "task-published-3",
+      "executionGas": "1536137",
+      "l1Gas": "2677",
+      "baseFee": "20076000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "30893229864000"
+    },
+    {
+      "label": "reference-circuit-4",
+      "executionGas": "360351",
+      "l1Gas": "127",
+      "baseFee": "20076000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "7236956328000"
+    },
+    {
+      "label": "task-published-4",
+      "executionGas": "1657840",
+      "l1Gas": "2558",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "33207960000000"
+    },
+    {
+      "label": "reference-circuit-5",
+      "executionGas": "364395",
+      "l1Gas": "127",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "7290440000000"
+    },
+    {
+      "label": "task-published-5",
+      "executionGas": "1769624",
+      "l1Gas": "2643",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "35445340000000"
+    },
+    {
+      "label": "reference-circuit-6",
+      "executionGas": "364395",
+      "l1Gas": "129",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "7290480000000"
+    },
+    {
+      "label": "task-published-6",
+      "executionGas": "1771870",
+      "l1Gas": "2693",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "35491260000000"
+    },
+    {
+      "label": "reference-circuit-7",
+      "executionGas": "368440",
+      "l1Gas": "128",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "7371360000000"
+    },
+    {
+      "label": "task-published-7",
+      "executionGas": "1875067",
+      "l1Gas": "2539",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "37552120000000"
+    },
+    {
+      "label": "reference-circuit-8",
+      "executionGas": "372478",
+      "l1Gas": "130",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "7452160000000"
+    },
+    {
+      "label": "task-published-8",
+      "executionGas": "1999709",
+      "l1Gas": "2628",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "40046740000000"
+    },
+    {
+      "label": "reference-circuit-9",
+      "executionGas": "364390",
+      "l1Gas": "127",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "7290340000000"
+    },
+    {
+      "label": "task-published-9",
+      "executionGas": "1830392",
+      "l1Gas": "2550",
+      "baseFee": "20058000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "36765150636000"
+    },
+    {
+      "label": "reference-circuit-10",
+      "executionGas": "376671",
+      "l1Gas": "128",
+      "baseFee": "20058000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "7557834342000"
+    },
+    {
+      "label": "task-published-10",
+      "executionGas": "2162605",
+      "l1Gas": "2403",
+      "baseFee": "20058000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "43425730464000"
+    },
+    {
+      "label": "reference-circuit-11",
+      "executionGas": "535405",
+      "l1Gas": "153",
+      "baseFee": "20058000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "10742222364000"
+    },
+    {
+      "label": "task-published-11",
+      "executionGas": "4101144",
+      "l1Gas": "2501",
+      "baseFee": "20058000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "82310911410000"
+    },
+    {
+      "label": "reference-circuit-12",
+      "executionGas": "860370",
+      "l1Gas": "203",
+      "baseFee": "20180000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "17366363140000"
+    },
+    {
+      "label": "task-published-12",
+      "executionGas": "8087163",
+      "l1Gas": "2681",
+      "baseFee": "20180000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "163253051920000"
+    },
+    {
+      "label": "reference-circuit-13",
+      "executionGas": "565510",
+      "l1Gas": "158",
+      "baseFee": "20180000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "11415180240000"
+    },
+    {
+      "label": "task-published-13",
+      "executionGas": "4277812",
+      "l1Gas": "2519",
+      "baseFee": "20180000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "86377079580000"
+    },
+    {
+      "label": "reference-circuit-14",
+      "executionGas": "411074",
+      "l1Gas": "133",
+      "baseFee": "20180000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "8298157260000"
+    },
+    {
+      "label": "task-published-14",
+      "executionGas": "2453459",
+      "l1Gas": "2378",
+      "baseFee": "20058000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "49259178546000"
+    },
+    {
+      "label": "reference-circuit-15",
+      "executionGas": "441612",
+      "l1Gas": "139",
+      "baseFee": "20058000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "8860641558000"
+    },
+    {
+      "label": "task-published-15",
+      "executionGas": "2747318",
+      "l1Gas": "2487",
+      "baseFee": "20058000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "55155588690000"
+    },
+    {
+      "label": "reference-circuit-16",
+      "executionGas": "484253",
+      "l1Gas": "147",
+      "baseFee": "20014000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "9694781600000"
+    },
+    {
+      "label": "task-published-16",
+      "executionGas": "3290968",
+      "l1Gas": "2567",
+      "baseFee": "20014000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "65916809490000"
+    },
+    {
+      "label": "reference-circuit-17",
+      "executionGas": "376671",
+      "l1Gas": "129",
+      "baseFee": "20154000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "7594027200000"
+    },
+    {
+      "label": "task-published-17",
+      "executionGas": "2118410",
+      "l1Gas": "2471",
+      "baseFee": "20154000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "42744235674000"
+    },
+    {
+      "label": "reference-circuit-18",
+      "executionGas": "415267",
+      "l1Gas": "134",
+      "baseFee": "20154000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "8371991754000"
+    },
+    {
+      "label": "task-published-18",
+      "executionGas": "2575972",
+      "l1Gas": "2488",
+      "baseFee": "20154000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "51966282840000"
+    },
+    {
+      "label": "reference-circuit-19",
+      "executionGas": "407172",
+      "l1Gas": "133",
+      "baseFee": "20154000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "8208824970000"
+    },
+    {
+      "label": "task-published-19",
+      "executionGas": "2338873",
+      "l1Gas": "2543",
+      "baseFee": "20078000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "47010950448000"
+    },
+    {
+      "label": "reference-circuit-20",
+      "executionGas": "453846",
+      "l1Gas": "143",
+      "baseFee": "20078000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "9115191142000"
+    },
+    {
+      "label": "task-published-20",
+      "executionGas": "3014938",
+      "l1Gas": "2660",
+      "baseFee": "20078000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "60587332644000"
+    },
+    {
+      "label": "reference-circuit-21",
+      "executionGas": "582019",
+      "l1Gas": "167",
+      "baseFee": "20078000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "11689130508000"
+    },
+    {
+      "label": "task-published-21",
+      "executionGas": "4747081",
+      "l1Gas": "2608",
+      "baseFee": "20078000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "95364255742000"
+    },
+    {
+      "label": "reference-circuit-22",
+      "executionGas": "523620",
+      "l1Gas": "147",
+      "baseFee": "20126000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "10541334642000"
+    },
+    {
+      "label": "task-published-22",
+      "executionGas": "3732826",
+      "l1Gas": "2623",
+      "baseFee": "20126000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "75179646574000"
+    },
+    {
+      "label": "reference-circuit-23",
+      "executionGas": "527653",
+      "l1Gas": "150",
+      "baseFee": "20126000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "10622563178000"
+    },
+    {
+      "label": "task-published-23",
+      "executionGas": "3864970",
+      "l1Gas": "2574",
+      "baseFee": "20126000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "77838190544000"
+    },
+    {
+      "label": "reference-circuit-24",
+      "executionGas": "450531",
+      "l1Gas": "134",
+      "baseFee": "20126000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "9070083790000"
+    },
+    {
+      "label": "task-published-24",
+      "executionGas": "3044895",
+      "l1Gas": "2828",
+      "baseFee": "20004000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "60966650892000"
+    },
+    {
+      "label": "reference-circuit-25",
+      "executionGas": "372802",
+      "l1Gas": "128",
+      "baseFee": "20004000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "7460091720000"
+    },
+    {
+      "label": "task-published-25",
+      "executionGas": "2059342",
+      "l1Gas": "2604",
+      "baseFee": "20004000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "41247167784000"
+    },
+    {
+      "label": "reference-circuit-26",
+      "executionGas": "527338",
+      "l1Gas": "156",
+      "baseFee": "20004000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "10551989976000"
+    },
+    {
+      "label": "task-published-26",
+      "executionGas": "4010892",
+      "l1Gas": "2732",
+      "baseFee": "20004000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "80288534496000"
+    },
+    {
+      "label": "reference-circuit-27",
+      "executionGas": "315706",
+      "l1Gas": "121",
+      "baseFee": "20008000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "6319066616000"
+    },
+    {
+      "label": "task-published-27",
+      "executionGas": "3181568",
+      "l1Gas": "709",
+      "baseFee": "20008000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "63670998216000"
+    },
+    {
+      "label": "reference-circuit-28",
+      "executionGas": "411387",
+      "l1Gas": "132",
+      "baseFee": "20008000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "8233672152000"
+    },
+    {
+      "label": "task-published-28",
+      "executionGas": "4954118",
+      "l1Gas": "609",
+      "baseFee": "20008000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "99134177816000"
+    },
+    {
+      "label": "reference-circuit-29",
+      "executionGas": "419475",
+      "l1Gas": "136",
+      "baseFee": "20008000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "8395576888000"
+    },
+    {
+      "label": "task-published-29",
+      "executionGas": "5584906",
+      "l1Gas": "596",
+      "baseFee": "20004000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "111732382008000"
+    },
+    {
+      "label": "reference-circuit-30",
+      "executionGas": "319732",
+      "l1Gas": "122",
+      "baseFee": "20004000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "6398359416000"
+    },
+    {
+      "label": "task-published-30",
+      "executionGas": "3543729",
+      "l1Gas": "673",
+      "baseFee": "20004000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "70902217608000"
+    },
+    {
+      "label": "reference-circuit-31",
+      "executionGas": "899627",
+      "l1Gas": "206",
+      "baseFee": "20004000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "18000259332000"
+    },
+    {
+      "label": "task-published-31",
+      "executionGas": "8640953",
+      "l1Gas": "2644",
+      "baseFee": "20004000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "172906514388000"
+    },
+    {
+      "label": "reference-circuit-32",
+      "executionGas": "1383025",
+      "l1Gas": "281",
+      "baseFee": "20006000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "27674419836000"
+    },
+    {
+      "label": "task-published-32",
+      "executionGas": "8812643",
+      "l1Gas": "1674",
+      "baseFee": "20006000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "176339225902000"
+    },
+    {
+      "label": "reference-circuit-33",
+      "executionGas": "2010611",
+      "l1Gas": "358",
+      "baseFee": "20006000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "40231445814000"
+    },
+    {
+      "label": "task-published-33",
+      "executionGas": "8721043",
+      "l1Gas": "1474",
+      "baseFee": "20006000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "174502675102000"
+    },
+    {
+      "label": "reference-circuit-34",
+      "executionGas": "771355",
+      "l1Gas": "190",
+      "baseFee": "20006000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "15435529270000"
+    },
+    {
+      "label": "task-published-34",
+      "executionGas": "6954314",
+      "l1Gas": "2600",
+      "baseFee": "20008000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "139193935312000"
+    },
+    {
+      "label": "reference-circuit-35",
+      "executionGas": "1065797",
+      "l1Gas": "237",
+      "baseFee": "20008000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "21329208272000"
+    },
+    {
+      "label": "task-published-35",
+      "executionGas": "8733186",
+      "l1Gas": "2238",
+      "baseFee": "20008000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "174778363392000"
+    },
+    {
+      "label": "reference-circuit-36",
+      "executionGas": "902855",
+      "l1Gas": "216",
+      "baseFee": "20008000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "18068644568000"
+    },
+    {
+      "label": "task-published-36",
+      "executionGas": "8439819",
+      "l1Gas": "2515",
+      "baseFee": "20008000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "168914218672000"
+    },
+    {
+      "label": "reference-circuit-37",
+      "executionGas": "647470",
+      "l1Gas": "169",
+      "baseFee": "20032000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "12973504448000"
+    },
+    {
+      "label": "task-published-37",
+      "executionGas": "5337434",
+      "l1Gas": "2412",
+      "baseFee": "20032000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "106967795072000"
+    },
+    {
+      "label": "reference-circuit-38",
+      "executionGas": "825920",
+      "l1Gas": "203",
+      "baseFee": "20032000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "16548895936000"
+    },
+    {
+      "label": "task-published-38",
+      "executionGas": "7860330",
+      "l1Gas": "2486",
+      "baseFee": "20032000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "157507930112000"
+    },
+    {
+      "label": "reference-circuit-39",
+      "executionGas": "946420",
+      "l1Gas": "213",
+      "baseFee": "20032000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "18962952256000"
+    },
+    {
+      "label": "task-published-39",
+      "executionGas": "8613167",
+      "l1Gas": "2535",
+      "baseFee": "20012000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "172417428424000"
+    },
+    {
+      "label": "reference-circuit-40",
+      "executionGas": "942043",
+      "l1Gas": "219",
+      "baseFee": "20012000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "18856547144000"
+    },
+    {
+      "label": "task-published-40",
+      "executionGas": "8676028",
+      "l1Gas": "2471",
+      "baseFee": "20012000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "173674121988000"
+    },
+    {
+      "label": "reference-circuit-41",
+      "executionGas": "1270237",
+      "l1Gas": "270",
+      "baseFee": "20012000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "25425386084000"
+    },
+    {
+      "label": "task-published-41",
+      "executionGas": "8853207",
+      "l1Gas": "1992",
+      "baseFee": "20012000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "177210242388000"
+    },
+    {
+      "label": "reference-circuit-42",
+      "executionGas": "1715900",
+      "l1Gas": "333",
+      "baseFee": "20048000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "34407039184000"
+    },
+    {
+      "label": "task-published-42",
+      "executionGas": "9027935",
+      "l1Gas": "1585",
+      "baseFee": "20048000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "181023816960000"
+    },
+    {
+      "label": "reference-circuit-43",
+      "executionGas": "1317748",
+      "l1Gas": "264",
+      "baseFee": "20048000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "26423504576000"
+    },
+    {
+      "label": "task-published-43",
+      "executionGas": "8721411",
+      "l1Gas": "1856",
+      "baseFee": "20048000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "174884056816000"
+    },
+    {
+      "label": "reference-circuit-44",
+      "executionGas": "907151",
+      "l1Gas": "202",
+      "baseFee": "20048000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "18190612944000"
+    },
+    {
+      "label": "task-published-44",
+      "executionGas": "8566751",
+      "l1Gas": "2197",
+      "baseFee": "20132000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "172510061136000"
+    },
+    {
+      "label": "reference-circuit-45",
+      "executionGas": "907151",
+      "l1Gas": "201",
+      "baseFee": "20132000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "18266810464000"
+    },
+    {
+      "label": "task-published-45",
+      "executionGas": "8585743",
+      "l1Gas": "2567",
+      "baseFee": "20132000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "172899856920000"
+    },
+    {
+      "label": "reference-circuit-46",
+      "executionGas": "864381",
+      "l1Gas": "205",
+      "baseFee": "20132000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "17405845352000"
+    },
+    {
+      "label": "task-published-46",
+      "executionGas": "8294053",
+      "l1Gas": "2555",
+      "baseFee": "20132000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "167027312256000"
+    },
+    {
+      "label": "reference-circuit-47",
+      "executionGas": "826346",
+      "l1Gas": "190",
+      "baseFee": "20192000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "16689414912000"
+    },
+    {
+      "label": "task-published-47",
+      "executionGas": "7842910",
+      "l1Gas": "2606",
+      "baseFee": "20192000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "158416659072000"
+    },
+    {
+      "label": "reference-circuit-48",
+      "executionGas": "488732",
+      "l1Gas": "143",
+      "baseFee": "20192000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "9871364000000"
+    },
+    {
+      "label": "task-published-48",
+      "executionGas": "3439332",
+      "l1Gas": "2605",
+      "baseFee": "20192000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "69499591904000"
+    },
+    {
+      "label": "reference-circuit-49",
+      "executionGas": "565925",
+      "l1Gas": "157",
+      "baseFee": "20192000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "11430327744000"
+    },
+    {
+      "label": "task-published-49",
+      "executionGas": "4338273",
+      "l1Gas": "2817",
+      "baseFee": "20006000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "86847846540000"
+    },
+    {
+      "label": "reference-circuit-50",
+      "executionGas": "694359",
+      "l1Gas": "176",
+      "baseFee": "20006000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "13894867210000"
+    },
+    {
+      "label": "task-published-50",
+      "executionGas": "6070885",
+      "l1Gas": "2439",
+      "baseFee": "20006000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "121502919944000"
+    },
+    {
+      "label": "reference-circuit-51",
+      "executionGas": "1233114",
+      "l1Gas": "261",
+      "baseFee": "20006000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "24674900250000"
+    },
+    {
+      "label": "task-published-51",
+      "executionGas": "8928706",
+      "l1Gas": "2071",
+      "baseFee": "20006000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "178669124662000"
+    },
+    {
+      "label": "reference-circuit-52",
+      "executionGas": "774985",
+      "l1Gas": "194",
+      "baseFee": "20012000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "15512882148000"
+    },
+    {
+      "label": "task-published-52",
+      "executionGas": "7257974",
+      "l1Gas": "2523",
+      "baseFee": "20012000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "145297065964000"
+    },
+    {
+      "label": "reference-circuit-53",
+      "executionGas": "1032573",
+      "l1Gas": "216",
+      "baseFee": "20012000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "20668173468000"
+    },
+    {
+      "label": "task-published-53",
+      "executionGas": "8906160",
+      "l1Gas": "2440",
+      "baseFee": "20012000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "178278903200000"
+    },
+    {
+      "label": "reference-circuit-54",
+      "executionGas": "941488",
+      "l1Gas": "217",
+      "baseFee": "20012000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "18845400460000"
+    },
+    {
+      "label": "task-published-54",
+      "executionGas": "8658082",
+      "l1Gas": "2599",
+      "baseFee": "20012000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "173317548172000"
+    },
+    {
+      "label": "reference-circuit-55",
+      "executionGas": "1065321",
+      "l1Gas": "239",
+      "baseFee": "20012000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "21323986720000"
+    },
+    {
+      "label": "task-published-55",
+      "executionGas": "8878106",
+      "l1Gas": "2269",
+      "baseFee": "20012000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "177714064500000"
+    },
+    {
+      "label": "reference-circuit-56",
+      "executionGas": "618348",
+      "l1Gas": "169",
+      "baseFee": "20012000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "12377762204000"
+    },
+    {
+      "label": "task-published-56",
+      "executionGas": "10719462",
+      "l1Gas": "618",
+      "baseFee": "20012000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "214530240960000"
+    },
+    {
+      "label": "reference-circuit-57",
+      "executionGas": "618329",
+      "l1Gas": "168",
+      "baseFee": "20082000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "12420656754000"
+    },
+    {
+      "label": "task-published-57",
+      "executionGas": "10639796",
+      "l1Gas": "600",
+      "baseFee": "20082000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "213680432472000"
+    },
+    {
+      "label": "reference-circuit-58",
+      "executionGas": "1084995",
+      "l1Gas": "241",
+      "baseFee": "20034000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "21741618024000"
+    },
+    {
+      "label": "task-published-58",
+      "executionGas": "12034965",
+      "l1Gas": "582",
+      "baseFee": "20034000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "241120148598000"
+    },
+    {
+      "label": "reference-circuit-59",
+      "executionGas": "715687",
+      "l1Gas": "186",
+      "baseFee": "20034000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "14341799682000"
+    },
+    {
+      "label": "task-published-59",
+      "executionGas": "11035972",
+      "l1Gas": "570",
+      "baseFee": "20038000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "221150228596000"
+    },
+    {
+      "label": "reference-circuit-60",
+      "executionGas": "415236",
+      "l1Gas": "132",
+      "baseFee": "20038000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "8323143984000"
+    },
+    {
+      "label": "task-published-60",
+      "executionGas": "5200881",
+      "l1Gas": "598",
+      "baseFee": "20038000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "104227236202000"
+    },
+    {
+      "label": "reference-circuit-61",
+      "executionGas": "415224",
+      "l1Gas": "132",
+      "baseFee": "20038000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "8322903528000"
+    },
+    {
+      "label": "task-published-61",
+      "executionGas": "5238746",
+      "l1Gas": "581",
+      "baseFee": "20038000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "104985634426000"
+    },
+    {
+      "label": "reference-circuit-62",
+      "executionGas": "419280",
+      "l1Gas": "134",
+      "baseFee": "20084000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "8423510776000"
+    },
+    {
+      "label": "task-published-62",
+      "executionGas": "5533620",
+      "l1Gas": "598",
+      "baseFee": "20084000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "111149234312000"
+    },
+    {
+      "label": "reference-circuit-63",
+      "executionGas": "626561",
+      "l1Gas": "170",
+      "baseFee": "20084000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "12587265404000"
+    },
+    {
+      "label": "task-published-63",
+      "executionGas": "10788823",
+      "l1Gas": "558",
+      "baseFee": "20084000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "216693928004000"
+    },
+    {
+      "label": "reference-circuit-64",
+      "executionGas": "622818",
+      "l1Gas": "171",
+      "baseFee": "20084000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "12512111076000"
+    },
+    {
+      "label": "task-published-64",
+      "executionGas": "10335585",
+      "l1Gas": "583",
+      "baseFee": "20052000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "207260840736000"
+    },
+    {
+      "label": "reference-circuit-65",
+      "executionGas": "589603",
+      "l1Gas": "164",
+      "baseFee": "20052000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "11826007884000"
+    },
+    {
+      "label": "task-published-65",
+      "executionGas": "10346814",
+      "l1Gas": "579",
+      "baseFee": "20052000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "207485924436000"
+    },
+    {
+      "label": "reference-circuit-66",
+      "executionGas": "1117099",
+      "l1Gas": "244",
+      "baseFee": "20052000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "22404961836000"
+    },
+    {
+      "label": "task-published-66",
+      "executionGas": "12148702",
+      "l1Gas": "533",
+      "baseFee": "20052000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "243616460220000"
+    },
+    {
+      "label": "reference-circuit-67",
+      "executionGas": "994217",
+      "l1Gas": "227",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "19888880000000"
+    },
+    {
+      "label": "task-published-67",
+      "executionGas": "12051442",
+      "l1Gas": "575",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "241040340000000"
+    },
+    {
+      "label": "reference-circuit-68",
+      "executionGas": "828090",
+      "l1Gas": "199",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "16565780000000"
+    },
+    {
+      "label": "task-published-68",
+      "executionGas": "11226901",
+      "l1Gas": "583",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "224549680000000"
+    },
+    {
+      "label": "reference-circuit-69",
+      "executionGas": "1033215",
+      "l1Gas": "230",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "20668900000000"
+    },
+    {
+      "label": "task-published-69",
+      "executionGas": "11778498",
+      "l1Gas": "541",
+      "baseFee": "20172000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "237606774708000"
+    },
+    {
+      "label": "reference-circuit-70",
+      "executionGas": "1039919",
+      "l1Gas": "235",
+      "baseFee": "20172000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "20981986488000"
+    },
+    {
+      "label": "task-published-70",
+      "executionGas": "12160314",
+      "l1Gas": "545",
+      "baseFee": "20172000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "245308847748000"
+    },
+    {
+      "label": "reference-circuit-71",
+      "executionGas": "1036619",
+      "l1Gas": "231",
+      "baseFee": "20172000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "20915338200000"
+    },
+    {
+      "label": "task-published-71",
+      "executionGas": "11915706",
+      "l1Gas": "563",
+      "baseFee": "20172000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "240374978268000"
+    },
+    {
+      "label": "reference-circuit-72",
+      "executionGas": "754235",
+      "l1Gas": "191",
+      "baseFee": "20034000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "15114170484000"
+    },
+    {
+      "label": "task-published-72",
+      "executionGas": "11120845",
+      "l1Gas": "534",
+      "baseFee": "20034000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "222805706886000"
+    },
+    {
+      "label": "reference-circuit-73",
+      "executionGas": "622367",
+      "l1Gas": "170",
+      "baseFee": "20034000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "12471906258000"
+    },
+    {
+      "label": "task-published-73",
+      "executionGas": "10387220",
+      "l1Gas": "598",
+      "baseFee": "20034000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "208109545812000"
+    },
+    {
+      "label": "reference-circuit-74",
+      "executionGas": "592097",
+      "l1Gas": "167",
+      "baseFee": "20034000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "11865416976000"
+    },
+    {
+      "label": "task-published-74",
+      "executionGas": "10249598",
+      "l1Gas": "570",
+      "baseFee": "20054000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "205556869072000"
+    },
+    {
+      "label": "reference-circuit-75",
+      "executionGas": "708929",
+      "l1Gas": "185",
+      "baseFee": "20054000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "14220572156000"
+    },
+    {
+      "label": "task-published-75",
+      "executionGas": "10993891",
+      "l1Gas": "582",
+      "baseFee": "20054000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "220483161542000"
+    },
+    {
+      "label": "reference-circuit-76",
+      "executionGas": "462116",
+      "l1Gas": "144",
+      "baseFee": "20054000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "9270162040000"
+    },
+    {
+      "label": "task-published-76",
+      "executionGas": "7258190",
+      "l1Gas": "612",
+      "baseFee": "20054000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "145568015308000"
+    },
+    {
+      "label": "reference-circuit-77",
+      "executionGas": "658354",
+      "l1Gas": "174",
+      "baseFee": "20044000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "13199535232000"
+    },
+    {
+      "label": "task-published-77",
+      "executionGas": "10821129",
+      "l1Gas": "616",
+      "baseFee": "20044000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "216911056780000"
+    },
+    {
+      "label": "reference-circuit-78",
+      "executionGas": "753863",
+      "l1Gas": "190",
+      "baseFee": "20044000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "15114238332000"
+    },
+    {
+      "label": "task-published-78",
+      "executionGas": "11368421",
+      "l1Gas": "608",
+      "baseFee": "20044000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "227880817276000"
+    },
+    {
+      "label": "reference-circuit-79",
+      "executionGas": "2020555",
+      "l1Gas": "381",
+      "baseFee": "20044000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "40507641184000"
+    },
+    {
+      "label": "task-published-79",
+      "executionGas": "12930545",
+      "l1Gas": "586",
+      "baseFee": "20032000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "259036416192000"
+    },
+    {
+      "label": "reference-circuit-80",
+      "executionGas": "961049",
+      "l1Gas": "215",
+      "baseFee": "20032000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "19256040448000"
+    },
+    {
+      "label": "task-published-80",
+      "executionGas": "11777152",
+      "l1Gas": "548",
+      "baseFee": "20032000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "235930886400000"
+    },
+    {
+      "label": "reference-circuit-81",
+      "executionGas": "2532624",
+      "l1Gas": "462",
+      "baseFee": "20032000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "50742778752000"
+    },
+    {
+      "label": "task-published-81",
+      "executionGas": "9334048",
+      "l1Gas": "1174",
+      "baseFee": "20032000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "187003167104000"
+    },
+    {
+      "label": "reference-circuit-82",
+      "executionGas": "3110468",
+      "l1Gas": "561",
+      "baseFee": "20030000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "62313910870000"
+    },
+    {
+      "label": "task-published-82",
+      "executionGas": "10608097",
+      "l1Gas": "575",
+      "baseFee": "20030000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "212491700160000"
+    },
+    {
+      "label": "reference-circuit-83",
+      "executionGas": "2940296",
+      "l1Gas": "533",
+      "baseFee": "20030000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "58904804870000"
+    },
+    {
+      "label": "task-published-83",
+      "executionGas": "13230916",
+      "l1Gas": "572",
+      "baseFee": "20030000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "265026704640000"
+    },
+    {
+      "label": "reference-circuit-84",
+      "executionGas": "3215125",
+      "l1Gas": "568",
+      "baseFee": "20030000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "64410330790000"
+    },
+    {
+      "label": "task-published-84",
+      "executionGas": "10946567",
+      "l1Gas": "531",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "218941960000000"
+    },
+    {
+      "label": "reference-circuit-85",
+      "executionGas": "2677706",
+      "l1Gas": "496",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "53564040000000"
+    },
+    {
+      "label": "task-published-85",
+      "executionGas": "11847360",
+      "l1Gas": "576",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "236958720000000"
+    },
+    {
+      "label": "reference-circuit-86",
+      "executionGas": "1738668",
+      "l1Gas": "325",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "34779860000000"
+    },
+    {
+      "label": "task-published-86",
+      "executionGas": "12496730",
+      "l1Gas": "575",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "249946100000000"
+    },
+    {
+      "label": "reference-circuit-87",
+      "executionGas": "1388110",
+      "l1Gas": "282",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "27767840000000"
+    },
+    {
+      "label": "task-published-87",
+      "executionGas": "8828385",
+      "l1Gas": "1908",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "176605860000000"
+    },
+    {
+      "label": "reference-circuit-88",
+      "executionGas": "1883775",
+      "l1Gas": "343",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "37682360000000"
+    },
+    {
+      "label": "task-published-88",
+      "executionGas": "8748422",
+      "l1Gas": "1510",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "174998640000000"
+    },
+    {
+      "label": "reference-circuit-89",
+      "executionGas": "2650930",
+      "l1Gas": "487",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "53028340000000"
+    },
+    {
+      "label": "task-published-89",
+      "executionGas": "11808319",
+      "l1Gas": "557",
+      "baseFee": "20024000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "236460933024000"
+    },
+    {
+      "label": "reference-circuit-90",
+      "executionGas": "1043272",
+      "l1Gas": "233",
+      "baseFee": "20024000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "20895144120000"
+    },
+    {
+      "label": "task-published-90",
+      "executionGas": "12427211",
+      "l1Gas": "599",
+      "baseFee": "20024000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "248854467440000"
+    },
+    {
+      "label": "reference-circuit-91",
+      "executionGas": "1643760",
+      "l1Gas": "323",
+      "baseFee": "20024000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "32921117992000"
+    },
+    {
+      "label": "task-published-91",
+      "executionGas": "13200975",
+      "l1Gas": "569",
+      "baseFee": "20024000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "264347717056000"
+    },
+    {
+      "label": "reference-circuit-92",
+      "executionGas": "835493",
+      "l1Gas": "209",
+      "baseFee": "20090000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "16789253180000"
+    },
+    {
+      "label": "task-published-92",
+      "executionGas": "11632666",
+      "l1Gas": "596",
+      "baseFee": "20090000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "233712233580000"
+    },
+    {
+      "label": "reference-circuit-93",
+      "executionGas": "1908356",
+      "l1Gas": "344",
+      "baseFee": "20090000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "38345783000000"
+    },
+    {
+      "label": "task-published-93",
+      "executionGas": "12205705",
+      "l1Gas": "583",
+      "baseFee": "20090000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "245224325920000"
+    },
+    {
+      "label": "reference-circuit-94",
+      "executionGas": "2406731",
+      "l1Gas": "431",
+      "baseFee": "20090000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "48359884580000"
+    },
+    {
+      "label": "task-published-94",
+      "executionGas": "13212127",
+      "l1Gas": "557",
+      "baseFee": "20094000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "265495672296000"
+    },
+    {
+      "label": "reference-circuit-95",
+      "executionGas": "1622397",
+      "l1Gas": "313",
+      "baseFee": "20094000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "32606734740000"
+    },
+    {
+      "label": "task-published-95",
+      "executionGas": "11798683",
+      "l1Gas": "563",
+      "baseFee": "20094000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "237094049124000"
+    },
+    {
+      "label": "reference-circuit-96",
+      "executionGas": "1575075",
+      "l1Gas": "310",
+      "baseFee": "20094000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "31655786190000"
+    },
+    {
+      "label": "task-published-96",
+      "executionGas": "12759552",
+      "l1Gas": "572",
+      "baseFee": "20094000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "256401931656000"
+    },
+    {
+      "label": "reference-circuit-97",
+      "executionGas": "1818544",
+      "l1Gas": "335",
+      "baseFee": "20020000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "36413957580000"
+    },
+    {
+      "label": "task-published-97",
+      "executionGas": "13151025",
+      "l1Gas": "570",
+      "baseFee": "20020000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "263294931900000"
+    },
+    {
+      "label": "reference-circuit-98",
+      "executionGas": "4313306",
+      "l1Gas": "759",
+      "baseFee": "20020000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "86367581300000"
+    },
+    {
+      "label": "task-published-98",
+      "executionGas": "10179180",
+      "l1Gas": "583",
+      "baseFee": "20020000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "203798855260000"
+    },
+    {
+      "label": "reference-circuit-99",
+      "executionGas": "3212221",
+      "l1Gas": "586",
+      "baseFee": "20020000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "64320396140000"
+    },
+    {
+      "label": "task-published-99",
+      "executionGas": "10856588",
+      "l1Gas": "525",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "217142260000000"
+    },
+    {
+      "label": "reference-circuit-100",
+      "executionGas": "1030151",
+      "l1Gas": "237",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "20607760000000"
+    },
+    {
+      "label": "task-published-100",
+      "executionGas": "12333692",
+      "l1Gas": "581",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "246685460000000"
+    },
+    {
+      "label": "ledger-factory",
+      "executionGas": "1559835",
+      "l1Gas": "1767",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "31232040000000"
+    },
+    {
+      "label": "mining-implementation",
+      "executionGas": "5123350",
+      "l1Gas": "6009",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "102587180000000"
+    },
+    {
+      "label": "mining-proxy",
+      "executionGas": "1536337",
+      "l1Gas": "415",
+      "baseFee": "20134000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "30940964768000"
+    },
+    {
+      "label": "registry-controller",
+      "executionGas": "29719",
+      "l1Gas": "81",
+      "baseFee": "20134000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "599993200000"
+    },
+    {
+      "label": "sampling-controller",
+      "executionGas": "46925",
+      "l1Gas": "81",
+      "baseFee": "20134000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "946418804000"
+    },
+    {
+      "label": "boost",
+      "executionGas": "2289399",
+      "l1Gas": "2285",
+      "baseFee": "20134000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "46140765656000"
+    },
+    {
+      "label": "mining-boost",
+      "executionGas": "54370",
+      "l1Gas": "81",
+      "baseFee": "20134000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "1096316434000"
+    },
+    {
+      "label": "transistor-market-implementation",
+      "executionGas": "1826455",
+      "l1Gas": "2337",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "36575840000000"
+    },
+    {
+      "label": "transistor-market-proxy",
+      "executionGas": "216154",
+      "l1Gas": "400",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "4331080000000"
+    },
+    {
+      "label": "circuit-market-implementation",
+      "executionGas": "1642212",
+      "l1Gas": "2171",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "32887660000000"
+    },
+    {
+      "label": "circuit-market-proxy",
+      "executionGas": "216035",
+      "l1Gas": "399",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "4328680000000"
+    },
+    {
+      "label": "account-payments",
+      "executionGas": "211953",
+      "l1Gas": "383",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "4246720000000"
+    },
+    {
+      "label": "account-implementation",
+      "executionGas": "1045295",
+      "l1Gas": "1310",
+      "baseFee": "20114000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "21051412970000"
+    },
+    {
+      "label": "account-beacon",
+      "executionGas": "243881",
+      "l1Gas": "389",
+      "baseFee": "20114000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "4913246780000"
+    },
+    {
+      "label": "account-router",
+      "executionGas": "144135",
+      "l1Gas": "303",
+      "baseFee": "20114000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "2905225932000"
+    },
+    {
+      "label": "account-opener",
+      "executionGas": "658422",
+      "l1Gas": "869",
+      "baseFee": "20114000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "13260979174000"
+    },
+    {
+      "label": "site-registry",
+      "executionGas": "787651",
+      "l1Gas": "1131",
+      "baseFee": "20114000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "15865561148000"
+    },
+    {
+      "label": "payments-opener",
+      "executionGas": "46649",
+      "l1Gas": "81",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "934600000000"
+    },
+    {
+      "label": "genesis-hooks",
+      "executionGas": "99923",
+      "l1Gas": "111",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "2000680000000"
+    },
+    {
+      "label": "genesis-mining-processor",
+      "executionGas": "54624",
+      "l1Gas": "96",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "1094400000000"
+    },
+    {
+      "label": "mining-sealed",
+      "executionGas": "55769",
+      "l1Gas": "67",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "1116720000000"
+    },
+    {
+      "label": "mining-authority-renounced",
+      "executionGas": "28872",
+      "l1Gas": "67",
+      "baseFee": "20000000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "578780000000"
+    },
+    {
+      "label": "materials-market-sealed",
+      "executionGas": "34050",
+      "l1Gas": "67",
+      "baseFee": "20022000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "683090574000"
+    },
+    {
+      "label": "circuit-market-sealed",
+      "executionGas": "33995",
+      "l1Gas": "67",
+      "baseFee": "20022000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "681989364000"
+    },
+    {
+      "label": "account-beacon-authority-renounced",
+      "executionGas": "23154",
+      "l1Gas": "67",
+      "baseFee": "20022000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "464930862000"
+    },
+    {
+      "label": "factory-sealed",
+      "executionGas": "65275",
+      "l1Gas": "67",
+      "baseFee": "20022000",
+      "l1BaseFee": "517020",
+      "estimatedFeeWei": "1308277524000"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "environment": "local fork of original contracts",
+  "referenceBlock": 73397243,
+  "remoteReadOnly": true,
+  "mainnetTransactionsSent": 0,
+  "testFixtureChanges": {
+    "provisionedNAND": 20,
+    "customTestTaskAndVectors": true
+  },
+  "headStartSeconds": "1800",
+  "publicationAttempts": [
+    {
+      "publisher": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+      "samples": 3,
+      "allowed": false,
+      "revert": "0x118cdaa700000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c1"
+    },
+    {
+      "publisher": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+      "samples": 32,
+      "allowed": false,
+      "revert": "0x118cdaa700000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c1"
+    },
+    {
+      "publisher": "0xfb7708019E64462126bAfFFC30c03E770e455Ef8",
+      "samples": 3,
+      "allowed": false,
+      "revert": "0x467fdfd7"
+    },
+    {
+      "publisher": "0xfb7708019E64462126bAfFFC30c03E770e455Ef8",
+      "samples": 32,
+      "allowed": true
+    }
+  ],
+  "selectedPublicationSamples": 32,
+  "taskId": "101",
+  "bad": {
+    "weightBefore": "10200",
+    "optimalBefore": true,
+    "weightAfterCounterexample": "10200",
+    "optimalAfterCounterexample": true,
+    "weightAfterKick": "600",
+    "optimalAfterKick": false
+  },
+  "slots": {
+    "before": [
+      "4936",
+      "1"
+    ],
+    "afterCounterexample": [
+      "4936",
+      "1"
+    ],
+    "afterKick": [
+      "0",
+      "1"
+    ]
+  },
+  "kickSucceeded": true,
+  "good": {
+    "weight": "2400",
+    "optimal": false
+  },
+  "stop": {
+    "slot": [
+      "4936",
+      "1"
+    ],
+    "tombstoneBlock": "73397257",
+    "originalCommitBlock": "73397248",
+    "paid": "30293",
+    "stoppedOptimal": true,
+    "restartedOptimal": true,
+    "restartedWeight": "10200",
+    "restartTombstone": "73397257"
+  },
+  "ceCount": "1",
+  "rpc": {
+    "publicRpcReads": 0,
+    "cacheHits": 9,
+    "broadcasts": 0
+  },
+  "selectiveStake": {
+    "selectedGoodWeight": "2520",
+    "omittedBadWeight": "600"
+  },
+  "bestTombstoneBlock": "0",
+  "taskGovernance": {
+    "before": [
+      "0",
+      "1",
+      "3",
+      "1",
+      "256",
+      true,
+      "0xae50c8166c0bec18d4b4ccc2c7c8a887ef6192e337cd22ce9c0505613f87e506",
+      "Fork counterexample task",
+      "4",
+      "256",
+      "0x87BFCa3494Aa228fF589ab9B642143A5e8c8F9a6",
+      "4934"
+    ],
+    "changed": [
+      "0",
+      "1",
+      "3",
+      "1",
+      "256",
+      true,
+      "0xae50c8166c0bec18d4b4ccc2c7c8a887ef6192e337cd22ce9c0505613f87e506",
+      "Fork counterexample task",
+      "4",
+      "256",
+      "0x87BFCa3494Aa228fF589ab9B642143A5e8c8F9a6",
+      "4935"
+    ],
+    "closed": [
+      "0",
+      "1",
+      "3",
+      "1",
+      "256",
+      false,
+      "0xae50c8166c0bec18d4b4ccc2c7c8a887ef6192e337cd22ce9c0505613f87e506",
+      "Fork counterexample task",
+      "4",
+      "256",
+      "0x87BFCa3494Aa228fF589ab9B642143A5e8c8F9a6",
+      "4935"
+    ],
+    "frozenAppendAllowed": true,
+    "sealedAppendAllowed": true
+  }
+}

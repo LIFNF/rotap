@@ -1,0 +1,722 @@
+{
+  "chainId": 196,
+  "block": "0x45ff3fb",
+  "matchedTasks": 46,
+  "totalTasks": 100,
+  "allRootsVerified": false,
+  "tasks": [
+    {
+      "taskId": 1,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 2,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 3,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 4,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 5,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 6,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 7,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 8,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 9,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 10,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 11,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 12,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 13,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 14,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 15,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 16,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 17,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 18,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 19,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 20,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 21,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 22,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 23,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 24,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 25,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 26,
+      "kind": 0,
+      "matched": false,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 27,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": [
+        "constant",
+        "increment",
+        "shift",
+        "repeat8"
+      ]
+    },
+    {
+      "taskId": 28,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 29,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 30,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 31,
+      "kind": 0,
+      "matched": false,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 32,
+      "kind": 0,
+      "matched": false,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 33,
+      "kind": 0,
+      "matched": false,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 34,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 35,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 36,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 37,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 38,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 39,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 40,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 41,
+      "kind": 0,
+      "matched": false,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 42,
+      "kind": 0,
+      "matched": false,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 43,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 44,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 45,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 46,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 47,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 48,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 49,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 50,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 51,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 52,
+      "kind": 0,
+      "matched": false,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 53,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 54,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 55,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 56,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 57,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 58,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 59,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 60,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 61,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 62,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 63,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 64,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 65,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 66,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 67,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 68,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 69,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 70,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 71,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 72,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 73,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 74,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 75,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 76,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 77,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 78,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 79,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 80,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 81,
+      "kind": 0,
+      "matched": false,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 82,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 83,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 84,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 85,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 86,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 87,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 88,
+      "kind": 0,
+      "matched": true,
+      "patternsTried": [
+        "constant"
+      ]
+    },
+    {
+      "taskId": 89,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 90,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 91,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 92,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 93,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 94,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 95,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 96,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 97,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 98,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 99,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    },
+    {
+      "taskId": 100,
+      "kind": 1,
+      "matched": false,
+      "patternsTried": []
+    }
+  ]
+}

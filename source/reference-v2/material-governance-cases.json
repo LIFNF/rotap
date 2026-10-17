@@ -1,0 +1,109 @@
+[
+  {
+    "name": "defaults",
+    "actions": []
+  },
+  {
+    "name": "creator-pricing",
+    "actions": [
+      [
+        "setPricing",
+        [
+          2000,
+          234,
+          345
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "creator-type-caps",
+    "actions": [
+      [
+        "setTypeCaps",
+        [
+          600,
+          700
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "creator-wallet-cap",
+    "actions": [
+      [
+        "setWalletCap",
+        [
+          100
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "creator-zero-pricing",
+    "actions": [
+      [
+        "setPricing",
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "zero-cap-mint",
+    "actions": [
+      [
+        "setPricing",
+        [
+          123,
+          650000000000000,
+          0
+        ]
+      ],
+      [
+        "mint",
+        [
+          0,
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "outsider-all",
+    "outsider": true,
+    "actions": [
+      [
+        "setPricing",
+        [
+          2000,
+          234,
+          345
+        ]
+      ],
+      [
+        "setTypeCaps",
+        [
+          600,
+          700
+        ]
+      ],
+      [
+        "setWalletCap",
+        [
+          100
+        ]
+      ],
+      [
+        "initializeTypeCounts",
+        [
+          1,
+          2
+        ]
+      ]
+    ]
+  }
+]

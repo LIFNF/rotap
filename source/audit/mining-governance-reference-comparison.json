@@ -1,0 +1,27 @@
+{
+  "environment": "local full candidate protocol with original deployment fork fixtures",
+  "referenceBlock": 73397243,
+  "checks": [
+    "owner-only anchored task publication with real sample count",
+    "false sampled design earns original bonus until kicked",
+    "registering counterexample alone leaves weights unchanged",
+    "kick removes bonus and preserves historical cost",
+    "valid higher-cost design remains base-only",
+    "stop pays rewards immediately and retains original slot history",
+    "1200-block restart restores slot",
+    "processor multiplier snapshots survive admin update",
+    "multiplier range zero through one hundred",
+    "permissionless claims pay NFT holder",
+    "task ref change preserves original cost and burn constants",
+    "task closing affects future starts",
+    "frozen and sealed registry remains append-only",
+    "pause allows arm/commit and blocks mining actions",
+    "cannot seal while paused",
+    "sealed mining retains owner but freezes governance",
+    "ownership may transfer after seal",
+    "UUPS upgrade preserves positions ledger and reward token",
+    "1800-second owner launch window"
+  ],
+  "mainnetDeployed": false,
+  "wholeProtocolEquivalent": false
+}

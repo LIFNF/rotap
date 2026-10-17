@@ -1,0 +1,16 @@
+{
+  "environment": "local",
+  "checks": [
+    "sample proof verification",
+    "pre-design commitment",
+    "best original slot",
+    "continuous claim",
+    "permissionless official-vector revocation",
+    "zero reward weight after revocation",
+    "holder transfer settles rewards",
+    "stop and cooldown"
+  ],
+  "samplingPolicy": "TEST MOCK ONLY - NOT DEPLOYABLE",
+  "referenceTaskBankImported": false,
+  "referenceSamplingParityVerified": false
+}

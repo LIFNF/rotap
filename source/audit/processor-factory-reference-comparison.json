@@ -1,0 +1,25 @@
+{
+  "environment": "local with original-chain read-only fixtures",
+  "originalBlock": "0x45ff3fb",
+  "matchedOriginalCreationCases": 7,
+  "matchedOriginalMaterialGovernanceCases": 0,
+  "checks": [
+    "owner-only creation",
+    "exact creation fee credit and excess refund balance",
+    "custom supply and zero-supply configuration",
+    "fixed prices and issuance caps without mutable setters",
+    "beacon proxies and locked implementation initializers",
+    "batch implementation upgrades preserve storage",
+    "UUPS upgrade context and authorization",
+    "external CPU registration",
+    "cross-factory REF execution",
+    "first NFT number and issued counter equal one",
+    "escaped metadata JSON",
+    "treasury withdrawal reconciles gas",
+    "seal renounces factory and beacon ownership",
+    "post-seal mint and execution remain available"
+  ],
+  "releaseConfigurationConfirmed": false,
+  "mainnetDeployed": false,
+  "wholeProtocolEquivalent": false
+}

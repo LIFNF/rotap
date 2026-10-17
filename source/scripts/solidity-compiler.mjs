@@ -1,0 +1,2 @@
+import fs from 'node:fs';import path from 'node:path';import solc from 'solc';
+export function compileSolidity(input){return solc.compile(input,{import:name=>{if(!name.startsWith('@openzeppelin/'))return {error:'Unresolved import: '+name};const root=path.resolve('node_modules'),target=path.resolve(root,name);if(!target.startsWith(root+path.sep))return {error:'Import outside dependencies'};try{return {contents:fs.readFileSync(target,'utf8')}}catch{return {error:'Missing dependency: '+name}}}});}

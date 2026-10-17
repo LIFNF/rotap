@@ -1,0 +1,33 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import solc from 'solc';
+import ganache from 'ganache';
+import {BrowserProvider,ContractFactory,Contract} from 'ethers';
+const sources=Object.fromEntries(['ROtapCircuits.sol','ROtapReferenceRuntime.sol','ROtapRuntime.sol','ROtapTransistors.sol'].map(name=>[name,{content:fs.readFileSync('contracts/'+name,'utf8')}]));
+const output=JSON.parse(solc.compile(JSON.stringify({language:'Solidity',sources,settings:{optimizer:{enabled:true,runs:200},viaIR:true,evmVersion:'shanghai',outputSelection:{'*':{'*':['abi','evm.bytecode.object']}}}})));
+assert.equal((output.errors||[]).filter(x=>x.severity==='error').length,0,JSON.stringify(output.errors));
+const dbPath='.test-chain/circuits-'+Date.now();fs.mkdirSync(dbPath,{recursive:true});
+const rpc=ganache.provider({database:{dbPath},logging:{quiet:true}});
+try{
+ const provider=new BrowserProvider(rpc,undefined,{cacheTimeout:-1}),owner=await provider.getSigner(0),buyer=await provider.getSigner(1);
+ const ownerAddress=await owner.getAddress(),buyerAddress=await buyer.getAddress();
+ const artifact=output.contracts['ROtapCircuits.sol'].ROtapCircuits;
+ const circuits=await new ContractFactory(artifact.abi,artifact.evm.bytecode.object,owner).deploy(ownerAddress,10n,7n,3n);await circuits.waitForDeployment();
+ const materials=new Contract(await circuits.transistors(),output.contracts['ROtapTransistors.sol'].ROtapTransistors.abi,buyer);
+ await(await materials.mint(0,4,{value:47})).wait();await(await materials.mint(1,1,{value:17})).wait();
+ const not='0x00000002000002';await(await circuits.connect(buyer).tapeout(not,1,1,{value:3})).wait();
+ assert.equal(await circuits.netlist(1),not);assert.equal(await circuits.ownerOf(1),buyerAddress);
+ assert.equal(await materials.balanceOf(buyerAddress,0),3n);assert.equal(await circuits.eval(1,'0x00'),'0x01');assert.equal(await circuits.eval(1,'0x01'),'0x00');
+ const latch='0x01000002';await(await circuits.connect(buyer).tapeout(latch,1,1,{value:3})).wait();
+ assert.deepEqual(Array.from(await circuits.step(2,'0x','0x01')),['0x01','0x00']);
+ assert.deepEqual(Array.from(await circuits.step(2,'0x01','0x00')),['0x00','0x01']);
+ await assert.rejects(()=>circuits.eval(2,'0x01'));
+ await assert.rejects(()=>circuits.connect(buyer).tapeout('0x00000003000002',1,1,{value:3}));
+ assert.equal(await circuits.nextId(),2n);assert.equal(await circuits.owedFees(),6n);
+ await assert.rejects(()=>circuits.transferFrom(buyerAddress,ownerAddress,1));
+ await(await circuits.connect(buyer).approve(ownerAddress,1)).wait();await(await circuits.transferFrom(buyerAddress,ownerAddress,1)).wait();
+ assert.equal(await circuits.ownerOf(1),ownerAddress);assert.equal(await circuits.netlist(1),not);assert.equal(await circuits.getApproved(1),'0x0000000000000000000000000000000000000000');
+ await(await circuits.sweepFees()).wait();assert.equal(await circuits.owedFees(),0n);assert.equal(await provider.getBalance(await circuits.getAddress()),0n);
+ fs.writeFileSync('audit/persistent-circuits-local.json',JSON.stringify({environment:'local',checks:['paid material issuance','exact burn','persistent netlist','combinational eval','prior-state step','ERC721 approval and transfer','fee sweep'],primitiveSuiteOnly:true,fullFabXParityVerified:false},null,2));
+ console.log('PASS: paid materials -> burn -> persistent circuit NFT -> eval/step -> approved transfer -> fee withdrawal. REF is checked in the separate reference suite.');
+}finally{await rpc.disconnect();}

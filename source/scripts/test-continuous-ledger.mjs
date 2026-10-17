@@ -1,0 +1,37 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import solc from 'solc';import ganache from 'ganache';
+import {BrowserProvider,ContractFactory,Contract,id} from 'ethers';
+const result=JSON.parse(solc.compile(JSON.stringify({language:'Solidity',sources:{'Ledger.sol':{content:fs.readFileSync('contracts/ROtapContinuousLedger.sol','utf8')}},settings:{optimizer:{enabled:true,runs:200},viaIR:true,evmVersion:'shanghai',outputSelection:{'*':{'*':['abi','evm.bytecode.object']}}}})));
+assert.equal((result.errors||[]).filter(x=>x.severity==='error').length,0,JSON.stringify(result.errors));
+const artifacts=result.contracts['Ledger.sol'];const dbPath='.test-chain/continuous-'+Date.now();fs.mkdirSync(dbPath,{recursive:true});
+const rpc=ganache.provider({database:{dbPath},logging:{quiet:true},miner:{timestampIncrement:0},chain:{time:new Date('2026-01-01T00:00:00Z')}});
+try{
+ const provider=new BrowserProvider(rpc,undefined,{cacheTimeout:-1}),controller=await provider.getSigner(0),a=await provider.getSigner(1),b=await provider.getSigner(2);
+ const ca=await controller.getAddress(),aa=await a.getAddress(),ba=await b.getAddress();
+ const deploy=async(name,args=[])=>{const artifact=artifacts[name];const c=await new ContractFactory(artifact.abi,artifact.evm.bytecode.object,controller).deploy(...args);await c.waitForDeployment();return c;};
+ const math=await deploy('ROtapEmissionHarness');
+ assert.equal(await math.between(0,100,0,1000,10000),1000000n);
+ assert.equal(await math.between(900,1200,0,1000,10000),2000000n);
+ assert.equal(await math.between(0,3000,0,1000,10000),17500000n);
+ assert.equal(await math.between(0,10,100,1000,10000),0n);
+ const genesis=(await provider.getBlock('latest')).timestamp;
+ const ledger=await deploy('ROtapContinuousLedger',[ca,genesis,1000,10000]);
+ const token=new Contract(await ledger.token(),artifacts.ROtapContinuousReward.abi,provider);
+ const ka=id('verified'),kb=id('unverified');
+ await(await ledger.setPosition(ka,aa,1,0)).wait();await(await ledger.setPosition(kb,ba,0,1)).wait();
+ const advance=async seconds=>{await rpc.request({method:'evm_increaseTime',params:[seconds]});await rpc.request({method:'evm_mine',params:[]});};
+ await advance(100);await(await ledger.connect(a).claim([ka])).wait();await(await ledger.connect(b).claim([kb])).wait();
+ assert.equal(await token.balanceOf(aa),990000n);assert.equal(await token.balanceOf(ba),10000n);
+ await(await ledger.setPosition(ka,aa,0,0)).wait();await(await ledger.setPosition(kb,ba,0,0)).wait();
+ await advance(100);await(await ledger.poke()).wait();assert.equal(await ledger.totalForgone(),1000000n);
+ await(await ledger.setPosition(ka,aa,1,0)).wait();await advance(100);
+ await(await ledger.setPosition(ka,ba,1,0)).wait();
+ await(await ledger.connect(a).claim([])).wait();assert.equal(await token.balanceOf(aa),1980000n);
+ await advance(100);await(await ledger.connect(b).claim([ka])).wait();assert.equal(await token.balanceOf(ba),1000000n);
+ assert.equal(await ledger.totalForgone(),1020000n);
+ await assert.rejects(()=>ledger.connect(a).setPosition(ka,aa,100000,0));
+ const before=await token.balanceOf(ba);await(await ledger.connect(b).claim([ka,ka])).wait();assert.equal(await token.balanceOf(ba),before);
+ assert.equal(await token.decimals(),8n);assert.equal(await token.cap(),2100000000000000n);
+ assert.equal(await ledger.totalScheduled(),(await ledger.totalForgone())+(await ledger.totalDistributed()));
+ fs.writeFileSync('audit/continuous-ledger-local.json',JSON.stringify({environment:'local',checks:['continuous per-second rewards','halving boundaries','99/1 allocation','empty-pool forfeiture','stop and restart','beneficiary transfer settlement','duplicate claim','8 decimals','21M cap constant'],referenceChainRoundingVerified:false,miningEligibilityIntegrated:false},null,2));
+ console.log('PASS: continuous candidate, halving integration, dual pools, forfeiture, stop/restart, beneficiary settlement and duplicate claims. Eligibility and reference rounding parity pending.');
+}finally{await rpc.disconnect();}

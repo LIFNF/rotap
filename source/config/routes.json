@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "home",
+    "mint",
+    "tasks",
+    "studio",
+    "workbench",
+    "materials",
+    "miners",
+    "docs",
+    "boost",
+    "market",
+    "accounts",
+    "processors",
+    "governance",
+    "status"
+  ],
+  "documentSections": [
+    "overview",
+    "components",
+    "verification",
+    "rewards",
+    "staking",
+    "network",
+    "limits",
+    "economics",
+    "permissions"
+  ]
+}

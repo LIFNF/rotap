@@ -1,0 +1,12 @@
+{
+  "environment": "local full candidate protocol with original fork fixtures",
+  "originalBlock": 73397243,
+  "burnWeightIncreaseMatchesOriginal": true,
+  "expirySettlesOldStoredWeight": true,
+  "expiryClaimSmallestUnits": "4989608050416",
+  "transferDoesNotCheckpointAccumulators": true,
+  "transferPreservesUnclaimedDebt": true,
+  "unclaimedRewardFollowsNFT": true,
+  "samplingOrStakingMocksUsed": false,
+  "mainnetDeployed": false
+}

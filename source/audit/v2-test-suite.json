@@ -1,0 +1,97 @@
+{
+  "environment": "local test chains",
+  "mainnetDeployed": false,
+  "referenceParityVerified": false,
+  "tests": [
+    {
+      "test": "test-transistor-sale",
+      "passed": true,
+      "milliseconds": 3384
+    },
+    {
+      "test": "test-fixed-release-security",
+      "passed": true,
+      "milliseconds": 8842
+    },
+    {
+      "test": "test-runtime",
+      "passed": true,
+      "milliseconds": 7566
+    },
+    {
+      "test": "test-persistent-circuits",
+      "passed": true,
+      "milliseconds": 18063
+    },
+    {
+      "test": "test-continuous-ledger",
+      "passed": true,
+      "milliseconds": 6418
+    },
+    {
+      "test": "test-stake-boost",
+      "passed": true,
+      "milliseconds": 2929
+    },
+    {
+      "test": "test-reward-stake",
+      "passed": true,
+      "milliseconds": 5904
+    },
+    {
+      "test": "test-task-registry",
+      "passed": true,
+      "milliseconds": 22691
+    },
+    {
+      "test": "test-mining-lifecycle",
+      "passed": true,
+      "milliseconds": 39623
+    },
+    {
+      "test": "test-markets",
+      "passed": true,
+      "milliseconds": 13312
+    },
+    {
+      "test": "test-accounts-sites",
+      "passed": true,
+      "milliseconds": 9314
+    },
+    {
+      "test": "test-reference-circuits",
+      "passed": true,
+      "milliseconds": 24134
+    },
+    {
+      "test": "test-burn-boost",
+      "passed": true,
+      "milliseconds": 16486
+    },
+    {
+      "test": "test-account-pure-reference",
+      "passed": true,
+      "milliseconds": 6758
+    },
+    {
+      "test": "test-processor-factory",
+      "passed": true,
+      "milliseconds": 17546
+    },
+    {
+      "test": "test-real-sampling-flow",
+      "passed": true,
+      "milliseconds": 53727
+    },
+    {
+      "test": "test-mining-reference-governance",
+      "passed": true,
+      "milliseconds": 33709
+    },
+    {
+      "test": "test-browser-ref-runtime",
+      "passed": true,
+      "milliseconds": 314
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "environment": "local fork of original contracts",
+  "referenceBlock": 73397243,
+  "remoteReadOnly": true,
+  "mainnetTransactionsSent": 0,
+  "testFixtureChanges": {
+    "provisionedNAND": 10,
+    "originalMintNotTestedHere": true
+  },
+  "tokenId": "4934",
+  "implementation": "0x14718069eeDD2Ab4F4c9EEFe5c3BA8A705d2c626",
+  "account": "0xa19134Bc4B9c105B5042c6fD3EbfcD0dc556cD92",
+  "runtime": "0x363d3d373d3d3d363d7314718069eedd2ab4f4c9eefe5c3ba8a705d2c6265af43d82803e903d91602b57fd5bf3000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c400000000000000000000000087bfca3494aa228ff589ab9b642143a5e8c8f9a60000000000000000000000000000000000000000000000000000000000001346",
+  "runtimeBytes": 173,
+  "open": {
+    "fee": "78000000000000000",
+    "amountDeltasAllowed": {
+      "0": true,
+      "1": true,
+      "-1": false
+    },
+    "treasuryReceived": "78000000000000000",
+    "anyoneCanPayForOwnersAccount": true,
+    "executionBeforeOpenAllowed": false,
+    "repeatOpenAllowed": false,
+    "overpayTreasury": "78000000000000000",
+    "overpayPayerDebitExcludingGas": "78000000000000000"
+  },
+  "execution": {
+    "fee": "1300000000000000",
+    "batchFee": "3250000000000000",
+    "amountsAllowed": {
+      "0": false,
+      "1299999999999999": false,
+      "1300000000000000": true,
+      "1300000000000001": true
+    },
+    "accountDebitFor1000Value": "1000",
+    "treasuryReceived": "1300000000000000",
+    "stateAfterExec": "1",
+    "stateAfterBatch": "2",
+    "executeWhileListedAllowed": false,
+    "unsafeSelfTransferAllowed": true,
+    "oldOwnerExecuteAllowed": false,
+    "overpayAccountCredit": "0",
+    "overpayTreasuryCredit": "1300000000000000",
+    "site": {
+      "currentVersion": "2",
+      "staleVersionAllowed": false
+    }
+  },
+  "rpc": {
+    "publicRpcReads": 23,
+    "cacheHits": 9,
+    "broadcasts": 0
+  }
+}

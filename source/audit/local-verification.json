@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-16",
+  "scope": "ROtap source and isolated local EVM only; no public transactions",
+  "findings": [
+    {
+      "id": "R02",
+      "confirmed": true,
+      "title": "Per-address free materials can be acquired by independent addresses without global supply cap",
+      "evidence": {
+        "aliceNand": 32,
+        "bobNand": 32
+      }
+    },
+    {
+      "id": "R03",
+      "confirmed": true,
+      "title": "Identical public designs may be minted repeatedly with equal reward weight",
+      "evidence": {
+        "sameDesignHash": true,
+        "weight": "8",
+        "distinctNfts": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "R01",
+      "confirmed": true,
+      "title": "Stateful LATCH passes combinational AND task and receives weight, but fails another input order",
+      "evidence": {
+        "chainAccepted": true,
+        "frontendRejects": true,
+        "taskId": 2,
+        "circuitId": 3,
+        "registeredWeight": "12",
+        "inputSequence": [
+          3,
+          1
+        ],
+        "actual": [
+          1,
+          1
+        ],
+        "expected": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "R04",
+      "confirmed": true,
+      "title": "Pausing task does not revoke existing circuit activation eligibility",
+      "evidence": {
+        "taskActive": false,
+        "existingCircuitNextEpochActive": true
+      }
+    },
+    {
+      "id": "R05",
+      "confirmed": true,
+      "title": "Owner may add trivial task with larger weight without reference circuit verification or timelock",
+      "evidence": {
+        "newTaskWeight": "64",
+        "originalNotWeight": "8"
+      }
+    },
+    {
+      "id": "GAP-ABI",
+      "confirmed": true,
+      "title": "Original-mechanism interfaces absent",
+      "evidence": {
+        "absent": [
+          "eval",
+          "step",
+          "stop",
+          "stake",
+          "unstake",
+          "challenge",
+          "bestOriginal",
+          "claimTask",
+          "seal"
+        ],
+        "storedCircuitFields": [
+          "taskId",
+          "weight",
+          "designHash"
+        ]
+      }
+    }
+  ],
+  "issuance": {
+    "decimals": 18,
+    "cap": "8760000.0",
+    "epochSeconds": 3600,
+    "perEpoch": "1000.0",
+    "maxPayable": "8759000.0",
+    "maxPayablePerDay": "24000",
+    "halvingImplemented": false
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "node": "v24.19.0",
+  "compiler": "0.8.30+commit.73712a01.Emscripten.clang",
+  "contractCreationBytecodesReproduced": 22,
+  "frontendRepeatedBuildSHA256": {
+    "app.js": "9e1728f2ffe2cc74bbf871ef4eb7dfb9d473694e2e61848cc2c427278df22ab4",
+    "launch.js": "2627e922e7d52087299a3887df5c1a6be8c317fdbeecd976e7f2c24d4606dd26",
+    "network.json": "6d150bc0e0374f9e85fef5d8a39d72e70089ee2cb65e6bbd573792cabaa6d62c",
+    "release.json": "6d30a50e43076a766bcda92f80616cac4ea32b9dec7feb94ea58a99a768c2fb7"
+  },
+  "scope": "Same pinned local environment; cross-platform reproduction is available for third-party verification"
+}

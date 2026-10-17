@@ -1,0 +1,77 @@
+{
+  "version": 3,
+  "chainId": 4663,
+  "owner": "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A",
+  "nativeCurrency": "ETH",
+  "referenceMigration": {
+    "referenceNativeCurrency": "OKB",
+    "fixedETHPerOKB": "0.0489",
+    "basis": "Previously configured migration ratio; not a live market quote"
+  },
+  "mint": {
+    "chainId": 4663,
+    "symbol": "ETH",
+    "unitPriceETH": "0.0002445",
+    "protocolFeeETH": "0.0003227",
+    "unitPriceWei": "244500000000000",
+    "protocolFeeWei": "322700000000000",
+    "supplyCap": "1000000",
+    "recipient": "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A",
+    "status": "configured-awaiting-contract-deployment"
+  },
+  "genesis": {
+    "name": "ROtap Genesis",
+    "symbol": "ROTG",
+    "story": "ROtap Genesis 电路处理器。NAND 与 LATCH 共用一百万枚累计发行额度。",
+    "supplyCap": "1000000",
+    "multiplier": 6
+  },
+  "factory": {
+    "deployFeeWei": "317850000000000",
+    "protocolFeeWei": "317850000000000",
+    "defaultTapeoutFeeWei": "63570000000000"
+  },
+  "mining": {
+    "initialRate": "8333333",
+    "halvingPeriod": 126000000,
+    "ownerHeadStartSeconds": 1800
+  },
+  "boost": {
+    "nativeStakeTiersWei": [
+      "2445000000000000000",
+      "7335000000000000000",
+      "12225000000000000000",
+      "19560000000000000000",
+      "24450000000000000000"
+    ],
+    "nativeBurnTiersWei": [
+      "122250000000000000",
+      "244500000000000000",
+      "733500000000000000",
+      "1222500000000000000",
+      "2445000000000000000"
+    ],
+    "rewardStakeTiers": [
+      "20000000000",
+      "60000000000",
+      "100000000000",
+      "150000000000",
+      "200000000000"
+    ]
+  },
+  "markets": {
+    "feeBps": 100
+  },
+  "accounts": {
+    "openFeeWei": "3814200000000000",
+    "executeFeeWei": "63570000000000",
+    "batchFeeWei": "158925000000000"
+  },
+  "releasePolicy": {
+    "fixedTerms": true,
+    "administrationRenounced": true,
+    "noPrivilegedMint": true,
+    "sourcePublicationRequired": true,
+    "liquidityPool": null
+  }
+}

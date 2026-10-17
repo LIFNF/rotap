@@ -1,0 +1,11 @@
+{
+  "chainId": 4663,
+  "symbol": "ETH",
+  "unitPriceETH": "0.0002445",
+  "protocolFeeETH": "0.0003227",
+  "unitPriceWei": "244500000000000",
+  "protocolFeeWei": "322700000000000",
+  "supplyCap": "1000000",
+  "recipient": "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A",
+  "status": "configured-awaiting-contract-deployment"
+}

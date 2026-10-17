@@ -1,0 +1,58 @@
+[
+  {
+    "name": "ref-and-zero",
+    "program": "0x0287bfca3494aa228ff589ab9b642143a5e8c8f9a600000000000013400201000002000003",
+    "ni": 2,
+    "no": 1,
+    "state": "0x",
+    "input": "0x00"
+  },
+  {
+    "name": "ref-delay-zero",
+    "program": "0x0287bfca3494aa228ff589ab9b642143a5e8c8f9a600000000000013440101000002",
+    "ni": 1,
+    "no": 1,
+    "state": "0x",
+    "input": "0x01"
+  },
+  {
+    "name": "ref-delay-one",
+    "program": "0x0287bfca3494aa228ff589ab9b642143a5e8c8f9a600000000000013440101000002",
+    "ni": 1,
+    "no": 1,
+    "state": "0x01",
+    "input": "0x00"
+  },
+  {
+    "name": "two-ref-delays",
+    "program": "0x0287bfca3494aa228ff589ab9b642143a5e8c8f9a6000000000000134401010000020287bfca3494aa228ff589ab9b642143a5e8c8f9a600000000000013440101000003",
+    "ni": 2,
+    "no": 2,
+    "state": "0x02",
+    "input": "0x01"
+  },
+  {
+    "name": "latch-then-ref",
+    "program": "0x010000020287bfca3494aa228ff589ab9b642143a5e8c8f9a600000000000013440101000003",
+    "ni": 2,
+    "no": 2,
+    "state": "0x01",
+    "input": "0x02"
+  },
+  {
+    "name": "ref-then-latch",
+    "program": "0x0287bfca3494aa228ff589ab9b642143a5e8c8f9a60000000000001344010100000201000003",
+    "ni": 2,
+    "no": 2,
+    "state": "0x01",
+    "input": "0x02"
+  },
+  {
+    "name": "ref-forward-input",
+    "program": "0x0287bfca3494aa228ff589ab9b642143a5e8c8f9a60000000000001344010100000400000002000002",
+    "ni": 1,
+    "no": 1,
+    "state": "0x",
+    "input": "0x01"
+  }
+]

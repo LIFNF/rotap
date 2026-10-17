@@ -1,0 +1,19 @@
+{
+  "traces": 2,
+  "matches": [
+    {
+      "packed": true,
+      "idType": "uint256",
+      "counterType": "uint32",
+      "layout": [
+        "hash",
+        "circuits",
+        "id"
+      ],
+      "mode": "direct",
+      "first": false,
+      "offset": 0,
+      "bytePosition": 31
+    }
+  ]
+}

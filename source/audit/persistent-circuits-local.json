@@ -1,0 +1,14 @@
+{
+  "environment": "local",
+  "checks": [
+    "paid material issuance",
+    "exact burn",
+    "persistent netlist",
+    "combinational eval",
+    "prior-state step",
+    "ERC721 approval and transfer",
+    "fee sweep"
+  ],
+  "primitiveSuiteOnly": true,
+  "fullFabXParityVerified": false
+}

@@ -1,0 +1,11 @@
+import {AbiCoder,keccak256,hexlify,randomBytes,isAddress} from 'ethers';
+const prefix='rotap.design.v2.';
+export const designCommitment=(designer,circuits,netlistHash,salt)=>keccak256(AbiCoder.defaultAbiCoder().encode(['address','address','bytes32','bytes32'],[designer,circuits,netlistHash,salt]));
+const pendingKey=(chainId,circuits,designer,hash)=>prefix+[chainId,circuits.toLowerCase(),designer.toLowerCase(),hash].join('.');
+const nftKey=(chainId,circuits,id)=>prefix+'nft.'+[chainId,circuits.toLowerCase(),id].join('.');
+export function designRecord(chainId,circuits,designer,program){const hash=keccak256(program),key=pendingKey(chainId,circuits,designer,hash);const stored=localStorage.getItem(key);if(stored)return validateDesign(JSON.parse(stored));const salt=hexlify(randomBytes(32)),record={version:2,chainId,designer,circuits,netlistHash:hash,salt,commitment:designCommitment(designer,circuits,hash,salt)};localStorage.setItem(key,JSON.stringify(record));return record;}
+export function attachDesign(record,tokenId){record={...record,tokenId:String(tokenId)};localStorage.setItem(nftKey(record.chainId,record.circuits,tokenId),JSON.stringify(record));localStorage.setItem(pendingKey(record.chainId,record.circuits,record.designer,record.netlistHash),JSON.stringify(record));return record;}
+export function nftDesign(chainId,circuits,id){const value=localStorage.getItem(nftKey(chainId,circuits,id));return value?validateDesign(JSON.parse(value)):null;}
+export function validateDesign(record){if(record.version!==2||!Number.isSafeInteger(record.chainId)||!isAddress(record.designer)||!isAddress(record.circuits)||!/^0x[\da-fA-F]{64}$/.test(record.netlistHash)||!/^0x[\da-fA-F]{64}$/.test(record.salt)||record.commitment!==designCommitment(record.designer,record.circuits,record.netlistHash,record.salt))throw Error('设计凭据无效。');return record;}
+export function importDesign(text){const record=validateDesign(JSON.parse(text));if(!record.tokenId||!/^\d+$/.test(record.tokenId))throw Error('设计凭据缺少电路编号。');return attachDesign(record,record.tokenId);}
+export function exportDesign(record){const url=URL.createObjectURL(new Blob([JSON.stringify(record,null,2)],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download='rotap-design-'+record.tokenId+'.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}

@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "environment": "local",
+  "checks": [
+    "uniform exact paid issuance for owner and public wallets",
+    "removed mutable pricing and supply selectors reject even deployer",
+    "sealed mining with zero owner cannot pause change rewards or upgrade",
+    "duplicate claim and duplicate start do not mint additional rewards",
+    "NFT transfer redirects new accrual to current owner",
+    "1200-block stop cooldown cannot be bypassed",
+    "protocol income withdrawal cannot access separate staking principal",
+    "multiple exits merge and reset a seven-day queue",
+    "any withdrawal trigger can only pay the recorded beneficiary",
+    "shared one-million lifetime cap survives component burns"
+  ],
+  "independentAudit": false
+}

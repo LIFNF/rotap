@@ -1,0 +1,17 @@
+{
+  "environment": "GitHub Pages and local browser",
+  "sourceCommit": "f8a8756b17292123c0dd74a7c33a7cf87226c084",
+  "checks": [
+    "clean path links",
+    "direct navigation",
+    "directory redirect canonicalization",
+    "refresh",
+    "browser back and forward",
+    "task query parameters",
+    "legacy hash links",
+    "docs subpaths",
+    "nested-page asset paths",
+    "live HTTP 200 and matching build HTML"
+  ],
+  "passed": true
+}

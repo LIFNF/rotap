@@ -1,0 +1,24 @@
+{
+  "environment": "local",
+  "samplingMockUsed": false,
+  "officialTaskRoot": "0xd8e9fa4bdc2611ae434fd4d3393c529b9c4f8f89ab7647bb0b74a2fbb6da1ed9",
+  "officialSamples": 32,
+  "optimizedNandCount": 1,
+  "referenceNandCount": 3,
+  "verifiedHashrate": "78",
+  "ledgerWeight": "7800",
+  "claimedSmallestUnits": "824999966",
+  "checks": [
+    "paid mint",
+    "exact burn",
+    "persistent circuit",
+    "official reference publication",
+    "pre-design commit",
+    "real anchor hash",
+    "reference-matched sampling algorithm",
+    "official Merkle proofs",
+    "best-original bonus",
+    "continuous 99 percent emission"
+  ],
+  "fullProtocolParityVerified": false
+}

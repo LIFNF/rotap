@@ -1,0 +1,1 @@
+export async function acceptRelease(req,res){res.writeHead(410,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'});res.end(JSON.stringify({error:'此配置写入接口已停用。新版部署与地址核验流程尚未开放。'}));}

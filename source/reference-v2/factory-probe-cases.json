@@ -1,0 +1,254 @@
+[
+  {
+    "name": "standard",
+    "args": [
+      "Processor",
+      "CPU",
+      "Story",
+      1000,
+      123,
+      0
+    ],
+    "owner": true
+  },
+  {
+    "name": "overpay",
+    "args": [
+      "Processor",
+      "CPU",
+      "Story",
+      1000,
+      123,
+      1
+    ],
+    "owner": true
+  },
+  {
+    "name": "underpay",
+    "args": [
+      "Processor",
+      "CPU",
+      "Story",
+      1000,
+      123,
+      -1
+    ],
+    "owner": true
+  },
+  {
+    "name": "zero-supply",
+    "args": [
+      "Processor",
+      "CPU",
+      "Story",
+      0,
+      123,
+      0
+    ],
+    "owner": true
+  },
+  {
+    "name": "zero-price",
+    "args": [
+      "Processor",
+      "CPU",
+      "Story",
+      1000,
+      0,
+      0
+    ],
+    "owner": true
+  },
+  {
+    "name": "empty-name-symbol-story",
+    "args": [
+      "",
+      "",
+      "",
+      1000,
+      123,
+      0
+    ],
+    "owner": true
+  },
+  {
+    "name": "first-tapeout",
+    "tapeout": true,
+    "owner": true
+  },
+  {
+    "name": "outsider-create",
+    "args": [
+      "Processor",
+      "CPU",
+      "Story",
+      1000,
+      123,
+      0
+    ]
+  },
+  {
+    "name": "owner-before-seal",
+    "owner": true,
+    "actions": [
+      {
+        "fn": "setDeployFee",
+        "data": "0xa9e5298700000000000000000000000000000000000000000000000000000000000003e7"
+      },
+      {
+        "fn": "setProtocolFee",
+        "data": "0x787dce3d0000000000000000000000000000000000000000000000000000000000000378"
+      },
+      {
+        "fn": "setProtocolWallet",
+        "data": "0xf01e9a8b000000000000000000000000000000000000000000000000000000000000fa03"
+      },
+      {
+        "fn": "registerExternalCPU",
+        "data": "0x2a3f43a60000000000000000000000001f09daefa827f02cbb40967cc91b25976376076100000000000000000000000087bfca3494aa228ff589ab9b642143a5e8c8f9a6"
+      },
+      {
+        "fn": "registerExternalCPU",
+        "data": "0x2a3f43a60000000000000000000000001f09daefa827f02cbb40967cc91b25976376076100000000000000000000000087bfca3494aa228ff589ab9b642143a5e8c8f9a6"
+      },
+      {
+        "fn": "upgradeTransistors",
+        "data": "0x81dd73ee000000000000000000000000265bf10fab9ddec0ee0a649c6b9db845f1b9a06b"
+      },
+      {
+        "fn": "upgradeCircuits",
+        "data": "0xc1a0ef1c000000000000000000000000977f217887e085d298cb3819cdad5a0ee35f29b2"
+      },
+      {
+        "fn": "seal",
+        "data": "0x3fb27b85"
+      },
+      {
+        "fn": "transferOwnership",
+        "data": "0xf2fde38b000000000000000000000000000000000000000000000000000000000000fa03"
+      },
+      {
+        "fn": "renounceOwnership",
+        "data": "0x715018a6"
+      },
+      {
+        "fn": "owner",
+        "data": "0x8da5cb5b"
+      },
+      {
+        "fn": "isSealed",
+        "data": "0x631f9852"
+      }
+    ],
+    "sealedFirst": false
+  },
+  {
+    "name": "owner-after-seal",
+    "owner": true,
+    "actions": [
+      {
+        "fn": "setDeployFee",
+        "data": "0xa9e5298700000000000000000000000000000000000000000000000000000000000003e7"
+      },
+      {
+        "fn": "setProtocolFee",
+        "data": "0x787dce3d0000000000000000000000000000000000000000000000000000000000000378"
+      },
+      {
+        "fn": "setProtocolWallet",
+        "data": "0xf01e9a8b000000000000000000000000000000000000000000000000000000000000fa03"
+      },
+      {
+        "fn": "registerExternalCPU",
+        "data": "0x2a3f43a60000000000000000000000001f09daefa827f02cbb40967cc91b25976376076100000000000000000000000087bfca3494aa228ff589ab9b642143a5e8c8f9a6"
+      },
+      {
+        "fn": "registerExternalCPU",
+        "data": "0x2a3f43a60000000000000000000000001f09daefa827f02cbb40967cc91b25976376076100000000000000000000000087bfca3494aa228ff589ab9b642143a5e8c8f9a6"
+      },
+      {
+        "fn": "upgradeTransistors",
+        "data": "0x81dd73ee000000000000000000000000265bf10fab9ddec0ee0a649c6b9db845f1b9a06b"
+      },
+      {
+        "fn": "upgradeCircuits",
+        "data": "0xc1a0ef1c000000000000000000000000977f217887e085d298cb3819cdad5a0ee35f29b2"
+      },
+      {
+        "fn": "seal",
+        "data": "0x3fb27b85"
+      },
+      {
+        "fn": "transferOwnership",
+        "data": "0xf2fde38b000000000000000000000000000000000000000000000000000000000000fa03"
+      },
+      {
+        "fn": "renounceOwnership",
+        "data": "0x715018a6"
+      },
+      {
+        "fn": "owner",
+        "data": "0x8da5cb5b"
+      },
+      {
+        "fn": "isSealed",
+        "data": "0x631f9852"
+      }
+    ],
+    "sealedFirst": true
+  },
+  {
+    "name": "outsider-governance",
+    "actions": [
+      {
+        "fn": "setDeployFee",
+        "data": "0xa9e5298700000000000000000000000000000000000000000000000000000000000003e7"
+      },
+      {
+        "fn": "setProtocolFee",
+        "data": "0x787dce3d0000000000000000000000000000000000000000000000000000000000000378"
+      },
+      {
+        "fn": "setProtocolWallet",
+        "data": "0xf01e9a8b000000000000000000000000000000000000000000000000000000000000fa03"
+      },
+      {
+        "fn": "registerExternalCPU",
+        "data": "0x2a3f43a60000000000000000000000001f09daefa827f02cbb40967cc91b25976376076100000000000000000000000087bfca3494aa228ff589ab9b642143a5e8c8f9a6"
+      },
+      {
+        "fn": "registerExternalCPU",
+        "data": "0x2a3f43a60000000000000000000000001f09daefa827f02cbb40967cc91b25976376076100000000000000000000000087bfca3494aa228ff589ab9b642143a5e8c8f9a6"
+      },
+      {
+        "fn": "upgradeTransistors",
+        "data": "0x81dd73ee000000000000000000000000265bf10fab9ddec0ee0a649c6b9db845f1b9a06b"
+      },
+      {
+        "fn": "upgradeCircuits",
+        "data": "0xc1a0ef1c000000000000000000000000977f217887e085d298cb3819cdad5a0ee35f29b2"
+      },
+      {
+        "fn": "seal",
+        "data": "0x3fb27b85"
+      },
+      {
+        "fn": "transferOwnership",
+        "data": "0xf2fde38b000000000000000000000000000000000000000000000000000000000000fa03"
+      },
+      {
+        "fn": "renounceOwnership",
+        "data": "0x715018a6"
+      },
+      {
+        "fn": "owner",
+        "data": "0x8da5cb5b"
+      },
+      {
+        "fn": "isSealed",
+        "data": "0x631f9852"
+      }
+    ],
+    "sealedFirst": false
+  }
+]

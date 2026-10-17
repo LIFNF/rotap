@@ -1,0 +1,19 @@
+{
+  "environment": "local; original bytecode view and transaction simulations as reference",
+  "matchedEraWindowBoundaries": 11,
+  "matchedOriginalBurnCases": 6,
+  "matchedWindowEdgeCases": 4,
+  "checks": [
+    "16/12/8/4 percent across first four eras",
+    "180-day opening window each era",
+    "7/14/28/60/180-day durations",
+    "active burn cannot be repeated",
+    "native stake adds to burn",
+    "burn payment forwarded to treasury",
+    "expiry removes factor",
+    "reburn after expiry",
+    "window ending does not truncate active burn duration"
+  ],
+  "expiryLedgerSettlementDifferentialPending": true,
+  "wholeProtocolEquivalent": false
+}

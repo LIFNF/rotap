@@ -1,0 +1,12 @@
+{
+  "environment": "browser runtime executed in Node with original read-only fixtures",
+  "referenceBlock": "0x45ff3fb",
+  "matchedPositiveCases": 9,
+  "matchedRejections": 1,
+  "crossByteStates": [
+    9,
+    11,
+    17
+  ],
+  "mainnetDeployed": false
+}

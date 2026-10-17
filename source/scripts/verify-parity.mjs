@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+const requirements=JSON.parse(fs.readFileSync('reference-v2/parity-requirements.json','utf8'));
+const proofPath='reference-v2/verified-equivalence.json';
+const proof=fs.existsSync(proofPath)?JSON.parse(fs.readFileSync(proofPath,'utf8')):null;
+const failures=[];
+if(!proof?.referenceBlock||!proof?.referenceChainId||!proof?.verifiedSourceHashes?.length)failures.push('未锁定原合约源码、实现地址及区块快照');
+for(const module of requirements.requiredModules)if(proof?.modules?.[module]?.status!=='equivalent')failures.push('未证明机制等价：'+module);
+for(const name of requirements.equivalenceTestsRequired)if(proof?.tests?.[name]?.status!=='passed')failures.push('缺少参考对照测试：'+name);
+if(!proof?.assetMapping?.confirmed)failures.push('未确认原支付/质押资产到 Robinhood 链的映射');
+console.log(JSON.stringify({status:failures.length?'blocked':'verified',reference:requirements.reference,blockers:failures},null,2));
+if(failures.length)process.exitCode=1;

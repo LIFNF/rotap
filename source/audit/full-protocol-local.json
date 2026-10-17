@@ -1,0 +1,1165 @@
+{
+  "environment": "local-qa",
+  "chainId": 4663,
+  "owner": "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A",
+  "releaseId": "0x486663fa041f2ddf5e688dcc1f50c96dbe76204e409e68a9436aa0587d50ab57",
+  "addresses": {
+    "factoryAddress": "0xaECF32e57d249ADD5941bEDb7231E786be8E3c4e",
+    "transistorsAddress": "0x5ADdFc3C30C2BB19790eC6a1c3D24365E38FAf68",
+    "circuitsAddress": "0xa822ebBA7b0375b98FdceD775a461AC9EB31521C",
+    "referenceCircuitsAddress": "0x8530c2718Bb7736ec2057276bA4A0B1c17435eE9",
+    "registryAddress": "0xca0FfeD25b99D97E2c3f3585582575309728dA63",
+    "samplingAddress": "0x9f049733811908D05e129f5F6f6486f9e9756C62",
+    "ledgerFactoryAddress": "0xB10d3FB345749E290C7E2E80234e5dbE102a5642",
+    "miningAddress": "0x69CBd55a2BE111d496EBEb80deEeeCf529D5dcF4",
+    "ledgerAddress": "0x2eE0456436C324500D42F9FF2385a821bc56B081",
+    "tokenAddress": "0x271DA6b92C78640F29594Ebfed99C9f7c1AD0Ec2",
+    "boostAddress": "0xE8aeB5AC19A187038a46671f467C295AB6d0653B",
+    "transistorMarketAddress": "0xd074eb7A98b4a8B4754fFDDD6E1eF81BC0004275",
+    "circuitMarketAddress": "0x6cf90504601B085B59E37fF1c14313C7474A5b35",
+    "accountRegistryAddress": "0x000000006551c19487814612e58fe06813775758",
+    "accountPaymentsAddress": "0xd622B39b85A6061BE3d8c224e27d6E8330073A27",
+    "accountImplementationAddress": "0x71454c822eFe087765397cEd1677588F65D0f452",
+    "accountBeaconAddress": "0xc09cf0f4B7D0689a32F0A6e1821cA83Ac698B920",
+    "accountRouterAddress": "0x8D4742D4CF4d618E82D044bdD73787Ad5CFF161f",
+    "accountOpenerAddress": "0x9370F9b1a0B27020a99f74aA81c6a0654d896507",
+    "siteRegistryAddress": "0x5b19f82E2363a8B9A9058556d2Ac739927c15029"
+  },
+  "sourceHashes": {
+    "ROtapRuntime.sol": "0xd37f109bbd29c3a6dfd02c8387f561a3af20181724394b817687f6f69f7c4a60",
+    "ROtapTransistors.sol": "0x382d6de8e65ea3c33cadbdf3447081d68f8f5216f18f7eba4a43be9ab90282d8",
+    "ROtapCircuits.sol": "0xdbbf87212692f9e56154df1fece29a5e97f15df66d75ec8f06b6f7a4e1008e0e",
+    "ROtapReferenceRuntime.sol": "0xfa0ad6b026c86a2ccd387ff4e560e0cfe31d43795e4f1abc7000749972dd701e",
+    "ROtapContinuousLedger.sol": "0x0b86bea92984a22419af877f4b4454131cf4ec3862514cdbafe7e81a4d59d235",
+    "ROtapStakeBoost.sol": "0x4af38aa3c1761fb4986c231377990a404c53497ea284e93eb64f315973989f52",
+    "ROtapRewardStakeBoost.sol": "0x5604967a5fe4efe9edfcfe38d220601899a79dd368aacf960989ed6c5ac23dcf",
+    "ROtapBoost.sol": "0xbd8ea00471cd94c662455618d1b10954b8d6bc7a4f6eb80b2280dc49565ab92c",
+    "ROtapSamplingPolicy.sol": "0x494e9307690eb9e78325f4bd2b9f1fd3bf26495d246d0d1e921cf403ab0e6129",
+    "ROtapTaskRegistry.sol": "0x05f51a96778939b17f3efa6a8175a86db820cf1af3b1ff83968b03450bfa72b5",
+    "ROtapMining.sol": "0xbce698f102873f469708da5b3b0d3cd705ab6ebd8a0115bba35d2d6cdbbd446c",
+    "ROtapMarkets.sol": "0x4057e92b7501f4420ecc38395fb5e069bded10fbec39b9d23e547c26f22770ac",
+    "ROtapAccounts.sol": "0xeb645ced5cb2acff84dbac10137d1cca63c156e667b4f8b6ec52152d52616f40",
+    "ROtapProcessorFactory.sol": "0x4b9afb04796f3ffeab3e88652890e0904dba96d6a5744cc9c4f636c06ad40bca"
+  },
+  "referenceIds": {
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9",
+    "10": "10",
+    "11": "11",
+    "12": "12",
+    "13": "13",
+    "14": "14",
+    "15": "15",
+    "16": "16",
+    "17": "17",
+    "18": "18",
+    "19": "19",
+    "20": "20",
+    "21": "21",
+    "22": "22",
+    "23": "23",
+    "24": "24",
+    "25": "25",
+    "26": "26",
+    "27": "27",
+    "28": "28",
+    "29": "29",
+    "30": "30",
+    "31": "31",
+    "32": "32",
+    "33": "33",
+    "34": "34",
+    "35": "35",
+    "36": "36",
+    "37": "37",
+    "38": "38",
+    "39": "39",
+    "40": "40",
+    "41": "41",
+    "42": "42",
+    "43": "43",
+    "44": "44",
+    "45": "45",
+    "46": "46",
+    "47": "47",
+    "48": "48",
+    "49": "49",
+    "50": "50",
+    "51": "51",
+    "52": "52",
+    "53": "53",
+    "54": "54",
+    "55": "55",
+    "56": "56",
+    "57": "57",
+    "58": "58",
+    "59": "59",
+    "60": "60",
+    "61": "61",
+    "62": "62",
+    "63": "63",
+    "64": "64",
+    "65": "65",
+    "66": "66",
+    "67": "67",
+    "68": "68",
+    "69": "69",
+    "70": "70",
+    "71": "71",
+    "72": "72",
+    "73": "73",
+    "74": "74",
+    "75": "75",
+    "76": "76",
+    "77": "77",
+    "78": "78",
+    "79": "79",
+    "80": "80",
+    "81": "81",
+    "82": "82",
+    "83": "83",
+    "84": "84",
+    "85": "85",
+    "86": "86",
+    "87": "87",
+    "88": "88",
+    "89": "89",
+    "90": "90",
+    "91": "91",
+    "92": "92",
+    "93": "93",
+    "94": "94",
+    "95": "95",
+    "96": "96",
+    "97": "97",
+    "98": "98",
+    "99": "99",
+    "100": "100"
+  },
+  "startTime": 1792220629,
+  "deploymentBlock": 3,
+  "transactionCount": 239,
+  "totalGasUsed": "919266764",
+  "totalExecutionFeesWei": "11074621853612469",
+  "journalPath": "C:\\Users\\田\\.codex\\.chatgpt-projects\\g-p-6ad200d54f208191b652d5332861cd05\\rotap\\.test-chain\\full-protocol-1792220628900\\deployment-journal.json",
+  "verification": {
+    "codeHashes": {
+      "0xaECF32e57d249ADD5941bEDb7231E786be8E3c4e": "0xfeef4ba1565dd804bd8ac10d5804ae92a570353b6ae7ca61500f839ef7a75466",
+      "0x5ADdFc3C30C2BB19790eC6a1c3D24365E38FAf68": "0x9145215046d038399d08099de0d338af1d3a2dd9c11c1dd36e0c98809c872b11",
+      "0xa822ebBA7b0375b98FdceD775a461AC9EB31521C": "0xbd4e1bc9d9b0f5e4c12c0fe26eb8af327fcf7f89f81b73b5d2b0aa97fe71452c",
+      "0x8530c2718Bb7736ec2057276bA4A0B1c17435eE9": "0x82bf4affd67e3c29080ab2dfa69382bc5492d32aafe691dadc0f643f079284ad",
+      "0xca0FfeD25b99D97E2c3f3585582575309728dA63": "0x2ae1099e1031c5b295d9768023c9628721160b50862e7a90a61574776baad140",
+      "0x9f049733811908D05e129f5F6f6486f9e9756C62": "0x2060bc884457771fdbe05ac5bb5210389741750d62a5edcda774c7dc09bfe435",
+      "0xB10d3FB345749E290C7E2E80234e5dbE102a5642": "0x6d39bc06ade481a391866da216751e4b92240a3473340f2b7f68a64233af7c1b",
+      "0x69CBd55a2BE111d496EBEb80deEeeCf529D5dcF4": "0xfeef4ba1565dd804bd8ac10d5804ae92a570353b6ae7ca61500f839ef7a75466",
+      "0x2eE0456436C324500D42F9FF2385a821bc56B081": "0xdb8af25d4a6aedcbdca4e3f5fa1579bb5081acbc9fade4a524fd15bb31f3ad6c",
+      "0x271DA6b92C78640F29594Ebfed99C9f7c1AD0Ec2": "0x93912340aaa53f51f3833edace5e100fa3bae2a36ee7bf78c355d493eced0e29",
+      "0xE8aeB5AC19A187038a46671f467C295AB6d0653B": "0x5f3f76b4cfd8250b87819766dbdae98834c85aed33d2a1aab7daaea5b1c073d2",
+      "0xd074eb7A98b4a8B4754fFDDD6E1eF81BC0004275": "0xfeef4ba1565dd804bd8ac10d5804ae92a570353b6ae7ca61500f839ef7a75466",
+      "0x6cf90504601B085B59E37fF1c14313C7474A5b35": "0xfeef4ba1565dd804bd8ac10d5804ae92a570353b6ae7ca61500f839ef7a75466",
+      "0x000000006551c19487814612e58fe06813775758": "0xda1d5b06e579f9e42e59b00fbc22939896ecb38dc8830d40de0a2508fecd6735",
+      "0xd622B39b85A6061BE3d8c224e27d6E8330073A27": "0x34d059e52caa39f32831f4b14ce0bba3f5ddb7e288d63a873759d97cd9b7d7ce",
+      "0x71454c822eFe087765397cEd1677588F65D0f452": "0xb96bcf24ec02c88ccd2c782a1c73001515bbbe638b8d66a5d50ea88d13c67045",
+      "0xc09cf0f4B7D0689a32F0A6e1821cA83Ac698B920": "0x5ab0486e8513f37bc81f1fc2d43543887157ee8a9b38cab0d26c8e17fc8a766b",
+      "0x8D4742D4CF4d618E82D044bdD73787Ad5CFF161f": "0xbc232c4609e67492a9aea3733b6defd0c303620a398cfe84395b08113d062a92",
+      "0x9370F9b1a0B27020a99f74aA81c6a0654d896507": "0x71ccc3fbeae571e40807ccfe2e491b9333061d984667c15d4cc4f35a15f8b4a5",
+      "0x5b19f82E2363a8B9A9058556d2Ac739927c15029": "0x5e07232a83e6d13b53b21ef1de8f2b7f1dfc3bf31f0d28c4420c350b65d3eac0",
+      "0xB2D36C141515f87912DfDFeC5feC889EA6d63253": "0x5fd2dd588d9a28bcbb7205180945a09aacd1764d9ab8c3725359f3b437af4124",
+      "0x3276005878e1012e83ff1d87697b8656EBFaa1EF": "0x82bf4affd67e3c29080ab2dfa69382bc5492d32aafe691dadc0f643f079284ad",
+      "0xA0EEB23BF1d99c2E1507Cdb785Ee8f571F548bD6": "0xfc3b688afb55514696e5ec6d6f3141fe90dbdab45681ca1f38c6b8448552d67a",
+      "0xeE928D1ea83Fa66f4B5F042F88398A39FB6f115F": "0x39351d3c178ca0b1c1c0128aad3273a445c28bc50c800ea16e7a399fc0a71cde",
+      "0x2fb3E43fBe02c97F0907bB66b6ba75A4f73D1631": "0x6022951107cc0b3b91279b15289f3a766ca1d42cae39020604b4ae2f94cf7604",
+      "0x48bF3E67BCE119A391a014e56816B40f87277360": "0xa4cb42c9bfe7b62d59f409deeca5867963d74bff8de33879bee3d30def56ff56",
+      "0x640CB8EB163e80124D3c4548369303189AA9Ba85": "0x15e10d4d6f51db96f67240d0eb1c8def42881916e0716f00af24d252b6e312a8",
+      "0x4A81Dcc5c617955eB7207c18505d17F86b4be662": "0x15e10d4d6f51db96f67240d0eb1c8def42881916e0716f00af24d252b6e312a8"
+    },
+    "verified": true,
+    "environment": "local-qa",
+    "releaseId": "0x486663fa041f2ddf5e688dcc1f50c96dbe76204e409e68a9436aa0587d50ab57",
+    "contractRuntimesMatched": 23,
+    "referenceTasksMatched": 100,
+    "recipient": "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A",
+    "ordinary100MintWei": "24772700000000000",
+    "allRecipientsAndAssetMappingsVerified": true,
+    "mainnet": false
+  },
+  "dbPath": ".test-chain/full-protocol-1792220628900",
+  "canonicalRegistryInstalledOnlyInLocalFixture": true,
+  "all100TasksPublishedAndVerified": true,
+  "paid100MintAndTreasuryWithdrawalVerified": true,
+  "uniformMintPricingVerified": true,
+  "mainnetDeployed": false,
+  "maxTransactionGas": 13230916,
+  "transactions": [
+    {
+      "label": "transistor-implementation",
+      "gasUsed": "1990986"
+    },
+    {
+      "label": "circuit-implementation",
+      "gasUsed": "4234831"
+    },
+    {
+      "label": "factory-implementation",
+      "gasUsed": "2102200"
+    },
+    {
+      "label": "factory-proxy",
+      "gasUsed": "697773"
+    },
+    {
+      "label": "factory-tapeout-default",
+      "gasUsed": "32162"
+    },
+    {
+      "label": "genesis-created",
+      "gasUsed": "825483"
+    },
+    {
+      "label": "factory-final-create-fee",
+      "gasUsed": "51942"
+    },
+    {
+      "label": "factory-final-protocol-fee",
+      "gasUsed": "34732"
+    },
+    {
+      "label": "task-registry",
+      "gasUsed": "2184202"
+    },
+    {
+      "label": "sampling-policy",
+      "gasUsed": "1300424"
+    },
+    {
+      "label": "reference-benchmark",
+      "gasUsed": "6298775"
+    },
+    {
+      "label": "reference-materials-nand",
+      "gasUsed": "133497"
+    },
+    {
+      "label": "reference-materials-latch",
+      "gasUsed": "99309"
+    },
+    {
+      "label": "reference-circuit-1",
+      "gasUsed": "339023"
+    },
+    {
+      "label": "task-published-1",
+      "gasUsed": "1429454"
+    },
+    {
+      "label": "reference-circuit-2",
+      "gasUsed": "307629"
+    },
+    {
+      "label": "task-published-2",
+      "gasUsed": "1427781"
+    },
+    {
+      "label": "reference-circuit-3",
+      "gasUsed": "311673"
+    },
+    {
+      "label": "task-published-3",
+      "gasUsed": "1536137"
+    },
+    {
+      "label": "reference-circuit-4",
+      "gasUsed": "360351"
+    },
+    {
+      "label": "task-published-4",
+      "gasUsed": "1657840"
+    },
+    {
+      "label": "reference-circuit-5",
+      "gasUsed": "364395"
+    },
+    {
+      "label": "task-published-5",
+      "gasUsed": "1769624"
+    },
+    {
+      "label": "reference-circuit-6",
+      "gasUsed": "364395"
+    },
+    {
+      "label": "task-published-6",
+      "gasUsed": "1771870"
+    },
+    {
+      "label": "reference-circuit-7",
+      "gasUsed": "368440"
+    },
+    {
+      "label": "task-published-7",
+      "gasUsed": "1875067"
+    },
+    {
+      "label": "reference-circuit-8",
+      "gasUsed": "372478"
+    },
+    {
+      "label": "task-published-8",
+      "gasUsed": "1999709"
+    },
+    {
+      "label": "reference-circuit-9",
+      "gasUsed": "364390"
+    },
+    {
+      "label": "task-published-9",
+      "gasUsed": "1830392"
+    },
+    {
+      "label": "reference-circuit-10",
+      "gasUsed": "376671"
+    },
+    {
+      "label": "task-published-10",
+      "gasUsed": "2162605"
+    },
+    {
+      "label": "reference-circuit-11",
+      "gasUsed": "535405"
+    },
+    {
+      "label": "task-published-11",
+      "gasUsed": "4101144"
+    },
+    {
+      "label": "reference-circuit-12",
+      "gasUsed": "860370"
+    },
+    {
+      "label": "task-published-12",
+      "gasUsed": "8087163"
+    },
+    {
+      "label": "reference-circuit-13",
+      "gasUsed": "565510"
+    },
+    {
+      "label": "task-published-13",
+      "gasUsed": "4277812"
+    },
+    {
+      "label": "reference-circuit-14",
+      "gasUsed": "411074"
+    },
+    {
+      "label": "task-published-14",
+      "gasUsed": "2453459"
+    },
+    {
+      "label": "reference-circuit-15",
+      "gasUsed": "441612"
+    },
+    {
+      "label": "task-published-15",
+      "gasUsed": "2747318"
+    },
+    {
+      "label": "reference-circuit-16",
+      "gasUsed": "484253"
+    },
+    {
+      "label": "task-published-16",
+      "gasUsed": "3290968"
+    },
+    {
+      "label": "reference-circuit-17",
+      "gasUsed": "376671"
+    },
+    {
+      "label": "task-published-17",
+      "gasUsed": "2118410"
+    },
+    {
+      "label": "reference-circuit-18",
+      "gasUsed": "415267"
+    },
+    {
+      "label": "task-published-18",
+      "gasUsed": "2575972"
+    },
+    {
+      "label": "reference-circuit-19",
+      "gasUsed": "407172"
+    },
+    {
+      "label": "task-published-19",
+      "gasUsed": "2338873"
+    },
+    {
+      "label": "reference-circuit-20",
+      "gasUsed": "453846"
+    },
+    {
+      "label": "task-published-20",
+      "gasUsed": "3014938"
+    },
+    {
+      "label": "reference-circuit-21",
+      "gasUsed": "582019"
+    },
+    {
+      "label": "task-published-21",
+      "gasUsed": "4747081"
+    },
+    {
+      "label": "reference-circuit-22",
+      "gasUsed": "523620"
+    },
+    {
+      "label": "task-published-22",
+      "gasUsed": "3732826"
+    },
+    {
+      "label": "reference-circuit-23",
+      "gasUsed": "527653"
+    },
+    {
+      "label": "task-published-23",
+      "gasUsed": "3864970"
+    },
+    {
+      "label": "reference-circuit-24",
+      "gasUsed": "450531"
+    },
+    {
+      "label": "task-published-24",
+      "gasUsed": "3044895"
+    },
+    {
+      "label": "reference-circuit-25",
+      "gasUsed": "372802"
+    },
+    {
+      "label": "task-published-25",
+      "gasUsed": "2059342"
+    },
+    {
+      "label": "reference-circuit-26",
+      "gasUsed": "527338"
+    },
+    {
+      "label": "task-published-26",
+      "gasUsed": "4010892"
+    },
+    {
+      "label": "reference-circuit-27",
+      "gasUsed": "315706"
+    },
+    {
+      "label": "task-published-27",
+      "gasUsed": "3181568"
+    },
+    {
+      "label": "reference-circuit-28",
+      "gasUsed": "411387"
+    },
+    {
+      "label": "task-published-28",
+      "gasUsed": "4954118"
+    },
+    {
+      "label": "reference-circuit-29",
+      "gasUsed": "419475"
+    },
+    {
+      "label": "task-published-29",
+      "gasUsed": "5584906"
+    },
+    {
+      "label": "reference-circuit-30",
+      "gasUsed": "319732"
+    },
+    {
+      "label": "task-published-30",
+      "gasUsed": "3543729"
+    },
+    {
+      "label": "reference-circuit-31",
+      "gasUsed": "899627"
+    },
+    {
+      "label": "task-published-31",
+      "gasUsed": "8640953"
+    },
+    {
+      "label": "reference-circuit-32",
+      "gasUsed": "1383025"
+    },
+    {
+      "label": "task-published-32",
+      "gasUsed": "8812643"
+    },
+    {
+      "label": "reference-circuit-33",
+      "gasUsed": "2010611"
+    },
+    {
+      "label": "task-published-33",
+      "gasUsed": "8721043"
+    },
+    {
+      "label": "reference-circuit-34",
+      "gasUsed": "771355"
+    },
+    {
+      "label": "task-published-34",
+      "gasUsed": "6954314"
+    },
+    {
+      "label": "reference-circuit-35",
+      "gasUsed": "1065797"
+    },
+    {
+      "label": "task-published-35",
+      "gasUsed": "8733186"
+    },
+    {
+      "label": "reference-circuit-36",
+      "gasUsed": "902855"
+    },
+    {
+      "label": "task-published-36",
+      "gasUsed": "8439819"
+    },
+    {
+      "label": "reference-circuit-37",
+      "gasUsed": "647470"
+    },
+    {
+      "label": "task-published-37",
+      "gasUsed": "5337434"
+    },
+    {
+      "label": "reference-circuit-38",
+      "gasUsed": "825920"
+    },
+    {
+      "label": "task-published-38",
+      "gasUsed": "7860330"
+    },
+    {
+      "label": "reference-circuit-39",
+      "gasUsed": "946420"
+    },
+    {
+      "label": "task-published-39",
+      "gasUsed": "8613167"
+    },
+    {
+      "label": "reference-circuit-40",
+      "gasUsed": "942043"
+    },
+    {
+      "label": "task-published-40",
+      "gasUsed": "8676028"
+    },
+    {
+      "label": "reference-circuit-41",
+      "gasUsed": "1270237"
+    },
+    {
+      "label": "task-published-41",
+      "gasUsed": "8853207"
+    },
+    {
+      "label": "reference-circuit-42",
+      "gasUsed": "1715900"
+    },
+    {
+      "label": "task-published-42",
+      "gasUsed": "9027935"
+    },
+    {
+      "label": "reference-circuit-43",
+      "gasUsed": "1317748"
+    },
+    {
+      "label": "task-published-43",
+      "gasUsed": "8721411"
+    },
+    {
+      "label": "reference-circuit-44",
+      "gasUsed": "907151"
+    },
+    {
+      "label": "task-published-44",
+      "gasUsed": "8566751"
+    },
+    {
+      "label": "reference-circuit-45",
+      "gasUsed": "907151"
+    },
+    {
+      "label": "task-published-45",
+      "gasUsed": "8585743"
+    },
+    {
+      "label": "reference-circuit-46",
+      "gasUsed": "864381"
+    },
+    {
+      "label": "task-published-46",
+      "gasUsed": "8294053"
+    },
+    {
+      "label": "reference-circuit-47",
+      "gasUsed": "826346"
+    },
+    {
+      "label": "task-published-47",
+      "gasUsed": "7842910"
+    },
+    {
+      "label": "reference-circuit-48",
+      "gasUsed": "488732"
+    },
+    {
+      "label": "task-published-48",
+      "gasUsed": "3439332"
+    },
+    {
+      "label": "reference-circuit-49",
+      "gasUsed": "565925"
+    },
+    {
+      "label": "task-published-49",
+      "gasUsed": "4338273"
+    },
+    {
+      "label": "reference-circuit-50",
+      "gasUsed": "694359"
+    },
+    {
+      "label": "task-published-50",
+      "gasUsed": "6070885"
+    },
+    {
+      "label": "reference-circuit-51",
+      "gasUsed": "1233114"
+    },
+    {
+      "label": "task-published-51",
+      "gasUsed": "8928706"
+    },
+    {
+      "label": "reference-circuit-52",
+      "gasUsed": "774985"
+    },
+    {
+      "label": "task-published-52",
+      "gasUsed": "7257974"
+    },
+    {
+      "label": "reference-circuit-53",
+      "gasUsed": "1032573"
+    },
+    {
+      "label": "task-published-53",
+      "gasUsed": "8906160"
+    },
+    {
+      "label": "reference-circuit-54",
+      "gasUsed": "941488"
+    },
+    {
+      "label": "task-published-54",
+      "gasUsed": "8658082"
+    },
+    {
+      "label": "reference-circuit-55",
+      "gasUsed": "1065321"
+    },
+    {
+      "label": "task-published-55",
+      "gasUsed": "8878106"
+    },
+    {
+      "label": "reference-circuit-56",
+      "gasUsed": "618348"
+    },
+    {
+      "label": "task-published-56",
+      "gasUsed": "10719462"
+    },
+    {
+      "label": "reference-circuit-57",
+      "gasUsed": "618329"
+    },
+    {
+      "label": "task-published-57",
+      "gasUsed": "10639796"
+    },
+    {
+      "label": "reference-circuit-58",
+      "gasUsed": "1084995"
+    },
+    {
+      "label": "task-published-58",
+      "gasUsed": "12034965"
+    },
+    {
+      "label": "reference-circuit-59",
+      "gasUsed": "715687"
+    },
+    {
+      "label": "task-published-59",
+      "gasUsed": "11035972"
+    },
+    {
+      "label": "reference-circuit-60",
+      "gasUsed": "415236"
+    },
+    {
+      "label": "task-published-60",
+      "gasUsed": "5200881"
+    },
+    {
+      "label": "reference-circuit-61",
+      "gasUsed": "415224"
+    },
+    {
+      "label": "task-published-61",
+      "gasUsed": "5238746"
+    },
+    {
+      "label": "reference-circuit-62",
+      "gasUsed": "419280"
+    },
+    {
+      "label": "task-published-62",
+      "gasUsed": "5533620"
+    },
+    {
+      "label": "reference-circuit-63",
+      "gasUsed": "626561"
+    },
+    {
+      "label": "task-published-63",
+      "gasUsed": "10788823"
+    },
+    {
+      "label": "reference-circuit-64",
+      "gasUsed": "622818"
+    },
+    {
+      "label": "task-published-64",
+      "gasUsed": "10335585"
+    },
+    {
+      "label": "reference-circuit-65",
+      "gasUsed": "589603"
+    },
+    {
+      "label": "task-published-65",
+      "gasUsed": "10346814"
+    },
+    {
+      "label": "reference-circuit-66",
+      "gasUsed": "1117099"
+    },
+    {
+      "label": "task-published-66",
+      "gasUsed": "12148702"
+    },
+    {
+      "label": "reference-circuit-67",
+      "gasUsed": "994217"
+    },
+    {
+      "label": "task-published-67",
+      "gasUsed": "12051442"
+    },
+    {
+      "label": "reference-circuit-68",
+      "gasUsed": "828090"
+    },
+    {
+      "label": "task-published-68",
+      "gasUsed": "11226901"
+    },
+    {
+      "label": "reference-circuit-69",
+      "gasUsed": "1033215"
+    },
+    {
+      "label": "task-published-69",
+      "gasUsed": "11778498"
+    },
+    {
+      "label": "reference-circuit-70",
+      "gasUsed": "1039919"
+    },
+    {
+      "label": "task-published-70",
+      "gasUsed": "12160314"
+    },
+    {
+      "label": "reference-circuit-71",
+      "gasUsed": "1036619"
+    },
+    {
+      "label": "task-published-71",
+      "gasUsed": "11915706"
+    },
+    {
+      "label": "reference-circuit-72",
+      "gasUsed": "754235"
+    },
+    {
+      "label": "task-published-72",
+      "gasUsed": "11120845"
+    },
+    {
+      "label": "reference-circuit-73",
+      "gasUsed": "622367"
+    },
+    {
+      "label": "task-published-73",
+      "gasUsed": "10387220"
+    },
+    {
+      "label": "reference-circuit-74",
+      "gasUsed": "592097"
+    },
+    {
+      "label": "task-published-74",
+      "gasUsed": "10249598"
+    },
+    {
+      "label": "reference-circuit-75",
+      "gasUsed": "708929"
+    },
+    {
+      "label": "task-published-75",
+      "gasUsed": "10993891"
+    },
+    {
+      "label": "reference-circuit-76",
+      "gasUsed": "462116"
+    },
+    {
+      "label": "task-published-76",
+      "gasUsed": "7258190"
+    },
+    {
+      "label": "reference-circuit-77",
+      "gasUsed": "658354"
+    },
+    {
+      "label": "task-published-77",
+      "gasUsed": "10821129"
+    },
+    {
+      "label": "reference-circuit-78",
+      "gasUsed": "753863"
+    },
+    {
+      "label": "task-published-78",
+      "gasUsed": "11368421"
+    },
+    {
+      "label": "reference-circuit-79",
+      "gasUsed": "2020555"
+    },
+    {
+      "label": "task-published-79",
+      "gasUsed": "12930545"
+    },
+    {
+      "label": "reference-circuit-80",
+      "gasUsed": "961049"
+    },
+    {
+      "label": "task-published-80",
+      "gasUsed": "11777152"
+    },
+    {
+      "label": "reference-circuit-81",
+      "gasUsed": "2532624"
+    },
+    {
+      "label": "task-published-81",
+      "gasUsed": "9334048"
+    },
+    {
+      "label": "reference-circuit-82",
+      "gasUsed": "3110468"
+    },
+    {
+      "label": "task-published-82",
+      "gasUsed": "10608097"
+    },
+    {
+      "label": "reference-circuit-83",
+      "gasUsed": "2940296"
+    },
+    {
+      "label": "task-published-83",
+      "gasUsed": "13230916"
+    },
+    {
+      "label": "reference-circuit-84",
+      "gasUsed": "3215125"
+    },
+    {
+      "label": "task-published-84",
+      "gasUsed": "10946567"
+    },
+    {
+      "label": "reference-circuit-85",
+      "gasUsed": "2677706"
+    },
+    {
+      "label": "task-published-85",
+      "gasUsed": "11847360"
+    },
+    {
+      "label": "reference-circuit-86",
+      "gasUsed": "1738668"
+    },
+    {
+      "label": "task-published-86",
+      "gasUsed": "12496730"
+    },
+    {
+      "label": "reference-circuit-87",
+      "gasUsed": "1388110"
+    },
+    {
+      "label": "task-published-87",
+      "gasUsed": "8828385"
+    },
+    {
+      "label": "reference-circuit-88",
+      "gasUsed": "1883775"
+    },
+    {
+      "label": "task-published-88",
+      "gasUsed": "8748422"
+    },
+    {
+      "label": "reference-circuit-89",
+      "gasUsed": "2650930"
+    },
+    {
+      "label": "task-published-89",
+      "gasUsed": "11808319"
+    },
+    {
+      "label": "reference-circuit-90",
+      "gasUsed": "1043272"
+    },
+    {
+      "label": "task-published-90",
+      "gasUsed": "12427211"
+    },
+    {
+      "label": "reference-circuit-91",
+      "gasUsed": "1643760"
+    },
+    {
+      "label": "task-published-91",
+      "gasUsed": "13200975"
+    },
+    {
+      "label": "reference-circuit-92",
+      "gasUsed": "835493"
+    },
+    {
+      "label": "task-published-92",
+      "gasUsed": "11632666"
+    },
+    {
+      "label": "reference-circuit-93",
+      "gasUsed": "1908356"
+    },
+    {
+      "label": "task-published-93",
+      "gasUsed": "12205705"
+    },
+    {
+      "label": "reference-circuit-94",
+      "gasUsed": "2406731"
+    },
+    {
+      "label": "task-published-94",
+      "gasUsed": "13212127"
+    },
+    {
+      "label": "reference-circuit-95",
+      "gasUsed": "1622397"
+    },
+    {
+      "label": "task-published-95",
+      "gasUsed": "11798683"
+    },
+    {
+      "label": "reference-circuit-96",
+      "gasUsed": "1575075"
+    },
+    {
+      "label": "task-published-96",
+      "gasUsed": "12759552"
+    },
+    {
+      "label": "reference-circuit-97",
+      "gasUsed": "1818544"
+    },
+    {
+      "label": "task-published-97",
+      "gasUsed": "13151025"
+    },
+    {
+      "label": "reference-circuit-98",
+      "gasUsed": "4313306"
+    },
+    {
+      "label": "task-published-98",
+      "gasUsed": "10179180"
+    },
+    {
+      "label": "reference-circuit-99",
+      "gasUsed": "3212221"
+    },
+    {
+      "label": "task-published-99",
+      "gasUsed": "10856588"
+    },
+    {
+      "label": "reference-circuit-100",
+      "gasUsed": "1030151"
+    },
+    {
+      "label": "task-published-100",
+      "gasUsed": "12333692"
+    },
+    {
+      "label": "ledger-factory",
+      "gasUsed": "1559835"
+    },
+    {
+      "label": "mining-implementation",
+      "gasUsed": "5123350"
+    },
+    {
+      "label": "mining-proxy",
+      "gasUsed": "1536337"
+    },
+    {
+      "label": "registry-controller",
+      "gasUsed": "29719"
+    },
+    {
+      "label": "sampling-controller",
+      "gasUsed": "46925"
+    },
+    {
+      "label": "boost",
+      "gasUsed": "2289399"
+    },
+    {
+      "label": "mining-boost",
+      "gasUsed": "54370"
+    },
+    {
+      "label": "transistor-market-implementation",
+      "gasUsed": "1826455"
+    },
+    {
+      "label": "transistor-market-proxy",
+      "gasUsed": "216154"
+    },
+    {
+      "label": "circuit-market-implementation",
+      "gasUsed": "1642212"
+    },
+    {
+      "label": "circuit-market-proxy",
+      "gasUsed": "216035"
+    },
+    {
+      "label": "account-payments",
+      "gasUsed": "211953"
+    },
+    {
+      "label": "account-implementation",
+      "gasUsed": "1045295"
+    },
+    {
+      "label": "account-beacon",
+      "gasUsed": "243881"
+    },
+    {
+      "label": "account-router",
+      "gasUsed": "144135"
+    },
+    {
+      "label": "account-opener",
+      "gasUsed": "658422"
+    },
+    {
+      "label": "site-registry",
+      "gasUsed": "787651"
+    },
+    {
+      "label": "payments-opener",
+      "gasUsed": "46649"
+    },
+    {
+      "label": "genesis-hooks",
+      "gasUsed": "99923"
+    },
+    {
+      "label": "genesis-mining-processor",
+      "gasUsed": "54624"
+    },
+    {
+      "label": "mining-sealed",
+      "gasUsed": "55769"
+    },
+    {
+      "label": "mining-authority-renounced",
+      "gasUsed": "28872"
+    },
+    {
+      "label": "materials-market-sealed",
+      "gasUsed": "34050"
+    },
+    {
+      "label": "circuit-market-sealed",
+      "gasUsed": "33995"
+    },
+    {
+      "label": "account-beacon-authority-renounced",
+      "gasUsed": "23154"
+    },
+    {
+      "label": "factory-sealed",
+      "gasUsed": "65275"
+    }
+  ],
+  "mainnetFeeEstimate": {
+    "gasPriceWei": "20000000",
+    "executionFeeWei": "18385335280000000",
+    "with25PercentGasMarginWei": "22981669100000000",
+    "walletBalanceWei": "1135797940946051",
+    "includesArbitrumDataFees": false
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "environment": "local with original fork financial fixtures",
+  "referenceBlock": 73397243,
+  "checks": [
+    "multiple registered processors",
+    "external factory allowlist",
+    "escrow and partial fills",
+    "fee rate fixed at order creation",
+    "exact payments and price guard",
+    "seller proceeds paid immediately",
+    "protocol fees credited for withdrawal",
+    "seller payout rejection reverts atomically",
+    "unused bid refund reconciled with gas",
+    "listing IDs count issued orders",
+    "duplicate relisting invalidates old listing",
+    "revoked approval permits stale delisting",
+    "same token ID isolated by processor",
+    "proxy initializer and counters",
+    "seal freezes administration while cancellations remain available"
+  ],
+  "referenceFinancialFixturesMatched": true,
+  "mainnetDeployed": false,
+  "wholeProtocolEquivalent": false
+}

@@ -1,0 +1,15 @@
+{
+  "environment": "local",
+  "checks": [
+    "pre-change settlement hook",
+    "post-change factor hook",
+    "stake tiers",
+    "immediate unstake factor drop",
+    "7-day exit",
+    "repeated unstake resets timer",
+    "principal and gas-reconciled payout"
+  ],
+  "ETHThresholdsFinalized": false,
+  "BEMStakingImplemented": false,
+  "referenceChainParityVerified": false
+}

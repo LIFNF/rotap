@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import {Interface} from 'ethers';
+const abi=JSON.parse(fs.readFileSync('reference-v2/abi/transistors.json'));
+const iface=new Interface(abi),to='0xbe6f94115d32f3ac3252bc4626573e739beeb714';
+const methods=[['mintPrice',[]],['protocolFee',[]],['supplyCap',[]],['minted',[]],['walletCap',[]],['typeCap',[0]],['typeCap',[1]],['mintedOf',[0]],['mintedOf',[1]],['creator',[]],['protocolWallet',[]]];
+const calls=[{jsonrpc:'2.0',id:1,method:'eth_chainId',params:[]},{jsonrpc:'2.0',id:2,method:'eth_blockNumber',params:[]}];
+for(const [name,args] of methods)calls.push({jsonrpc:'2.0',id:calls.length+1,method:'eth_call',params:[{to,data:iface.encodeFunctionData(name,args)},'latest']});
+fs.writeFileSync('reference-v2/mint-request.json',JSON.stringify(calls));
+fs.writeFileSync('reference-v2/mint-methods.json',JSON.stringify(methods));
+console.log('Read-only Mint requests prepared');

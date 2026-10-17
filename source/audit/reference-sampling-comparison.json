@@ -1,0 +1,46 @@
+{
+  "referenceBlock": "0x45ff3fb",
+  "matchedOriginalSampleTraces": 6,
+  "counts": [
+    {
+      "circuitId": 4928,
+      "taskId": 1,
+      "liveGates": "6",
+      "samples": 32
+    },
+    {
+      "circuitId": 4928,
+      "taskId": 27,
+      "liveGates": "6",
+      "samples": 3
+    },
+    {
+      "circuitId": 4928,
+      "taskId": 100,
+      "liveGates": "6",
+      "samples": 9
+    },
+    {
+      "circuitId": 4932,
+      "taskId": 1,
+      "liveGates": "3",
+      "samples": 32
+    },
+    {
+      "circuitId": 4932,
+      "taskId": 27,
+      "liveGates": "3",
+      "samples": 4
+    },
+    {
+      "circuitId": 4932,
+      "taskId": 100,
+      "liveGates": "3",
+      "samples": 10
+    }
+  ],
+  "hashEncoding": "keccak256(abi.encodePacked(bytes32 anchorHash,address circuits,uint256 circuitId,uint32 sampleIndex)) % vectorCount",
+  "duplicateSamplesAllowed": true,
+  "initialGasParametersMatched": true,
+  "budgetGovernanceReferenceVerified": false
+}

@@ -1,0 +1,24 @@
+{
+  "chainId": 196,
+  "contract": "0xbe6f94115d32f3ac3252bc4626573e739beeb714",
+  "rpc": "https://rpc.xlayer.tech",
+  "observedBlock": "0x45fe127",
+  "note": "Calls made at latest across multiple blocks; observedBlock is a sampling marker, not a pinned snapshot.",
+  "responses": [
+    {
+      "data": "0x6817c76c",
+      "status": 200,
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":\"0x0000000000000000000000000000000000000000000000000001c6bf52634000\",\"id\":1}\n"
+    },
+    {
+      "data": "0x8f770ad0",
+      "status": 200,
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":\"0x00000000000000000000000000000000000000000000000000000000000f4240\",\"id\":1}\n"
+    },
+    {
+      "data": "0xb0e21e8a",
+      "status": 200,
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":\"0x00000000000000000000000000000000000000000000000000025844398d4000\",\"id\":1}\n"
+    }
+  ]
+}

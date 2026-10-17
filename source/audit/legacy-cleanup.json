@@ -1,0 +1,13 @@
+{
+  "legacyEpochFrontendRemoved": true,
+  "legacyContractAndDeployScriptRemoved": true,
+  "retiredAbiAndBytecodeRemoved": true,
+  "releaseWriteApiDisabled": true,
+  "oldLocalDeliveryBundlesRemoved": true,
+  "currentMintPricingAndWhitelistPreserved": true,
+  "currentTaskCount": 100,
+  "workbenchWalletAndMintBrowserRegressionsPassed": true,
+  "githubLiveScriptVerified": true,
+  "oldDeploymentArtifactHttpStatus": 404,
+  "mainnetDeployed": false
+}

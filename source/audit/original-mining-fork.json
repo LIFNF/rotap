@@ -1,0 +1,187 @@
+{
+  "environment": "local Ganache fork of original deployment",
+  "referenceBlock": 73397243,
+  "referenceTimestamp": 1792166279,
+  "remoteReadOnly": true,
+  "mainnetTransactionsSent": 0,
+  "testFixtureChanges": {
+    "reason": "Original genesis sold out; supply test materials only in local storage",
+    "NANDGiven": 1,
+    "originalMintNotTestedHere": true
+  },
+  "firstUnusedSnapshot": "4934",
+  "newNFTId": "4934",
+  "base": {
+    "weight": "600",
+    "boostBps": "10000"
+  },
+  "burn": {
+    "weight": "696",
+    "boostBps": "11600",
+    "until": "1792771079"
+  },
+  "expiredBeforeRefresh": {
+    "factorBps": "10000",
+    "storedWeight": "696",
+    "storedBoostBps": "11600",
+    "pending": "0"
+  },
+  "afterClaim": {
+    "weight": "600",
+    "boostBps": "10000",
+    "debt": "18734622"
+  },
+  "expiryAccounting": {
+    "paid": "12501790",
+    "oldStoredWeightAccrual": "12501790",
+    "paidOldWeightAccrual": true,
+    "accVerif": "31224370923799538600895189291925",
+    "debtBefore": "9230372"
+  },
+  "pendingBefore": "0",
+  "rpc": {
+    "publicRpcReads": 0,
+    "cacheHits": 9,
+    "broadcasts": 0
+  },
+  "transferAccounting": {
+    "oldOwnerReceived": "0",
+    "newOwnerReceived": "3564",
+    "storedRegistrantAfterTransfer": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+    "registrantBefore": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+    "accUpdatedDuringTransfer": false
+  },
+  "governance": {
+    "owner": "0xfb7708019E64462126bAfFFC30c03E770e455Ef8",
+    "sealed": false,
+    "tasksFrozen": false,
+    "calls": {
+      "outsider-claim": {
+        "allowed": true
+      },
+      "processor-same": {
+        "allowed": true
+      },
+      "processor-change": {
+        "allowed": true
+      },
+      "processor-zero": {
+        "allowed": true
+      },
+      "processor-uint32-max": {
+        "allowed": false,
+        "revert": "0x40a3a8e2"
+      },
+      "processor-uint32-overflow": {
+        "allowed": false,
+        "revert": "0x40a3a8e2"
+      },
+      "processor-eoa": {
+        "allowed": true
+      },
+      "boost-same": {
+        "allowed": true
+      },
+      "boost-zero": {
+        "allowed": true
+      },
+      "raise-lower": {
+        "allowed": false,
+        "revert": "0x901b94c0"
+      },
+      "raise-same": {
+        "allowed": false,
+        "revert": "0x901b94c0"
+      },
+      "raise-higher": {
+        "allowed": true
+      },
+      "update-task-reference": {
+        "allowed": true
+      },
+      "paused-arm": {
+        "allowed": true
+      },
+      "paused-commit": {
+        "allowed": true
+      },
+      "paused-claim": {
+        "allowed": false,
+        "revert": "0xd93c0665"
+      },
+      "paused-stop": {
+        "allowed": false,
+        "revert": "0xd93c0665"
+      },
+      "paused-reclaim": {
+        "allowed": false,
+        "revert": "0xd93c0665"
+      },
+      "paused-seal": {
+        "allowed": false,
+        "revert": "0xd93c0665"
+      },
+      "running-reclaim": {
+        "allowed": false,
+        "revert": "0x79710317"
+      },
+      "seal": {
+        "allowed": true
+      },
+      "sealed-processor": {
+        "allowed": false,
+        "revert": "0x0a85aa9b"
+      },
+      "sealed-boost": {
+        "allowed": false,
+        "revert": "0x0a85aa9b"
+      },
+      "sealed-raise": {
+        "allowed": false,
+        "revert": "0x0a85aa9b"
+      },
+      "sealed-ref": {
+        "allowed": false,
+        "revert": "0x0a85aa9b"
+      },
+      "sealed-transfer-owner": {
+        "allowed": true
+      },
+      "sealed-pause": {
+        "allowed": false,
+        "revert": "0x0a85aa9b"
+      }
+    },
+    "stakeAutoClaim": {
+      "paid": "1782"
+    },
+    "maxProcessorMultiplier": 100,
+    "sealWhilePaused": {
+      "allowed": false
+    },
+    "processorUpdate": {
+      "mappingAfter": "7",
+      "storedMultBefore": "6",
+      "storedMultAfter": "6",
+      "storedWeightAfter": "630"
+    },
+    "afterSeal": {
+      "owner": "0xfb7708019E64462126bAfFFC30c03E770e455Ef8",
+      "sealed": true,
+      "tasksFrozen": true,
+      "paused": false
+    }
+  },
+  "poolRounding": {
+    "seconds": 1,
+    "rate": "8333333",
+    "verifiedWeight": "277781526",
+    "unverifiedWeight": "14781000",
+    "verifiedAccumulatorDelta": "29699599245487621088236083",
+    "unverifiedAccumulatorDelta": "5637845883228468980447872",
+    "floor99Matches": false,
+    "remaining99Matches": true,
+    "totalMinedDelta": "0",
+    "totalForgoneDelta": "0"
+  }
+}

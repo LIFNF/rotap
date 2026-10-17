@@ -1,0 +1,32 @@
+{
+  "environment": "local",
+  "assetAdaptation": "BEM replaced with ROTAP by user instruction",
+  "tiers": [
+    "200",
+    "600",
+    "1000",
+    "1500",
+    "2000"
+  ],
+  "decimals": 8,
+  "boostBps": [
+    "500",
+    "700",
+    "900",
+    "1200",
+    "1500"
+  ],
+  "withdrawalDelay": 604800,
+  "checks": [
+    "all tier boundaries",
+    "allowance enforcement",
+    "settlement hooks before and after factor changes",
+    "native and ROTAP additive factor",
+    "immediate factor reduction on unstake",
+    "repeated exit merges and resets timer",
+    "principal conservation",
+    "third-party withdrawal pays beneficiary only",
+    "no double withdrawal"
+  ],
+  "referenceWholeProtocolParity": false
+}

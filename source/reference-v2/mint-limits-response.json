@@ -1,0 +1,49 @@
+{
+  "chainId": 196,
+  "contract": "0xbe6f94115d32f3ac3252bc4626573e739beeb714",
+  "rpc": "https://rpc.xlayer.tech",
+  "observedBlock": "0x45fe127",
+  "note": "Calls made at latest across multiple blocks; observedBlock is a sampling marker, not a pinned snapshot.",
+  "responses": [
+    {
+      "label": "block",
+      "status": 200,
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":\"0x45fe127\",\"id\":1}\n"
+    },
+    {
+      "label": "chain",
+      "status": 200,
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":\"0xc4\",\"id\":1}\n"
+    },
+    {
+      "label": "0x4f02c420",
+      "status": 200,
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":\"0x00000000000000000000000000000000000000000000000000000000000f4240\",\"id\":1}\n"
+    },
+    {
+      "label": "0x58950c22",
+      "status": 200,
+      "body": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":3,\"message\":\"execution reverted\"},\"id\":1}\n"
+    },
+    {
+      "label": "0x9fdfc5160000000000000000000000000000000000000000000000000000000000000000",
+      "status": 200,
+      "body": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":3,\"message\":\"execution reverted\"},\"id\":1}\n"
+    },
+    {
+      "label": "0x9fdfc5160000000000000000000000000000000000000000000000000000000000000001",
+      "status": 200,
+      "body": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":3,\"message\":\"execution reverted\"},\"id\":1}\n"
+    },
+    {
+      "label": "0xf05563b60000000000000000000000000000000000000000000000000000000000000000",
+      "status": 200,
+      "body": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":3,\"message\":\"execution reverted\"},\"id\":1}\n"
+    },
+    {
+      "label": "0xf05563b60000000000000000000000000000000000000000000000000000000000000001",
+      "status": 200,
+      "body": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":3,\"message\":\"execution reverted\"},\"id\":1}\n"
+    }
+  ]
+}

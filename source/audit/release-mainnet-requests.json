@@ -1,0 +1,1 @@
+[{"method":"eth_chainId","params":[]},{"method":"eth_getBlockByNumber","params":["latest",false]},{"method":"eth_gasPrice","params":[]},{"method":"eth_getBalance","params":["0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A","latest"]},{"method":"eth_getCode","params":["0x000000006551c19487814612e58fe06813775758","latest"]}]

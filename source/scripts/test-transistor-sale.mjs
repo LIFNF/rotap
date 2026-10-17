@@ -1,0 +1,34 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import solc from 'solc';
+import ganache from 'ganache';
+import {BrowserProvider,ContractFactory} from 'ethers';
+const input={language:'Solidity',sources:{'ROtapTransistors.sol':{content:fs.readFileSync('contracts/ROtapTransistors.sol','utf8')}},settings:{optimizer:{enabled:true,runs:200},evmVersion:'shanghai',outputSelection:{'*':{'*':['abi','evm.bytecode.object']}}}};
+const compiled=JSON.parse(solc.compile(JSON.stringify(input)));
+assert.equal((compiled.errors||[]).filter(e=>e.severity==='error').length,0,JSON.stringify(compiled.errors));
+const output=compiled.contracts['ROtapTransistors.sol'].ROtapTransistors;
+const dbPath='.test-chain/transistor-sale-'+Date.now();fs.mkdirSync(dbPath,{recursive:true});
+const chain=ganache.provider({logging:{quiet:true},chain:{hardfork:'shanghai'},database:{dbPath}});
+try{
+ const provider=new BrowserProvider(chain,undefined,{cacheTimeout:-1});const owner=await provider.getSigner(0),buyer=await provider.getSigner(1),circuit=await provider.getSigner(2),other=await provider.getSigner(3);
+ const address=await owner.getAddress(),buyerAddress=await buyer.getAddress();
+ const sale=await new ContractFactory(output.abi,output.evm.bytecode.object,owner).deploy(address,address,await circuit.getAddress(),10n,7n);await sale.waitForDeployment();
+ const reject=async call=>assert.rejects(async()=>{const tx=await call();await tx.wait();});
+ await reject(()=>sale.connect(buyer).mint(0,2,{value:26}));
+ await reject(()=>sale.connect(buyer).mint(0,2,{value:28}));
+ await reject(()=>sale.connect(buyer).mint(2,1,{value:17}));
+ await reject(()=>sale.connect(buyer).mint(0,0,{value:7}));
+ await(await sale.connect(buyer).mint(0,2,{value:27})).wait();
+ await(await sale.connect(buyer).mint(1,3,{value:37})).wait();
+ assert.equal(await sale.minted(),5n);assert.equal(await sale.balanceOf(buyerAddress,0),2n);assert.equal(await sale.owed(address),64n);
+ await reject(()=>sale.connect(other).burnFrom(buyerAddress,0,1));
+ await(await sale.connect(circuit).burnFrom(buyerAddress,0,1)).wait();
+ assert.equal(await sale.minted(),5n);assert.equal(await sale.balanceOf(buyerAddress,0),1n);
+ await(await sale.withdraw()).wait();assert.equal(await sale.owed(address),0n);assert.equal(await provider.getBalance(await sale.getAddress()),0n);
+ const otherAddress=await other.getAddress();
+ await reject(()=>sale.connect(other).safeTransferFrom(buyerAddress,otherAddress,0,1,'0x'));
+ await(await sale.connect(buyer).mint(1,999995,{value:9999957})).wait();
+ assert.equal(await sale.minted(),1000000n);
+ await reject(()=>sale.connect(buyer).mint(0,1,{value:17}));
+ console.log('PASS: payable issuance, both types share 1M cap, exact payment, revenue accounting, withdrawals, unauthorized operations, burn does not restore issuance. NOT proof of full Fab X parity.');
+}finally{await chain.disconnect();}

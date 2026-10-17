@@ -1,0 +1,26 @@
+[
+  {
+    "publisher": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+    "samples": 3,
+    "allowed": false,
+    "revert": "0x118cdaa700000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c1"
+  },
+  {
+    "publisher": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+    "samples": 32,
+    "allowed": false,
+    "revert": "0x118cdaa700000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c1"
+  },
+  {
+    "publisher": "0xfb7708019E64462126bAfFFC30c03E770e455Ef8",
+    "samples": 3,
+    "allowed": false,
+    "revert": "0xbb9cda13"
+  },
+  {
+    "publisher": "0xfb7708019E64462126bAfFFC30c03E770e455Ef8",
+    "samples": 32,
+    "allowed": false,
+    "revert": "0xbb9cda13"
+  }
+]

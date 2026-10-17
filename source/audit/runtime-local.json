@@ -1,0 +1,16 @@
+{
+  "environment": "local",
+  "randomCombinationalDesigns": 24,
+  "truthTableEvaluations": 192,
+  "sequentialCycles": 8,
+  "checks": [
+    "little-endian bits",
+    "prior-state outputs",
+    "forward latch feedback",
+    "critical depth excluding dead NAND paths",
+    "area and burn",
+    "malformed input rejection"
+  ],
+  "REFSupported": false,
+  "referenceChainDifferentialVerified": false
+}

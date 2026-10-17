@@ -1,0 +1,10 @@
+{
+  "environment": "local with original-chain read-only fixtures",
+  "referenceBlock": "0x45ff3fb",
+  "CIDCasesMatched": 44,
+  "accountInterfaceCasesMatched": 8,
+  "CIDPolicy": "canonical CIDv1/base32 lower-case/dag-pb/sha2-256/32-byte digest; CIDv0 and other codecs rejected",
+  "ERC1271Policy": "signatures return zero, matching original",
+  "mainnetDeployed": false,
+  "wholeProtocolEquivalent": false
+}

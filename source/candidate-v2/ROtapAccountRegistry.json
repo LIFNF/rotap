@@ -1,0 +1,170 @@
+{
+  "candidate": true,
+  "deploymentAllowed": false,
+  "source": "ROtapAccounts.sol",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "salt",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "chainId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "tokenContract",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ERC6551AccountCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "salt",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "chainId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "tokenContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "account",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "salt",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "chainId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "tokenContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "createAccount",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "result",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "salt",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "chainId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "tokenContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "creationCode",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080806040523460155761039d908161001b8239f35b600080fdfe6080604052600436101561001257600080fd5b60003560e01c8063246a0021146100bb5780632e5551fe1461007057638a54c52f1461003d57600080fd5b3461006b576020610059610050366100d7565b93929092610285565b6040516001600160a01b039091168152f35b600080fd5b3461006b5761008a610081366100d7565b939290926101cc565b604080518092602082526100ad8151809281602086015260208686019101610119565b601f01601f19168101030190f35b3461006b5760206100596100ce366100d7565b93929092610174565b60a090600319011261006b576004356001600160a01b038116810361006b579060243590604435906064356001600160a01b038116810361006b579060843590565b60005b83811061012c5750506000910152565b818101518382015260200161011c565b90601f8019910116810190811067ffffffffffffffff82111761015e57604052565b634e487b7160e01b600052604160045260246000fd5b9181610182949295936101cc565b602081519101209060405191602083019160ff60f81b83523060601b602185015260358401526055830152605582526101bc60758361013c565b905190206001600160a01b031690565b9060579294610282946040519660208801938452604088015260018060a01b0316606087015260808601526080855261020660a08661013c565b610271604051958693693d60ad80600a3d3981f360b01b602086015269363d3d373d3d3d363d7360b01b602a8601526bffffffffffffffffffffffff199060601b1660348501526e5af43d82803e903d91602b57fd5bf360881b604885015251809285850190610119565b81010301601f19810183528261013c565b90565b9194939290946102988483838987610174565b95863b61036057806102ad86858584896101cc565b6020815191016000f56001600160a01b038881169491168085149081610356575b501561031e577f79f19b3655ee38b1ce526556b7731a20c8f218fbda4a3990b6cc4172fdf88722926060926040519586526020860152604085015260018060a01b03169360018060a01b031692a4565b60405162461bcd60e51b815260206004820152601060248201526f20a1a1a7aaa72a2fa1a922a0aa24a7a760811b6044820152606490fd5b90501515386102ce565b505050505056fea2646970667358221220694fbadc0219257111c844228dfb30a85fa4390c448482364aec09857e91278164736f6c634300081e0033",
+  "runtimeTemplate": "0x6080604052600436101561001257600080fd5b60003560e01c8063246a0021146100bb5780632e5551fe1461007057638a54c52f1461003d57600080fd5b3461006b576020610059610050366100d7565b93929092610285565b6040516001600160a01b039091168152f35b600080fd5b3461006b5761008a610081366100d7565b939290926101cc565b604080518092602082526100ad8151809281602086015260208686019101610119565b601f01601f19168101030190f35b3461006b5760206100596100ce366100d7565b93929092610174565b60a090600319011261006b576004356001600160a01b038116810361006b579060243590604435906064356001600160a01b038116810361006b579060843590565b60005b83811061012c5750506000910152565b818101518382015260200161011c565b90601f8019910116810190811067ffffffffffffffff82111761015e57604052565b634e487b7160e01b600052604160045260246000fd5b9181610182949295936101cc565b602081519101209060405191602083019160ff60f81b83523060601b602185015260358401526055830152605582526101bc60758361013c565b905190206001600160a01b031690565b9060579294610282946040519660208801938452604088015260018060a01b0316606087015260808601526080855261020660a08661013c565b610271604051958693693d60ad80600a3d3981f360b01b602086015269363d3d373d3d3d363d7360b01b602a8601526bffffffffffffffffffffffff199060601b1660348501526e5af43d82803e903d91602b57fd5bf360881b604885015251809285850190610119565b81010301601f19810183528261013c565b90565b9194939290946102988483838987610174565b95863b61036057806102ad86858584896101cc565b6020815191016000f56001600160a01b038881169491168085149081610356575b501561031e577f79f19b3655ee38b1ce526556b7731a20c8f218fbda4a3990b6cc4172fdf88722926060926040519586526020860152604085015260018060a01b03169360018060a01b031692a4565b60405162461bcd60e51b815260206004820152601060248201526f20a1a1a7aaa72a2fa1a922a0aa24a7a760811b6044820152606490fd5b90501515386102ce565b505050505056fea2646970667358221220694fbadc0219257111c844228dfb30a85fa4390c448482364aec09857e91278164736f6c634300081e0033",
+  "immutableReferences": {}
+}

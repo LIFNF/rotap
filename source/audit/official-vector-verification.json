@@ -1,0 +1,611 @@
+{
+  "chainId": 196,
+  "block": "0x45ff3fb",
+  "tasks": 100,
+  "vectors": 25600,
+  "allRootsVerified": true,
+  "allReferenceExecutionsMatched": true,
+  "scope": "Official vector integrity and NAND/LATCH reference execution, not complete protocol parity",
+  "results": [
+    {
+      "taskId": 1,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 2,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 3,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 4,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 5,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 6,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 7,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 8,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 9,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 10,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 11,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 12,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 13,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 14,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 15,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 16,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 17,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 18,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 19,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 20,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 21,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 22,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 23,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 24,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 25,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 26,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 27,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 28,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 29,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 30,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 31,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 32,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 33,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 34,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 35,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 36,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 37,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 38,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 39,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 40,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 41,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 42,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 43,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 44,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 45,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 46,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 47,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 48,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 49,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 50,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 51,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 52,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 53,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 54,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 55,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 56,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 57,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 58,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 59,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 60,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 61,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 62,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 63,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 64,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 65,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 66,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 67,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 68,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 69,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 70,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 71,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 72,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 73,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 74,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 75,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 76,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 77,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 78,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 79,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 80,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 81,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 82,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 83,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 84,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 85,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 86,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 87,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 88,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 89,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 90,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 91,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 92,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 93,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 94,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 95,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 96,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 97,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 98,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 99,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    },
+    {
+      "taskId": 100,
+      "vectors": 256,
+      "rootVerified": true,
+      "referenceExecutionMatched": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "purpose": "Historical reference evidence only; never used as live network configuration",
+  "referenceChainId": 196,
+  "referenceBlock": "0x45ff3fb",
+  "referenceMining": "0x4f6a2312d80753bdafd35ddb1bf4bb14c43f8265",
+  "targetChainId": 4663,
+  "targetTaskDataHash": "0x9f4a997995b2dddffefe50edf4e955be4153c1dab26692e8f710d6f72d488b96",
+  "referenceSourceFileHash": "0x57a12bd2b7590975276c084db65c039b676dc8e2d5de950ff4d4d2d5a12530ab",
+  "originalSoliditySourceAvailable": false,
+  "changes": [
+    "Removed all historical contract addresses from runtime task data",
+    "Reassigned network metadata to Robinhood Chain",
+    "Preserved logical task specifications, byte programs, vector bytes and Merkle roots"
+  ]
+}

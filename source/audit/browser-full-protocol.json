@@ -1,0 +1,36 @@
+{
+  "environment": "local-qa",
+  "mainnetDeployed": false,
+  "passed": true,
+  "releaseId": "0x486663fa041f2ddf5e688dcc1f50c96dbe76204e409e68a9436aa0587d50ab57",
+  "sourceHashes": {
+    "ROtapRuntime.sol": "0xd37f109bbd29c3a6dfd02c8387f561a3af20181724394b817687f6f69f7c4a60",
+    "ROtapTransistors.sol": "0x382d6de8e65ea3c33cadbdf3447081d68f8f5216f18f7eba4a43be9ab90282d8",
+    "ROtapCircuits.sol": "0xdbbf87212692f9e56154df1fece29a5e97f15df66d75ec8f06b6f7a4e1008e0e",
+    "ROtapReferenceRuntime.sol": "0xfa0ad6b026c86a2ccd387ff4e560e0cfe31d43795e4f1abc7000749972dd701e",
+    "ROtapContinuousLedger.sol": "0x0b86bea92984a22419af877f4b4454131cf4ec3862514cdbafe7e81a4d59d235",
+    "ROtapStakeBoost.sol": "0x4af38aa3c1761fb4986c231377990a404c53497ea284e93eb64f315973989f52",
+    "ROtapRewardStakeBoost.sol": "0x5604967a5fe4efe9edfcfe38d220601899a79dd368aacf960989ed6c5ac23dcf",
+    "ROtapBoost.sol": "0xbd8ea00471cd94c662455618d1b10954b8d6bc7a4f6eb80b2280dc49565ab92c",
+    "ROtapSamplingPolicy.sol": "0x494e9307690eb9e78325f4bd2b9f1fd3bf26495d246d0d1e921cf403ab0e6129",
+    "ROtapTaskRegistry.sol": "0x05f51a96778939b17f3efa6a8175a86db820cf1af3b1ff83968b03450bfa72b5",
+    "ROtapMining.sol": "0xbce698f102873f469708da5b3b0d3cd705ab6ebd8a0115bba35d2d6cdbbd446c",
+    "ROtapMarkets.sol": "0x4057e92b7501f4420ecc38395fb5e069bded10fbec39b9d23e547c26f22770ac",
+    "ROtapAccounts.sol": "0xeb645ced5cb2acff84dbac10137d1cca63c156e667b4f8b6ec52152d52616f40",
+    "ROtapProcessorFactory.sol": "0x4b9afb04796f3ffeab3e88652890e0904dba96d6a5744cc9c4f636c06ad40bca"
+  },
+  "appAssetHash": "9e1728f2ffe2cc74bbf871ef4eb7dfb9d473694e2e61848cc2c427278df22ab4",
+  "checks": [
+    "connect EIP-6963 wallet and uniform owner Mint",
+    "ordinary paid 100 Mint and treasury income",
+    "official vectors, design commitment and circuit tapeout",
+    "real sampling and continuous mining claim",
+    "selected native and ROTAP staking, exit and burn",
+    "canonical account opening, deposit, execute and site publish",
+    "material market partial trade and NFT ownership transfer",
+    "processor Mint, administration and treasury withdrawal",
+    "all routes desktop and mobile layout"
+  ],
+  "errors": [],
+  "failed": []
+}

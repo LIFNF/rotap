@@ -1,0 +1,13 @@
+{
+  "chainId": 196,
+  "referenceBlock": "0x45ff3fb",
+  "referenceCircuits": "0x265E2580cB9c3FC059f2AA3cf20ad30F3F0A653C",
+  "referenceTasks": 100,
+  "metricsMatched": 100,
+  "originalCalls": 100,
+  "missingOriginalTaskIds": [],
+  "outputsMatched": 100,
+  "rejectionsMatched": 0,
+  "differences": [],
+  "scope": "Only successfully downloaded original calls are compared; missing cases and full protocol parity remain pending"
+}

@@ -1,0 +1,14 @@
+{
+  "environment": "local",
+  "samplingMockUsed": false,
+  "stakingMockUsed": false,
+  "rewardSource": "official-task mining claim",
+  "stakingAsset": "ROTAP",
+  "stakedSmallestUnits": "20000000000",
+  "baseVerifiedWeight": "7800",
+  "stakedVerifiedWeight": "7830",
+  "unstakedVerifiedWeight": "7800",
+  "withdrawalDelaySeconds": 604800,
+  "principalReturnedExactly": true,
+  "mainnetDeployed": false
+}

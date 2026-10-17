@@ -1,0 +1,27 @@
+{
+  "environment": "local with original fork fixtures",
+  "referenceBlock": 73397243,
+  "checks": [
+    "standard ERC6551 173-byte runtime and immutable footer",
+    "canonical CREATE2 address and idempotent registry",
+    "predeployed account cannot execute before paid opening",
+    "third party may pay opening fee",
+    "opening and execution overpayment refunded",
+    "fees reach treasury exactly",
+    "CALL-only execution and batch state",
+    "NFT listing locks account withdrawals",
+    "registered protocol NFTs rejected by safe receiver",
+    "NFT transfer changes current owner",
+    "old owner rejected",
+    "multiple processors with same NFT number",
+    "account beacon upgrade preserves assets and state",
+    "foreign chain owner invalid",
+    "strict canonical CID publication",
+    "version and current-owner publishing checks"
+  ],
+  "ERC6551RuntimeReferenceMatched": true,
+  "CIDRulesReferenceVerified": true,
+  "multiProcessorAccountsSupported": true,
+  "mainnetDeployed": false,
+  "wholeProtocolEquivalent": false
+}

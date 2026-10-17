@@ -1,0 +1,179 @@
+{
+  "status": "candidate-not-for-deployment",
+  "deploymentAllowed": false,
+  "compiler": "0.8.30+commit.73712a01.Emscripten.clang",
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "viaIR": true,
+    "evmVersion": "paris",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object",
+          "evm.deployedBytecode.immutableReferences"
+        ]
+      }
+    }
+  },
+  "sourceHashes": {
+    "ROtapRuntime.sol": "0xd37f109bbd29c3a6dfd02c8387f561a3af20181724394b817687f6f69f7c4a60",
+    "ROtapTransistors.sol": "0x382d6de8e65ea3c33cadbdf3447081d68f8f5216f18f7eba4a43be9ab90282d8",
+    "ROtapCircuits.sol": "0xdbbf87212692f9e56154df1fece29a5e97f15df66d75ec8f06b6f7a4e1008e0e",
+    "ROtapReferenceRuntime.sol": "0xfa0ad6b026c86a2ccd387ff4e560e0cfe31d43795e4f1abc7000749972dd701e",
+    "ROtapContinuousLedger.sol": "0x0b86bea92984a22419af877f4b4454131cf4ec3862514cdbafe7e81a4d59d235",
+    "ROtapStakeBoost.sol": "0x4af38aa3c1761fb4986c231377990a404c53497ea284e93eb64f315973989f52",
+    "ROtapRewardStakeBoost.sol": "0x5604967a5fe4efe9edfcfe38d220601899a79dd368aacf960989ed6c5ac23dcf",
+    "ROtapBoost.sol": "0xbd8ea00471cd94c662455618d1b10954b8d6bc7a4f6eb80b2280dc49565ab92c",
+    "ROtapSamplingPolicy.sol": "0x494e9307690eb9e78325f4bd2b9f1fd3bf26495d246d0d1e921cf403ab0e6129",
+    "ROtapTaskRegistry.sol": "0x05f51a96778939b17f3efa6a8175a86db820cf1af3b1ff83968b03450bfa72b5",
+    "ROtapMining.sol": "0xbce698f102873f469708da5b3b0d3cd705ab6ebd8a0115bba35d2d6cdbbd446c",
+    "ROtapMarkets.sol": "0x4057e92b7501f4420ecc38395fb5e069bded10fbec39b9d23e547c26f22770ac",
+    "ROtapAccounts.sol": "0xeb645ced5cb2acff84dbac10137d1cca63c156e667b4f8b6ec52152d52616f40",
+    "ROtapProcessorFactory.sol": "0x4b9afb04796f3ffeab3e88652890e0904dba96d6a5744cc9c4f636c06ad40bca"
+  },
+  "contracts": {
+    "ROtapAccountBeacon": {
+      "source": "ROtapAccounts.sol",
+      "creationBytes": 986,
+      "runtimeBytes": 624,
+      "creationCodeHash": "0x0bc4398f96940c75f1cb3f58eec6d183af0ba0ca3dadd15ba81b6cfd93f8d682"
+    },
+    "ROtapAccountOpener": {
+      "source": "ROtapAccounts.sol",
+      "creationBytes": 3220,
+      "runtimeBytes": 2734,
+      "creationCodeHash": "0xb8d34e2daa13f854292c992fea31fa3dca431b904ee904b91a6ae6173cee8d5c"
+    },
+    "ROtapAccountPayments": {
+      "source": "ROtapAccounts.sol",
+      "creationBytes": 908,
+      "runtimeBytes": 724,
+      "creationCodeHash": "0xe992c1f5201e11d583fef59c272b52860cfa3ca632541ff0416b13ca3a72341d"
+    },
+    "ROtapAccountRegistry": {
+      "source": "ROtapAccounts.sol",
+      "creationBytes": 952,
+      "runtimeBytes": 925,
+      "creationCodeHash": "0xe70610fa2952572c0168e034a67336cc86557af6ef1517f7de2238cba4bde482"
+    },
+    "ROtapAccountRouter": {
+      "source": "ROtapAccounts.sol",
+      "creationBytes": 591,
+      "runtimeBytes": 397,
+      "creationCodeHash": "0x3f2ca62946a0698a2586ac358582e74d37d1e94d70a8c4ae4e5d123ba5d2ef74"
+    },
+    "ROtapCircuitAccount": {
+      "source": "ROtapAccounts.sol",
+      "creationBytes": 4963,
+      "runtimeBytes": 4534,
+      "creationCodeHash": "0xc1593faf710501d451722cfc3a503be5e9cd2defed141778ac9323c254ffe196"
+    },
+    "ROtapSiteRegistry": {
+      "source": "ROtapAccounts.sol",
+      "creationBytes": 3624,
+      "runtimeBytes": 3361,
+      "creationCodeHash": "0xddd8ee34903d4d9628aecf660127c3c7a957963ea8367cb1894fe926e897aee7"
+    },
+    "ROtapBoost": {
+      "source": "ROtapBoost.sol",
+      "creationBytes": 9728,
+      "runtimeBytes": 8079,
+      "creationCodeHash": "0xbeabf5ff37212bb25cd52c5385d1b5daf1711f3de6759e0275d31460e914febc"
+    },
+    "ROtapCircuits": {
+      "source": "ROtapCircuits.sol",
+      "creationBytes": 29310,
+      "runtimeBytes": 18444,
+      "creationCodeHash": "0xfb201e00b384dd9dfed3badedc42f4817082ba70971941e0d617a27a3f0e17ae"
+    },
+    "ROtapContinuousLedger": {
+      "source": "ROtapContinuousLedger.sol",
+      "creationBytes": 6475,
+      "runtimeBytes": 4272,
+      "creationCodeHash": "0x17a9c776c4d6c412ca8235cf9ad9b8a152fccd353030c08d5ae3f54709be5bf2"
+    },
+    "ROtapContinuousReward": {
+      "source": "ROtapContinuousLedger.sol",
+      "creationBytes": 1762,
+      "runtimeBytes": 1715,
+      "creationCodeHash": "0x23bf7136f2b0a2dfaf244382125d194b2899556180b1270c2db70c53f74072b9"
+    },
+    "ROtapLedgerFactory": {
+      "source": "ROtapContinuousLedger.sol",
+      "creationBytes": 7040,
+      "runtimeBytes": 7013,
+      "creationCodeHash": "0x17170b5fdc524792e4fa153e23f4df7af67ab8e3aee00b1074ddaffdf49d251b"
+    },
+    "ROtapCircuitMarket": {
+      "source": "ROtapMarkets.sol",
+      "creationBytes": 7793,
+      "runtimeBytes": 7202,
+      "creationCodeHash": "0xd61e2ecf82547af97a6797d28d7c210e3cc1fcb7dda66b8dd8de59b52abf7852"
+    },
+    "ROtapTransistorMarket": {
+      "source": "ROtapMarkets.sol",
+      "creationBytes": 8645,
+      "runtimeBytes": 8054,
+      "creationCodeHash": "0x6d905d28c89b724859eaba7513a6e72e44b2596fb4657050998780cda1e6b436"
+    },
+    "ROtapMining": {
+      "source": "ROtapMining.sol",
+      "creationBytes": 24182,
+      "runtimeBytes": 23266,
+      "creationCodeHash": "0x6bd86bcc1954f514da51878f36511cc8a3f02a86696678fe10b580a6a2bd4a5d"
+    },
+    "ROtapFactoryProxy": {
+      "source": "ROtapProcessorFactory.sol",
+      "creationBytes": 710,
+      "runtimeBytes": 134,
+      "creationCodeHash": "0x0ad56b809978df2e339e3d12d0224bab230527c3f87a8e0c7b33c6a347c37348"
+    },
+    "ROtapProcessorFactory": {
+      "source": "ROtapProcessorFactory.sol",
+      "creationBytes": 9604,
+      "runtimeBytes": 9364,
+      "creationCodeHash": "0x61fe0b46f18b5c9adeb9040cbaa74ee83cb252c4e06e1d31d5b54a494fa7c2e0"
+    },
+    "ROtapRewardStakeBoost": {
+      "source": "ROtapRewardStakeBoost.sol",
+      "creationBytes": 6799,
+      "runtimeBytes": 5763,
+      "creationCodeHash": "0x53125fda0045b9018eac3e4855dabdeca264cfb1407135815b9eee93b7398a9d"
+    },
+    "ROtapSamplingPolicy": {
+      "source": "ROtapSamplingPolicy.sol",
+      "creationBytes": 5878,
+      "runtimeBytes": 5647,
+      "creationCodeHash": "0xfe46a2042d5ad3db6943229279a68b74df3f62aebf9cbdc10f25bf2f31631c81"
+    },
+    "ROtapStakeBoost": {
+      "source": "ROtapStakeBoost.sol",
+      "creationBytes": 3764,
+      "runtimeBytes": 3139,
+      "creationCodeHash": "0x306587c8662db17fd1d493524ca0cc3a694cea8008c4d5962c281e59e0249f81"
+    },
+    "ROtapTaskRegistry": {
+      "source": "ROtapTaskRegistry.sol",
+      "creationBytes": 9936,
+      "runtimeBytes": 9868,
+      "creationCodeHash": "0x2dc13363abd0b3fdb4e7adb6b08c7ccf1fca792e02fce4d230ec39bf8dfd2283"
+    },
+    "ROtapTransistors": {
+      "source": "ROtapTransistors.sol",
+      "creationBytes": 10222,
+      "runtimeBytes": 8756,
+      "creationCodeHash": "0xb4ffb4b259e3ec67764d3a09ba0dadd06a78238bca6be169b220e65bdd08a5c8"
+    }
+  },
+  "remaining": [
+    "exact-release acceptance evidence",
+    "independent third-party review",
+    "mainnet funding and deployment",
+    "explorer source verification"
+  ]
+}

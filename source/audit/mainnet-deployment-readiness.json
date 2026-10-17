@@ -1,0 +1,33 @@
+{
+  "releaseId": "0x486663fa041f2ddf5e688dcc1f50c96dbe76204e409e68a9436aa0587d50ab57",
+  "chainId": 4663,
+  "sourceIntegrityMatches": true,
+  "testsPassed": true,
+  "completeLocalDeploymentVerified": true,
+  "all100TasksVerified": true,
+  "uniformPaidMintVerified": true,
+  "permissionsPermanentlyRenouncedInLocalDeployment": true,
+  "fullBrowserFlowVerified": true,
+  "mainnetDeployed": false,
+  "paymentsEnabled": false,
+  "independentReview": {
+    "status": "pending",
+    "report": null
+  },
+  "sourceVerification": {
+    "status": "pending",
+    "reason": "No actual mainnet deployment"
+  },
+  "budget": {
+    "budgetWei": "23041804599107500",
+    "balanceWei": "1135797940946051",
+    "shortfallWei": "21906006658161449",
+    "funded": false
+  },
+  "remaining": [
+    "Actual independent third-party review, matching source commit and issues",
+    "Mainnet deployment funding",
+    "Mainnet transactions and explorer source verification"
+  ],
+  "scopeConfirmed": true
+}

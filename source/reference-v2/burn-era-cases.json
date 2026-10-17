@@ -1,0 +1,79 @@
+[
+  {
+    "elapsed": -1,
+    "genesis": 1792166280,
+    "now": 1792166279,
+    "eraLength": 126000000,
+    "burnWindow": 15552000
+  },
+  {
+    "elapsed": 0,
+    "genesis": 1792166279,
+    "now": 1792166279,
+    "eraLength": 126000000,
+    "burnWindow": 15552000
+  },
+  {
+    "elapsed": 15551999,
+    "genesis": 1776614280,
+    "now": 1792166279,
+    "eraLength": 126000000,
+    "burnWindow": 15552000
+  },
+  {
+    "elapsed": 15552000,
+    "genesis": 1776614279,
+    "now": 1792166279,
+    "eraLength": 126000000,
+    "burnWindow": 15552000
+  },
+  {
+    "elapsed": 125999999,
+    "genesis": 1666166280,
+    "now": 1792166279,
+    "eraLength": 126000000,
+    "burnWindow": 15552000
+  },
+  {
+    "elapsed": 126000000,
+    "genesis": 1666166279,
+    "now": 1792166279,
+    "eraLength": 126000000,
+    "burnWindow": 15552000
+  },
+  {
+    "elapsed": 141551999,
+    "genesis": 1650614280,
+    "now": 1792166279,
+    "eraLength": 126000000,
+    "burnWindow": 15552000
+  },
+  {
+    "elapsed": 141552000,
+    "genesis": 1650614279,
+    "now": 1792166279,
+    "eraLength": 126000000,
+    "burnWindow": 15552000
+  },
+  {
+    "elapsed": 252000000,
+    "genesis": 1540166279,
+    "now": 1792166279,
+    "eraLength": 126000000,
+    "burnWindow": 15552000
+  },
+  {
+    "elapsed": 378000000,
+    "genesis": 1414166279,
+    "now": 1792166279,
+    "eraLength": 126000000,
+    "burnWindow": 15552000
+  },
+  {
+    "elapsed": 504000000,
+    "genesis": 1288166279,
+    "now": 1792166279,
+    "eraLength": 126000000,
+    "burnWindow": 15552000
+  }
+]

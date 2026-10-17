@@ -1,0 +1,5 @@
+import fs from 'node:fs';import {Interface} from 'ethers';
+const iface=new Interface(JSON.parse(fs.readFileSync('reference-v2/abi/podLens.json','utf8'))),anchors=JSON.parse(fs.readFileSync('reference-v2/armed-read-results.json','utf8')).responses.filter(r=>r.result&&BigInt(r.result)>0n);
+const queries=[],labels=[];
+for(const item of anchors.filter(r=>[1,4928,4932].includes(r.id))){const anchor=BigInt(item.result),block='0x'+(anchor+1n).toString(16);for(const taskId of [1,27,100]){labels.push({kind:'sample',circuitId:item.id,taskId,anchor:anchor.toString(),block});queries.push({jsonrpc:'2.0',id:queries.length+1,method:'eth_call',params:[{to:'0xE566F9F6F20C19e2AfbD0BB9028A2517d55Bf5F5',data:iface.encodeFunctionData('sampleIndexes',['0x87bfca3494aa228ff589ab9b642143a5e8c8f9a6',item.id,taskId,anchor])},block]});}labels.push({kind:'block',anchor:anchor.toString()});queries.push({jsonrpc:'2.0',id:queries.length+1,method:'eth_getBlockByNumber',params:['0x'+anchor.toString(16),false]});}
+fs.writeFileSync('reference-v2/sampling-read-requests.json',JSON.stringify(queries));fs.writeFileSync('reference-v2/sampling-read-labels.json',JSON.stringify(labels));

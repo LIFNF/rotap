@@ -1,0 +1,17 @@
+[
+  {
+    "label": "mining",
+    "address": "0x98a0c46bdaad9a01832f1863eb2c80ec8681738a",
+    "cid": "Qmcre1WBeGkBNU7hX5Yi7Em4k71dqeDXSFYhHeAFKe9DoA"
+  },
+  {
+    "label": "transistors",
+    "address": "0x265bf10fab9ddec0ee0a649c6b9db845f1b9a06b",
+    "cid": "QmW2Nk2KTW7GqMRoh2TtHYT9dTPpbo3BdawuF6kNqovBR1"
+  },
+  {
+    "label": "circuits",
+    "address": "0x977f217887e085d298cb3819cdad5a0ee35f29b2",
+    "cid": "QmR5b1XDcT4ThzaEfrxARosAajNmGswT1zTB8CJiFJ5fLS"
+  }
+]

@@ -1,0 +1,122 @@
+{
+  "project": "ROtap",
+  "reference": "Fab X on X Layer",
+  "requiredOutcome": "Mechanism parity, not a simplified reinterpretation",
+  "deploymentAllowed": false,
+  "status": "collecting-verified-reference",
+  "preserve": [
+    "pixel-cyberpunk-visual-design",
+    "formal-Chinese-copy",
+    "configured-owner"
+  ],
+  "allowedAdaptations": [
+    "brand and token names",
+    "deployment addresses",
+    "network and gas configuration",
+    "BEM staking asset replaced with ROTAP reward token, explicitly authorized by user",
+    "Fixed issuance prices and cap; factory, mining, market and account upgrade authorities permanently renounced before release, explicitly authorized by user"
+  ],
+  "mustNotGuess": [
+    "reference implementation code",
+    "task reference circuits and vectors",
+    "native and staking asset mapping",
+    "mint prices and fees",
+    "proxy implementations and owner permissions",
+    "rounding and settlement order"
+  ],
+  "requiredModules": [
+    "processor factory",
+    "ERC1155 transistor issuance",
+    "persistent executable netlists",
+    "NAND LATCH REF semantics",
+    "eval and step",
+    "verified reference task registry",
+    "continuous mining",
+    "verified and unverified pools",
+    "burn area depth quality computation",
+    "best original slot replacement",
+    "halving emission",
+    "sampling anchors and gas bounds",
+    "counterexample challenge and revocation",
+    "staking boosts and withdrawal queue",
+    "transistor orders and refunds",
+    "circuit sales and fees",
+    "circuit-bound accounts",
+    "DeWEB registry",
+    "seal and governance rules",
+    "frontend for each on-chain action"
+  ],
+  "publishedParametersToVerifyOnChain": {
+    "supplyCap": "21000000",
+    "decimals": 8,
+    "initialDailyEmission": "7200",
+    "halvingSeconds": 126000000,
+    "verifiedPoolBps": 9900,
+    "unverifiedPoolBps": 100,
+    "areaLambda": 6,
+    "burnLambda": 1,
+    "depthBeta": 3,
+    "qualityClamp": 4,
+    "processorFactor": 6,
+    "anchorBlocks": 200,
+    "stopCooldownBlocks": 1200,
+    "stakingWithdrawalSeconds": 604800,
+    "marketFeeBps": 100
+  },
+  "equivalenceTestsRequired": [
+    "same netlist evaluation and state transitions",
+    "same valid and invalid task decisions",
+    "same graph metrics",
+    "same weight and original-slot decisions",
+    "same emission at halving boundaries",
+    "same pool allocation and rounding",
+    "same start stop transfer and claim settlement",
+    "same stake unstake delayed withdrawal",
+    "same order fill cancel refunds and fees",
+    "same container ownership and execution permissions",
+    "same challenge evidence and revocation outcomes",
+    "real reference deployment fork comparisons"
+  ],
+  "knownReferenceAddresses": {
+    "chainId": 196,
+    "factoryFromStats": "0x1f09daefa827f02cbb40967cc91b259763760761",
+    "transistorBeacon": "0x1059ad62cabb6a6925bb65aa617300556c60a51b",
+    "circuitBeacon": "0xf70d1ed4f62cf3780157b0b421b7e2f45bd0991c",
+    "genesisCircuit": "0x87bfca3494aa228ff589ab9b642143a5e8c8f9a6",
+    "genesisMaterials": "0xbe6f94115d32f3ac3252bc4626573e739beeb714",
+    "rewardTokenFromHtml": "0x72F349B1Eee7833B26f8C81a8410775A4e231ed2"
+  },
+  "assetMapping": {
+    "referenceStakingAsset": "BEM",
+    "targetStakingAsset": "ROTAP",
+    "targetDecimals": 8,
+    "userAuthorized": true,
+    "changesOriginalAssetRelationship": true,
+    "stakingThresholdTokens": [
+      "200",
+      "600",
+      "1000",
+      "1500",
+      "2000"
+    ],
+    "stakingBoostBps": [
+      500,
+      700,
+      900,
+      1200,
+      1500
+    ],
+    "withdrawalDelaySeconds": 604800
+  },
+  "mintPricing": {
+    "chainId": 4663,
+    "symbol": "ETH",
+    "unitPriceETH": "0.0002445",
+    "protocolFeeETH": "0.0003227",
+    "unitPriceWei": "244500000000000",
+    "protocolFeeWei": "322700000000000",
+    "supplyCap": "1000000",
+    "recipient": "0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A",
+    "status": "configured-awaiting-contract-deployment"
+  }
+}

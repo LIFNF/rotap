@@ -1,0 +1,1 @@
+[{"id":1002,"method":"eth_getTransactionCount","params":["0x8638636536Ed50fC1cCCDFDa1790aCC83E39643A","pending"],"jsonrpc":"2.0"},{"id":1003,"method":"eth_chainId","params":[],"jsonrpc":"2.0"}]

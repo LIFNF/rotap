@@ -1,0 +1,17 @@
+{
+  "environment": "local with pinned original-chain simulation fixtures",
+  "originalBlock": "0x45ff3fb",
+  "matchedOriginalCases": 6,
+  "checks": [
+    "registered target CPU",
+    "expanded transitive gate and state counts",
+    "ordered packed state across REF and LATCH",
+    "mixed local material burn only",
+    "future REF input rejected",
+    "pure REF uses no material",
+    "nested multi-output REF",
+    "invalid shape and truncated REF rejected",
+    "REF mining metrics unavailable"
+  ],
+  "wholeProtocolEquivalent": false
+}
