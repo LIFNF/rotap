@@ -7,7 +7,7 @@
   "beforeSourceCommit": "b236429c4a9da03c6ba6d52f844016edc90952d2",
   "beforeFindingCount": 3,
   "beforeReport": "reports/codeql-before-fixes.sarif",
-  "status": "implemented-awaiting-rescan",
+  "status": "fixed-and-rescanned",
   "scope": "Three local development and verification scripts; the browser application was not flagged by this scan",
   "files": [
     "scripts/github-security-results.mjs",
@@ -15,5 +15,12 @@
     "scripts/test-github-pages.mjs"
   ],
   "change": "Replace check-then-read filesystem operations with direct reads or opened-file handles; only missing-file errors are treated as missing.",
-  "verification": null
+  "verification": {
+    "runUrl": "https://github.com/LIFNF/rotap/actions/runs/39016457782",
+    "sourceCommit": "786123d0fc918443c3257d99b2992b13ae524c33",
+    "findingCount": 0,
+    "scriptSyntaxChecksPassed": true,
+    "cacheRegressionPassed": true,
+    "fullPagesBrowserPassed": true
+  }
 }

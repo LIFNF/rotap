@@ -1,13 +1,14 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-17T08:08:06.747Z",
+  "generatedAt": "2026-10-17T08:13:32.877Z",
   "status": "completed",
   "kind": "automated",
   "independentReview": false,
   "scope": [
     "14 份自有 Solidity 源文件与导入依赖；编译器 0.8.30+commit.73712a01.Emscripten.clang。",
     "Slither 全部 102 个检测器；完整原始输出，不排除或压低严重性。",
-    "项目人工上下文仅覆盖 13 条 High 告警及资金/库存规则；其余 214 条原始告警仍待独立逐项确认。"
+    "项目人工上下文仅覆盖 13 条 High 告警及资金/库存规则；其余 214 条原始告警仍待独立逐项确认。",
+    "前端和工具脚本由 GitHub CodeQL security-extended 检查，范围及文件校验值见 CodeQL 原始记录。"
   ],
   "tools": [
     {
@@ -23,11 +24,12 @@
     {
       "name": "GitHub CodeQL",
       "version": "GitHub Actions / security-extended",
-      "status": "pending",
+      "status": "completed",
       "report": "reports/codeql-summary.json",
       "officialUrl": "https://docs.github.com/en/code-security/concepts/code-scanning/codeql/codeql-code-scanning",
-      "summary": "首次扫描发现3处本地工具脚本文件读取时序问题，修复已提交，正在复扫。",
-      "triageReport": "reports/codeql-fixes.json"
+      "summary": "JavaScript 静态分析已完成，0 项工具结果；Solidity 不在此工具范围内。",
+      "triageReport": "reports/codeql-fixes.json",
+      "readableReport": "reports/codeql-report.md"
     }
   ],
   "sourceHashes": {
@@ -304,5 +306,6 @@
       ]
     }
   ],
-  "codeqlSourceCommit": "b236429c4a9da03c6ba6d52f844016edc90952d2"
+  "codeqlSourceCommit": "786123d0fc918443c3257d99b2992b13ae524c33",
+  "sourceCommit": "3607c0f5e72b88443b6d0b2874c8742cdc83f165"
 }

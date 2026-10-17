@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "sourceTreeHash": "e678726e68de316a7cec76f08a625837e1987cbb1f04ca98a0d73efd02fcdeb0",
+  "sourceTreeHash": "dcdd2e4f8dd759e0612c42409f550784a41de6c12dd4dbaeb477f69718dbb53b",
   "files": [
     {
       "path": ".github/workflows/security.yml",
@@ -20,7 +20,7 @@
     },
     {
       "path": "audit/audit-summary.json",
-      "sha256": "7d330ff916031efaf6254458d430a4503519cdf70ef962fb88ffc255cd7f01fe"
+      "sha256": "c18f752154cceded455d33a6b64dc2b229dcb7c301f1e035a218d46b54d782d8"
     },
     {
       "path": "audit/browser-full-protocol.json",
@@ -160,15 +160,19 @@
     },
     {
       "path": "audit/public/codeql-fixes.json",
-      "sha256": "9a08ba55a047c9d79496c8caaf90e0ec92a5012eb45bd6f0cfc5789f9dc000ee"
+      "sha256": "0f779444ce9b677a70ef4893cac6c13a42f20d524608b89483d66ba551bfbdf2"
+    },
+    {
+      "path": "audit/public/codeql-report.md",
+      "sha256": "95cc0356fb472a8842b9cfdbbda80521c1345605373d6121d6014184c4a2672e"
     },
     {
       "path": "audit/public/codeql-summary.json",
-      "sha256": "df3c2457481bb98ef229a04b723faa4e89574a1da5d75ef3faa4d47ae990344c"
+      "sha256": "f075dbfdf12151d2249ee21884579e70cbff58eafdc8cf443c7dc6cfd9f65384"
     },
     {
       "path": "audit/public/codeql.sarif",
-      "sha256": "cd4cbdab0703178f338618f7c97f7d007db8d789235c0df1736627d322c23575"
+      "sha256": "d7d2ad802e77e414172c8ff7d37648a99694de44d6164b04f9403bf30e6dd53a"
     },
     {
       "path": "audit/public/slither-environment.json",
